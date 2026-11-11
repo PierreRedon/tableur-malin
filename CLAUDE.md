@@ -51,6 +51,16 @@ Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site stati
 10. En cas d'échec à n'importe quelle étape : ne rien publier d'incomplet, et laisser un compte rendu clair de ce qui a
     bloqué. Ne pas contourner un blocage par une dépense.
 
+## Enrichir le site (demandé par Pierre le 11/11/2026)
+
+- En plus de l'astuce du jour avec vidéo, ajouter chaque jour UNE page d'astuce supplémentaire sans vidéo (pas de champ
+  `video`), sur une question que les gens cherchent vraiment (« comment ... dans Excel »), vérifiée de la même façon.
+- Le pack de modèles (six fichiers .xlsx : budget, dépenses, facture et devis, planning, stock, tâches) existe depuis le
+  11/11/2026. Ses fichiers ne sont PAS dans ce dépôt public et ne doivent jamais y être ajoutés. Il n'est pas encore en
+  vente : `stripe_lien` est vide dans `contenu.py` tant que Pierre n'a pas fourni le lien de paiement.
+- Idées d'enrichissement du pack à proposer à Pierre dans le compte rendu quand c'est pertinent, sans rien vendre de
+  nouveau sans son accord.
+
 ## Commits
 
 Auteur : `-c user.name="Tableur Malin" -c user.email="tableurmalin@gmail.com"`.

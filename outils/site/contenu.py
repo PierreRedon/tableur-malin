@@ -17,9 +17,9 @@ PACK_MODELES = [
     ("Budget mensuel", "Revenus, dépenses fixes et variables, reste à vivre calculé tout seul."),
     ("Suivi des dépenses", "Une ligne par achat, le total par catégorie et par mois se met à jour."),
     ("Facture et devis", "Numérotation, totaux et TVA (ou mention de franchise) déjà en place."),
-    ("Planning hebdomadaire", "Une semaine par onglet, couleurs automatiques selon le type de tâche."),
+    ("Planning hebdomadaire", "Une grille par semaine, couleurs automatiques selon le type d'activité, heures comptées par type."),
     ("Suivi de stock", "Entrées, sorties, stock restant et alerte quand il faut recommander."),
-    ("Liste de tâches", "Cases à cocher, échéances et avancement en pourcentage."),
+    ("Liste de tâches", "Tâches faites barrées, retards signalés en rouge, avancement en pourcentage."),
 ]
 
 ASTUCES = [

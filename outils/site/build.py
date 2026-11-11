@@ -212,7 +212,7 @@ def pack():
   <div>
     <h2>Ce que contient le pack</h2>
     <ul class="modeles">{modeles}</ul>
-    <p>Chaque modèle est fourni en deux versions : un fichier .xlsx pour Excel et un lien de copie pour Google Sheets.</p>
+    <p>Chaque modèle est un fichier .xlsx avec son mode d'emploi. Il s'ouvre dans Excel et s'importe dans Google Sheets (Fichier, Importer).</p>
   </div>
   <div class="achat">{achat}</div>
 </section>"""
