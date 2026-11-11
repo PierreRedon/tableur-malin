@@ -5,9 +5,9 @@ SITE = {
     "url": "https://tableurmalin.fr",
     "email": "tableurmalin@gmail.com",
     "accroche": "Une astuce Excel ou Google Sheets par jour, expliquée simplement.",
-    # Pack : tant que le lien Stripe est vide, la page affiche « en préparation » et aucun bouton d'achat.
-    "stripe_lien": "",
-    "pack_prix": "",
+    # Pack en vente depuis le 11/11/2026 (lien de paiement Stripe fourni par Pierre).
+    "stripe_lien": "https://buy.stripe.com/8x26oH8Vq46ZdYcaBq3gk02",
+    "pack_prix": "9 €",
     "editeur": "Pierre Redon, entrepreneur individuel",
     "siret": "981 175 714 00030",
     "adresse": "46 route de Vouillé, 86170 Cissé",

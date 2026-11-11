@@ -1,7 +1,7 @@
 # Tableur Malin : consignes pour Claude
 
 Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site statique sur GitHub Pages
-(https://tableurmalin.fr), une courte vidéo d'astuce par jour, pack de modèles vendu par lien Stripe (pas encore en vente).
+(https://tableurmalin.fr), une courte vidéo d'astuce par jour, pack de modèles vendu 9 € par lien Stripe.
 
 ## Règles fixées par Pierre
 
@@ -56,8 +56,10 @@ Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site stati
 - En plus de l'astuce du jour avec vidéo, ajouter chaque jour UNE page d'astuce supplémentaire sans vidéo (pas de champ
   `video`), sur une question que les gens cherchent vraiment (« comment ... dans Excel »), vérifiée de la même façon.
 - Le pack de modèles (vingt fichiers .xlsx et un aide-mémoire, listés dans `PACK_MODELES`) existe depuis le
-  11/11/2026. Prix prévu : 9 €. Ses fichiers ne sont PAS dans ce dépôt public et ne doivent jamais y être ajoutés. Il n'est pas encore en
-  vente : `stripe_lien` est vide dans `contenu.py` tant que Pierre n'a pas fourni le lien de paiement.
+  11/11/2026. Prix prévu : 9 €. Ses fichiers ne sont PAS dans ce dépôt public et ne doivent jamais y être ajoutés. Il est en vente
+  depuis le 11/11/2026 par le lien Stripe renseigné dans `contenu.py` (`stripe_lien`). Les fichiers sont livrés par un dossier
+  Google Drive dont le lien ne doit JAMAIS figurer sur le site ni dans ce dépôt.
+- Dans une légende sur trois environ, ajouter une ligne : « 20 modèles prêts à remplir : tableurmalin.fr/pack-modeles ».
 - Idées d'enrichissement du pack à proposer à Pierre dans le compte rendu quand c'est pertinent, sans rien vendre de
   nouveau sans son accord.
 

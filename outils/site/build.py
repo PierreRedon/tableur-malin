@@ -199,7 +199,7 @@ def pack():
     if SITE["stripe_lien"]:
         achat = (f'<p class="prix">{e(SITE["pack_prix"])}, paiement unique</p>'
                  f'<p><a class="bouton" href="{e(SITE["stripe_lien"])}">Acheter le pack</a></p>'
-                 '<p class="discret">Paiement sécurisé par Stripe. Les fichiers sont envoyés par e-mail après le paiement.</p>')
+                 '<p class="discret">Paiement sécurisé par Stripe. Le lien de téléchargement s\'affiche juste après le paiement.</p>')
     else:
         achat = ('<p class="etat">Le pack est en préparation : il n\'est pas encore en vente.</p>'
                  '<p>En attendant, toutes les astuces du site sont gratuites.</p>'
