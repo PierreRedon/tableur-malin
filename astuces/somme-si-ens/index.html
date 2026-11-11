@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Additionner selon plusieurs critères avec SOMME.SI.ENS | Tableur Malin</title>
+<meta name="description" content="SOMME.SI.ENS additionne uniquement les lignes qui respectent une ou plusieurs conditions : total par catégorie, par mois, par client. Syntaxe, exemple et erreurs courantes.">
+<link rel="canonical" href="https://pierreredon.github.io/tableur-malin/astuces/somme-si-ens/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Additionner selon plusieurs critères avec SOMME.SI.ENS | Tableur Malin">
+<meta property="og:description" content="SOMME.SI.ENS additionne uniquement les lignes qui respectent une ou plusieurs conditions : total par catégorie, par mois, par client. Syntaxe, exemple et erreurs courantes.">
+<meta property="og:url" content="https://pierreredon.github.io/tableur-malin/astuces/somme-si-ens/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Additionner selon plusieurs critères avec SOMME.SI.ENS", "description": "SOMME.SI.ENS additionne uniquement les lignes qui respectent une ou plusieurs conditions : total par catégorie, par mois, par client. Syntaxe, exemple et erreurs courantes.", "inLanguage": "fr", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "mainEntityOfPage": "https://pierreredon.github.io/tableur-malin/astuces/somme-si-ens/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://pierreredon.github.io/tableur-malin/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Additionner selon plusieurs critères avec SOMME.SI.ENS", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Indiquez d'abord la colonne qui contient les montants à additionner."}, {"@type": "HowToStep", "position": 2, "text": "Ajoutez la première colonne à tester, puis le critère attendu entre guillemets."}, {"@type": "HowToStep", "position": 3, "text": "Ajoutez autant de paires colonne et critère que nécessaire, séparées par des points-virgules."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://pierreredon.github.io/tableur-malin/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://pierreredon.github.io/tableur-malin/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Additionner selon plusieurs critères", "item": "https://pierreredon.github.io/tableur-malin/astuces/somme-si-ens/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Additionner selon plusieurs critères avec SOMME.SI.ENS</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau intermédiaire.</p>
+<p class="bref">SOMME.SI.ENS prend d&#x27;abord la colonne à additionner, puis des paires « colonne à tester ; critère ». Elle fonctionne à l&#x27;identique dans Excel et Google Sheets.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Indiquez d'abord la colonne qui contient les montants à additionner.</li><li>Ajoutez la première colonne à tester, puis le critère attendu entre guillemets.</li><li>Ajoutez autant de paires colonne et critère que nécessaire, séparées par des points-virgules.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SOMME.SI.ENS(C2:C100;A2:A100;&quot;Courses&quot;;B2:B100;&quot;Janvier&quot;)</code><button type="button" class="copier" data-copie="=SOMME.SI.ENS(C2:C100;A2:A100;&quot;Courses&quot;;B2:B100;&quot;Janvier&quot;)">Copier</button></div><figcaption>Additionne les montants de la colonne C pour la catégorie Courses au mois de Janvier.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SOMME.SI.ENS(C2:C100;A2:A100;F1;C2:C100;&quot;&gt;50&quot;)</code><button type="button" class="copier" data-copie="=SOMME.SI.ENS(C2:C100;A2:A100;F1;C2:C100;&quot;&gt;50&quot;)">Copier</button></div><figcaption>Le critère peut venir d&#x27;une cellule (F1) ou être une comparaison, ici les montants supérieurs à 50.</figcaption></figure>
+<h2>À savoir</h2><p>Toutes les conditions doivent être vraies en même temps pour qu'une ligne soit comptée. Pour compter des lignes au lieu d'additionner des montants, la fonction NB.SI.ENS suit la même logique, sans la première colonne.</p>
+<h2>Dans Google Sheets</h2><p>Même nom et mêmes arguments dans Google Sheets.</p>
+<h2>Les pièges à éviter</h2><ul><li>L&#x27;ordre est inversé par rapport à SOMME.SI : ici, la colonne à additionner vient en premier.</li><li>Toutes les plages doivent avoir la même taille, sinon la formule renvoie #VALEUR!.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/remplissage-instantane-ctrl-e/index.html">Séparer prénom et nom sans formule avec Ctrl + E</a><span class="meta">Excel</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/recherchex-remplacer-recherchev/index.html">RECHERCHEX : la formule qui remplace RECHERCHEV</a><span class="meta">Excel, Google Sheets</span><span class="meta">Intermédiaire</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/liste-deroulante/index.html">Créer une liste déroulante dans une cellule</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit les tableaux les plus demandés (budget, factures, planning, stock), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

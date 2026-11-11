@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Créer une liste déroulante dans une cellule | Tableur Malin</title>
+<meta name="description" content="Comment ajouter une liste déroulante dans Excel et dans Google Sheets pour limiter la saisie à quelques choix : étapes, source de la liste et erreurs fréquentes.">
+<link rel="canonical" href="https://pierreredon.github.io/tableur-malin/astuces/liste-deroulante/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Créer une liste déroulante dans une cellule | Tableur Malin">
+<meta property="og:description" content="Comment ajouter une liste déroulante dans Excel et dans Google Sheets pour limiter la saisie à quelques choix : étapes, source de la liste et erreurs fréquentes.">
+<meta property="og:url" content="https://pierreredon.github.io/tableur-malin/astuces/liste-deroulante/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Créer une liste déroulante dans une cellule", "description": "Comment ajouter une liste déroulante dans Excel et dans Google Sheets pour limiter la saisie à quelques choix : étapes, source de la liste et erreurs fréquentes.", "inLanguage": "fr", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "mainEntityOfPage": "https://pierreredon.github.io/tableur-malin/astuces/liste-deroulante/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://pierreredon.github.io/tableur-malin/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Créer une liste déroulante dans une cellule", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Sélectionnez les cellules qui doivent proposer la liste."}, {"@type": "HowToStep", "position": 2, "text": "Dans Excel, ouvrez l'onglet Données puis cliquez sur Validation des données."}, {"@type": "HowToStep", "position": 3, "text": "Dans le champ Autoriser, choisissez Liste."}, {"@type": "HowToStep", "position": 4, "text": "Dans le champ Source, tapez vos choix séparés par des points-virgules, ou sélectionnez une plage qui les contient."}, {"@type": "HowToStep", "position": 5, "text": "Validez : une flèche apparaît à droite de la cellule quand vous cliquez dessus."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://pierreredon.github.io/tableur-malin/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://pierreredon.github.io/tableur-malin/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Créer une liste déroulante", "item": "https://pierreredon.github.io/tableur-malin/astuces/liste-deroulante/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Créer une liste déroulante dans une cellule</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Dans Excel : onglet Données, Validation des données, Autoriser « Liste ». Dans Google Sheets : menu Insertion, Menu déroulant.</p>
+<h2>Les étapes dans Excel</h2><ol class="etapes"><li>Sélectionnez les cellules qui doivent proposer la liste.</li><li>Dans Excel, ouvrez l'onglet Données puis cliquez sur Validation des données.</li><li>Dans le champ Autoriser, choisissez Liste.</li><li>Dans le champ Source, tapez vos choix séparés par des points-virgules, ou sélectionnez une plage qui les contient.</li><li>Validez : une flèche apparaît à droite de la cellule quand vous cliquez dessus.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>Payé;En attente;En retard</code><button type="button" class="copier" data-copie="Payé;En attente;En retard">Copier</button></div><figcaption>À saisir dans le champ Source, sans signe égal.</figcaption></figure>
+<h2>À savoir</h2><p>Si la liste risque d'évoluer, écrivez plutôt vos choix dans une colonne à part, sur un autre onglet par exemple, et indiquez cette plage comme source. Vous n'aurez qu'à modifier la colonne pour mettre à jour toutes les listes.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets, sélectionnez les cellules puis ouvrez le menu Insertion et choisissez Menu déroulant. Saisissez chaque choix dans le panneau qui s'ouvre à droite ; vous pouvez attribuer une couleur à chacun.</p>
+<h2>Les pièges à éviter</h2><ul><li>Une liste déroulante n&#x27;empêche pas de coller une autre valeur par-dessus : le collage remplace aussi la règle de validation.</li><li>Dans Excel en français, le séparateur des choix est le point-virgule, pas la virgule.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/remplissage-instantane-ctrl-e/index.html">Séparer prénom et nom sans formule avec Ctrl + E</a><span class="meta">Excel</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/recherchex-remplacer-recherchev/index.html">RECHERCHEX : la formule qui remplace RECHERCHEV</a><span class="meta">Excel, Google Sheets</span><span class="meta">Intermédiaire</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/figer-premiere-ligne/index.html">Garder la ligne de titres visible quand on fait défiler</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit les tableaux les plus demandés (budget, factures, planning, stock), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
