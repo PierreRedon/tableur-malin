@@ -8,10 +8,9 @@ SITE = {
     # Pack : tant que le lien Stripe est vide, la page affiche « en préparation » et aucun bouton d'achat.
     "stripe_lien": "",
     "pack_prix": "",
-    # Mentions légales : à compléter avant la mise en ligne.
     "editeur": "Pierre Redon, entrepreneur individuel",
-    "siret": "",
-    "adresse": "",
+    "siret": "981 175 714 00030",
+    "adresse": "46 route de Vouillé, 86170 Cissé",
 }
 
 PACK_MODELES = [
