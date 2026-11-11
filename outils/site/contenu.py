@@ -2,7 +2,7 @@
 
 SITE = {
     "nom": "Tableur Malin",
-    "url": "https://pierreredon.github.io/tableur-malin",  # à changer si un nom de domaine est acheté
+    "url": "https://tableurmalin.fr",
     "email": "tableurmalin@gmail.com",
     "accroche": "Une astuce Excel ou Google Sheets par jour, expliquée simplement.",
     # Pack : tant que le lien Stripe est vide, la page affiche « en préparation » et aucun bouton d'achat.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pierreredon.github.io/tableur-malin/sitemap.xml
+Sitemap: https://tableurmalin.fr/sitemap.xml
