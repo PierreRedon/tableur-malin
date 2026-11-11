@@ -90,7 +90,7 @@ def lignes_astuces(astuces, p, debut=1):
 def bloc_pack(p):
     return f"""<aside class="bande-pack">
   <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
-  <p>Le pack de modèles réunit les tableaux les plus demandés (budget, factures, planning, stock), avec les formules
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
   déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
   <a class="bouton" href="{p}pack-modeles/index.html">Voir le contenu du pack</a>
 </aside>"""
@@ -206,7 +206,7 @@ def pack():
                  '<p><a class="bouton" href="../astuces/index.html">Parcourir les astuces</a></p>')
     corps = f"""<section class="entete-page">
   <h1>Le pack de modèles Excel et Google Sheets</h1>
-  <p class="chapo">Six tableaux prêts à remplir, avec les formules déjà en place. Un seul paiement, pas d'abonnement.</p>
+  <p class="chapo">Vingt tableaux prêts à remplir, avec les formules déjà en place, et un aide-mémoire des formules. Un seul paiement, pas d'abonnement.</p>
 </section>
 <section class="pack">
   <div>
@@ -217,8 +217,8 @@ def pack():
   <div class="achat">{achat}</div>
 </section>"""
     page("pack-modeles/index.html", "Pack de modèles Excel et Google Sheets | Tableur Malin",
-         "Six modèles de tableaux prêts à remplir pour Excel et Google Sheets : budget, dépenses, factures, planning, "
-         "stock, tâches. Paiement unique.", corps, 1)
+         "Vingt modèles de tableaux prêts à remplir pour Excel et Google Sheets : budget, factures, planning, "
+         "stock, prêt, épargne. Paiement unique.", corps, 1)
 
 
 def mentions():

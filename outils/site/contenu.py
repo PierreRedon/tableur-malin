@@ -15,11 +15,26 @@ SITE = {
 
 PACK_MODELES = [
     ("Budget mensuel", "Revenus, dépenses fixes et variables, reste à vivre calculé tout seul."),
+    ("Budget annuel", "Douze mois côte à côte, solde du mois et solde cumulé."),
     ("Suivi des dépenses", "Une ligne par achat, le total par catégorie et par mois se met à jour."),
-    ("Facture et devis", "Numérotation, totaux et TVA (ou mention de franchise) déjà en place."),
-    ("Planning hebdomadaire", "Une grille par semaine, couleurs automatiques selon le type d'activité, heures comptées par type."),
+    ("Objectifs d'épargne", "Avancement de chaque objectif et effort mensuel pour tenir l'échéance."),
+    ("Suivi des abonnements", "Coût réel sur un an et alerte avant chaque renouvellement."),
+    ("Simulateur de prêt", "Mensualité, coût des intérêts et échéancier mois par mois."),
+    ("Comptes partagés", "Colocation, couple, vacances : qui doit combien à qui."),
+    ("Facture et devis", "Totaux et TVA calculés, mention de franchise affichée si besoin."),
+    ("Suivi des factures clients", "Factures payées, en attente, en retard, avec les jours de retard."),
+    ("Chiffre d'affaires micro-entreprise", "Cumul, part du plafond et cotisations estimées."),
     ("Suivi de stock", "Entrées, sorties, stock restant et alerte quand il faut recommander."),
+    ("Feuille d'heures", "Heures travaillées, heures supplémentaires ou manquantes sur la semaine."),
+    ("Planning hebdomadaire", "Une grille par semaine, couleurs automatiques selon le type d'activité."),
+    ("Rétroplanning de projet", "Un diagramme en barres qui se dessine à partir des dates."),
     ("Liste de tâches", "Tâches faites barrées, retards signalés en rouge, avancement en pourcentage."),
+    ("Suivi d'habitudes", "Une case par jour et un taux de réussite par habitude."),
+    ("Suivi de recherche d'emploi", "Candidatures, entretiens et relances à faire."),
+    ("Comparateur d'offres", "Notes pondérées par vos priorités pour départager trois options."),
+    ("Menus et liste de courses", "Repas de la semaine et courses classées par rayon."),
+    ("Organisation d'événement", "Liste d'invités, réponses reçues et budget prévu contre réel."),
+    ("Bonus : aide-mémoire", "36 formules en français avec exemple, et 15 raccourcis clavier."),
 ]
 
 ASTUCES = [
