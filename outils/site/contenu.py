@@ -46,7 +46,7 @@ ASTUCES = [
                        "reformate une liste entière à partir d'un seul exemple. Équivalent Google Sheets inclus.",
         "bref": "Tapez le résultat attendu pour la première ligne, validez, puis appuyez sur Ctrl + E : Excel "
                 "comprend le modèle et remplit toute la colonne.",
-        "outils": "Excel", "niveau": "Débutant", "date": "2026-11-12",
+        "outils": "Excel", "niveau": "Débutant", "date": "2026-11-11",
         "video": "remplissage-instantane-ctrl-e",
         "etapes": [
             "Placez-vous dans la colonne juste à droite de vos données. Si vos noms complets sont en colonne A, travaillez en colonne B.",
@@ -77,7 +77,7 @@ ASTUCES = [
                        "gauche et affiche le message de votre choix quand rien n'est trouvé. Syntaxe et exemple.",
         "bref": "RECHERCHEX demande trois choses : la valeur cherchée, la colonne où la chercher, la colonne à "
                 "renvoyer. Plus de numéro de colonne à compter, plus de FAUX à ajouter à la fin.",
-        "outils": "Excel, Google Sheets", "niveau": "Intermédiaire", "date": "2026-11-12",
+        "outils": "Excel, Google Sheets", "niveau": "Intermédiaire", "date": "2026-11-11",
         "etapes": [
             "Repérez la valeur que vous connaissez, par exemple une référence produit saisie en E2.",
             "Repérez la colonne où cette référence se trouve dans votre tableau, par exemple A2:A100.",
@@ -108,7 +108,7 @@ ASTUCES = [
                        "quelques choix : étapes, source de la liste et erreurs fréquentes.",
         "bref": "Dans Excel : onglet Données, Validation des données, Autoriser « Liste ». Dans Google Sheets : menu "
                 "Insertion, Menu déroulant.",
-        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-12",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-11",
         "etapes": [
             "Sélectionnez les cellules qui doivent proposer la liste.",
             "Dans Excel, ouvrez l'onglet Données puis cliquez sur Validation des données.",
@@ -136,7 +136,7 @@ ASTUCES = [
                        "titres à l'écran pendant le défilement, et comment libérer les volets.",
         "bref": "Dans Excel : onglet Affichage, Figer les volets, Figer la ligne supérieure. Dans Google Sheets : menu "
                 "Affichage, Figer, 1 ligne.",
-        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-12",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-11",
         "etapes": [
             "Ouvrez l'onglet Affichage.",
             "Cliquez sur Figer les volets.",
@@ -162,7 +162,7 @@ ASTUCES = [
                        "liste sans doublons qui se met à jour avec la fonction UNIQUE.",
         "bref": "Dans Excel : onglet Données, Supprimer les doublons. Dans Google Sheets : menu Données, Nettoyage des "
                 "données, Supprimer les doublons.",
-        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-12",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-11",
         "etapes": [
             "Faites une copie de votre onglet : la suppression est définitive une fois le fichier enregistré.",
             "Cliquez dans votre tableau.",
@@ -192,7 +192,7 @@ ASTUCES = [
                        "par catégorie, par mois, par client. Syntaxe, exemple et erreurs courantes.",
         "bref": "SOMME.SI.ENS prend d'abord la colonne à additionner, puis des paires « colonne à tester ; critère ». "
                 "Elle fonctionne à l'identique dans Excel et Google Sheets.",
-        "outils": "Excel, Google Sheets", "niveau": "Intermédiaire", "date": "2026-11-12",
+        "outils": "Excel, Google Sheets", "niveau": "Intermédiaire", "date": "2026-11-11",
         "etapes": [
             "Indiquez d'abord la colonne qui contient les montants à additionner.",
             "Ajoutez la première colonne à tester, puis le critère attendu entre guillemets.",
