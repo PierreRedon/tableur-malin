@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloquer une cellule dans une formule avec le signe $ | Tableur Malin</title>
+<meta name="description" content="Comment figer une cellule dans une formule Excel ou Google Sheets pour qu&#x27;elle ne se décale pas quand on recopie : le signe $, la touche F4 et les références absolues, relatives et mixtes.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/bloquer-cellule-formule-dollar-f4/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Bloquer une cellule dans une formule avec le signe $ | Tableur Malin">
+<meta property="og:description" content="Comment figer une cellule dans une formule Excel ou Google Sheets pour qu&#x27;elle ne se décale pas quand on recopie : le signe $, la touche F4 et les références absolues, relatives et mixtes.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/bloquer-cellule-formule-dollar-f4/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Bloquer une cellule dans une formule avec le signe $", "description": "Comment figer une cellule dans une formule Excel ou Google Sheets pour qu'elle ne se décale pas quand on recopie : le signe $, la touche F4 et les références absolues, relatives et mixtes.", "inLanguage": "fr", "datePublished": "2026-11-12", "dateModified": "2026-11-12", "mainEntityOfPage": "https://tableurmalin.fr/astuces/bloquer-cellule-formule-dollar-f4/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Bloquer une cellule dans une formule avec le signe $", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Commencez votre formule normalement, par exemple =A2*B1 pour multiplier un prix (A2) par un taux saisi une seule fois en B1."}, {"@type": "HowToStep", "position": 2, "text": "Dans la barre de formule, cliquez sur la référence à bloquer, ici B1."}, {"@type": "HowToStep", "position": 3, "text": "Appuyez sur F4 : B1 devient $B$1. Vous pouvez aussi taper les deux signes $ à la main."}, {"@type": "HowToStep", "position": 4, "text": "Validez, puis recopiez la formule vers le bas : A2 devient A3, A4, A5, mais $B$1 reste $B$1."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Bloquer une cellule avec $ (F4)", "item": "https://tableurmalin.fr/astuces/bloquer-cellule-formule-dollar-f4/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Bloquer une cellule dans une formule avec le signe $</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Écrivez la référence avec deux signes dollar, $B$1 au lieu de B1 : elle ne bouge plus quand vous recopiez la formule. La touche F4 ajoute les dollars à votre place.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Commencez votre formule normalement, par exemple =A2*B1 pour multiplier un prix (A2) par un taux saisi une seule fois en B1.</li><li>Dans la barre de formule, cliquez sur la référence à bloquer, ici B1.</li><li>Appuyez sur <kbd>F4</kbd> : B1 devient $B$1. Vous pouvez aussi taper les deux signes $ à la main.</li><li>Validez, puis recopiez la formule vers le bas : A2 devient A3, A4, A5, mais $B$1 reste $B$1.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=A2*$B$1</code><button type="button" class="copier" data-copie="=A2*$B$1">Copier</button></div><figcaption>A2 suit la recopie ligne après ligne ; $B$1 désigne toujours la même cellule.</figcaption></figure>
+<h2>À savoir</h2><p>Par défaut, une référence est relative : quand on recopie la formule, elle se décale avec elle. Le signe $ placé devant la lettre bloque la colonne, celui placé devant le chiffre bloque la ligne. Avec les deux, la référence est dite absolue.</p><p>Chaque appui sur F4 passe au type suivant : $B$1 (tout est bloqué), B$1 (seule la ligne est bloquée), $B1 (seule la colonne est bloquée), puis de nouveau B1. Les deux formes intermédiaires, dites mixtes, servent surtout dans les tableaux à double entrée.</p>
+<h2>Dans Google Sheets</h2><p>Le signe $ fonctionne exactement de la même façon dans Google Sheets, et la touche F4 y ajoute aussi les dollars pendant la saisie ou la modification d'une formule.</p>
+<h2>Les pièges à éviter</h2><ul><li>Le signe $ n&#x27;a aucun rapport avec la monnaie et ne change pas le résultat de la formule : il agit seulement au moment de la recopie.</li><li>Sur beaucoup d&#x27;ordinateurs portables, F4 règle d&#x27;abord le son ou la luminosité : essayez alors Fn + F4.</li><li>Bloquer une cellule dans une formule ne la protège pas contre la modification : pour cela, il faut passer par la protection de la feuille.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/somme-automatique-alt-egal/index.html">Additionner une colonne en deux touches avec Alt + =</a><span class="meta">Excel</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/remplissage-instantane-ctrl-e/index.html">Séparer prénom et nom sans formule avec Ctrl + E</a><span class="meta">Excel</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/recherchex-remplacer-recherchev/index.html">RECHERCHEX : la formule qui remplace RECHERCHEV</a><span class="meta">Excel, Google Sheets</span><span class="meta">Intermédiaire</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

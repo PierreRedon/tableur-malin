@@ -39,6 +39,67 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "somme-automatique-alt-egal",
+        "titre": "Additionner une colonne en deux touches avec Alt + =",
+        "court": "Additionner une colonne avec Alt + =",
+        "description": "Le raccourci Alt + = d'Excel écrit la formule SOMME à votre place : cliquez sous une colonne de "
+                       "nombres, appuyez, validez. Plusieurs totaux d'un coup, et l'équivalent Google Sheets.",
+        "bref": "Cliquez dans la cellule située juste sous vos nombres, appuyez sur Alt + =, puis validez avec Entrée : "
+                "Excel écrit la formule SOMME et choisit lui-même la plage à additionner.",
+        "outils": "Excel", "niveau": "Débutant", "date": "2026-11-12",
+        "video": "somme-automatique-alt-egal",
+        "etapes": [
+            "Cliquez dans la cellule vide située juste sous la colonne de nombres à additionner, par exemple B7 si vos montants vont de B2 à B6.",
+            "Appuyez sur <kbd>Alt</kbd> + <kbd>=</kbd>. Excel écrit la formule SOMME et entoure la plage qu'il propose d'additionner.",
+            "Vérifiez que la plage proposée est la bonne, puis validez avec <kbd>Entrée</kbd>.",
+            "Pour plusieurs totaux d'un coup, sélectionnez d'abord toutes les cellules de total (par exemple B7 à D7), puis appuyez sur <kbd>Alt</kbd> + <kbd>=</kbd> : chaque colonne reçoit sa somme, sans passer par Entrée.",
+        ],
+        "formules": [("=SOMME(B2:B6)", "La formule qu'Excel écrit à votre place en B7.")],
+        "texte": "<p>Ce raccourci déclenche le bouton Somme automatique, que l'on trouve aussi dans l'onglet Accueil et "
+                 "dans l'onglet Formules. Il fonctionne également pour une ligne : placez-vous dans la cellule située "
+                 "à droite des nombres.</p>"
+                 "<p>Le total reste une formule ordinaire : si vous modifiez un montant, il se recalcule tout seul.</p>",
+        "sheets": "<p>Dans Google Sheets, le plus sûr est de taper la formule ci-dessous dans la cellule du total. "
+                  "Vous pouvez aussi sélectionner vos nombres, cliquer sur le bouton Fonctions (Σ) de la barre "
+                  "d'outils et choisir SOMME.</p>",
+        "sheets_formule": "=SOMME(B2:B6)",
+        "pieges": [
+            "Excel s'arrête à la première cellule vide : si votre colonne contient un trou, la plage proposée est incomplète. Corrigez-la avant de valider.",
+            "Un nombre saisi comme du texte (souvent aligné à gauche dans la cellule) n'est pas compté dans la somme.",
+            "Le raccourci Alt + = est celui d'Excel pour Windows. Sur Mac, le plus simple est de cliquer sur le bouton Somme automatique de l'onglet Accueil.",
+        ],
+    },
+    {
+        "slug": "bloquer-cellule-formule-dollar-f4",
+        "titre": "Bloquer une cellule dans une formule avec le signe $",
+        "court": "Bloquer une cellule avec $ (F4)",
+        "description": "Comment figer une cellule dans une formule Excel ou Google Sheets pour qu'elle ne se décale pas "
+                       "quand on recopie : le signe $, la touche F4 et les références absolues, relatives et mixtes.",
+        "bref": "Écrivez la référence avec deux signes dollar, $B$1 au lieu de B1 : elle ne bouge plus quand vous "
+                "recopiez la formule. La touche F4 ajoute les dollars à votre place.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-12",
+        "etapes": [
+            "Commencez votre formule normalement, par exemple =A2*B1 pour multiplier un prix (A2) par un taux saisi une seule fois en B1.",
+            "Dans la barre de formule, cliquez sur la référence à bloquer, ici B1.",
+            "Appuyez sur <kbd>F4</kbd> : B1 devient $B$1. Vous pouvez aussi taper les deux signes $ à la main.",
+            "Validez, puis recopiez la formule vers le bas : A2 devient A3, A4, A5, mais $B$1 reste $B$1.",
+        ],
+        "formules": [("=A2*$B$1", "A2 suit la recopie ligne après ligne ; $B$1 désigne toujours la même cellule.")],
+        "texte": "<p>Par défaut, une référence est relative : quand on recopie la formule, elle se décale avec elle. "
+                 "Le signe $ placé devant la lettre bloque la colonne, celui placé devant le chiffre bloque la ligne. "
+                 "Avec les deux, la référence est dite absolue.</p>"
+                 "<p>Chaque appui sur F4 passe au type suivant : $B$1 (tout est bloqué), B$1 (seule la ligne est "
+                 "bloquée), $B1 (seule la colonne est bloquée), puis de nouveau B1. Les deux formes intermédiaires, "
+                 "dites mixtes, servent surtout dans les tableaux à double entrée.</p>",
+        "sheets": "<p>Le signe $ fonctionne exactement de la même façon dans Google Sheets, et la touche F4 y ajoute "
+                  "aussi les dollars pendant la saisie ou la modification d'une formule.</p>",
+        "pieges": [
+            "Le signe $ n'a aucun rapport avec la monnaie et ne change pas le résultat de la formule : il agit seulement au moment de la recopie.",
+            "Sur beaucoup d'ordinateurs portables, F4 règle d'abord le son ou la luminosité : essayez alors Fn + F4.",
+            "Bloquer une cellule dans une formule ne la protège pas contre la modification : pour cela, il faut passer par la protection de la feuille.",
+        ],
+    },
+    {
         "slug": "remplissage-instantane-ctrl-e",
         "titre": "Séparer prénom et nom sans formule avec Ctrl + E",
         "court": "Séparer prénom et nom avec Ctrl + E",
