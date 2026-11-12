@@ -159,7 +159,7 @@ def fiche(a):
 <p class="fiche-meta">Fonctionne dans {e(a['outils'])}. Niveau {e(a['niveau']).lower()}.</p>
 <p class="bref">{e(a['bref'])}</p>"""]
     if a.get("video"):
-        blocs.append(f'<figure class="fiche-video">{bloc_video(a, p)}<figcaption>L\'astuce en vidéo, sans le son.</figcaption></figure>')
+        blocs.append(f'<figure class="fiche-video">{bloc_video(a, p)}<figcaption>L\'astuce en vidéo.</figcaption></figure>')
     titre_etapes = "Les étapes dans Excel" if a.get("etapes_excel") else "Les étapes"
     blocs.append(f"<h2>{titre_etapes}</h2><ol class=\"etapes\">" + "".join(f"<li>{s}</li>" for s in a["etapes"]) + "</ol>")
     for f, leg in a["formules"]:

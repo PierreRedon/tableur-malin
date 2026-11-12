@@ -16,7 +16,9 @@ Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site stati
     aux publications (titre obligatoire, visibilité publique).
 - Réglages TikTok choisis par Pierre le 11/11/2026 pour toutes les vidéos : `privacyLevel` PUBLIC_TO_EVERYONE,
   `allowComment` true, `musicUsageConfirmed` true. Ajouter `isAiGenerated` true.
-- Vidéos : verticales 1080×1920, 15 à 25 secondes, sans visage ni voix, piste audio silencieuse.
+- Vidéos : verticales 1080×1920, 15 à 25 secondes, sans visage ni voix, mais JAMAIS muettes (demandé par Pierre le
+  12/11/2026) : fond musical doux et bruitages calés sur l'image, fabriqués par `outils/video/son.py` (synthèse
+  maison, gratuite, sans musique sous droits). Pas de voix ni de musique payantes sans son accord.
 
 ## Organisation du dépôt
 
@@ -37,7 +39,8 @@ Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site stati
 3. Ajouter l'astuce EN TÊTE de `ASTUCES` (mêmes champs que les autres, `date` du jour, `video` = slug), en respectant le ton :
    réponse courte d'abord, étapes, « À savoir », équivalent Google Sheets, pièges. Français correct, vouvoiement, sans jargon.
 4. Créer `outils/video/astuce_<slug>.py` en copiant `astuce_ctrl_e.py` et en adaptant les scènes (accroche, démonstration,
-   carte de fin). Garder exactement le style : papier quadrillé, cellule active verte à ombre jaune, barre de formule,
+   carte de fin) ainsi que la liste `SONS` (un bruitage par action visible : frappe, clic, touche, carillon, fin).
+   Garder exactement le style : papier quadrillé, cellule active verte à ombre jaune, barre de formule,
    en-tête Tableur Malin avec barre de progression. Zone utile : x de 60 à 960, rien d'important sous y = 1500.
 5. Générer d'abord des images d'aperçu (`--apercu`), LES REGARDER, corriger tout texte coupé, chevauchement ou faute,
    puis rendre la vidéo dans `videos/<slug>.mp4` et extraire `videos/<slug>.jpg` (image de la démonstration, largeur 720).

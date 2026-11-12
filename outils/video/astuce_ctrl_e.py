@@ -12,6 +12,8 @@ import tempfile
 
 from PIL import Image, ImageDraw, ImageFont
 
+from son import bande_son
+
 W, H, FPS = 1080, 1920, 30
 VERT_NUIT = (15, 61, 46)
 VERT = (30, 142, 90)
@@ -346,6 +348,14 @@ def s_fin(t, tg):
 SCENES = [(s_accroche, 2.8), (s_demo, D_DEMO), (s_fin, 4.0)]
 DUREE_TOTALE = sum(x[1] for x in SCENES)
 
+# Bruitages : (type, instant depuis le début de la vidéo). La démonstration commence à 2,8 s.
+_D, _F = 2.8, 2.8 + D_DEMO
+SONS = ([("frappe", 0.15 + k * 0.085) for k in range(12)] + [("pop", 1.5)]
+        + [("frappe", _D + T_TAPE1 + k * 0.16) for k in range(1, 8)] + [("touche", _D + T_ENTREE1)]
+        + [("touche", _D + T_APPUI1), ("carillon", _D + T_APPUI1 + 0.1)]
+        + [("frappe", _D + T_TAPE2 + k * 0.16) for k in range(1, 7)] + [("touche", _D + T_ENTREE2)]
+        + [("touche", _D + T_APPUI2), ("carillon", _D + T_APPUI2 + 0.1), ("fin", _F)])
+
 
 def apercu(dossier):
     os.makedirs(dossier, exist_ok=True)
@@ -378,10 +388,12 @@ def rendre():
     muet = os.path.join(tmp, "muet.mp4")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", liste,
                     "-c", "copy", muet], check=True)
-    # Piste audio silencieuse : certaines plateformes refusent les vidéos sans piste son.
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", muet, "-f", "lavfi", "-i",
-                    "anullsrc=r=44100:cl=stereo", "-map", "0:v", "-map", "1:a", "-c:v", "copy",
-                    "-c:a", "aac", "-b:a", "96k", "-shortest", "-movflags", "+faststart", SORTIE], check=True)
+    # Bande-son : fond musical et bruitages synthétiques (son.py), calés sur la liste SONS.
+    wav = os.path.join(tmp, "son.wav")
+    bande_son(wav, DUREE_TOTALE, SONS)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", muet, "-i", wav, "-map", "0:v", "-map", "1:a",
+                    "-c:v", "copy", "-af", "loudnorm=I=-17:TP=-1.5:LRA=11", "-ar", "44100", "-c:a", "aac",
+                    "-b:a", "128k", "-shortest", "-movflags", "+faststart", SORTIE], check=True)
 
 
 if __name__ == "__main__":
