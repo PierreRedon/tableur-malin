@@ -39,6 +39,72 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "recopier-formule-double-clic",
+        "titre": "Recopier une formule jusqu'en bas d'un double-clic",
+        "court": "Recopier une formule d'un double-clic",
+        "description": "Inutile de tirer une formule sur des centaines de lignes : un double-clic sur la poignée de recopie, "
+                       "le petit carré en bas à droite de la cellule, la recopie jusqu'en bas dans Excel et Google Sheets.",
+        "bref": "Sélectionnez la cellule qui contient la formule, puis double-cliquez sur le petit carré situé dans son "
+                "coin inférieur droit : la formule est recopiée jusqu'à la dernière ligne de votre tableau.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-13",
+        "video": "recopier-formule-double-clic",
+        "etapes": [
+            "Écrivez la formule une seule fois, dans la première ligne de votre tableau, par exemple =B2*1,2 en C2 pour passer un prix hors taxes en prix TTC à 20 %. Validez avec <kbd>Entrée</kbd>.",
+            "Cliquez de nouveau sur la cellule de la formule, ici C2.",
+            "Placez le pointeur sur le petit carré vert, dans le coin inférieur droit de la cellule : il se transforme en croix noire fine. Ce carré s'appelle la poignée de recopie.",
+            "Double-cliquez. La formule descend toute seule jusqu'à la dernière ligne remplie de la colonne voisine.",
+        ],
+        "formules": [("=B2*1,2", "La formule saisie en C2. Une fois recopiée, elle devient =B3*1,2 en C3, =B4*1,2 en C4, et ainsi de suite.")],
+        "texte": "<p>Le double-clic fait exactement la même chose que tirer la poignée vers le bas avec la souris, mais "
+                 "il s'arrête tout seul au bon endroit. Sur un tableau de plusieurs centaines de lignes, c'est beaucoup "
+                 "plus rapide et plus sûr.</p>"
+                 "<p>Pour savoir où s'arrêter, le tableur regarde la colonne d'à côté : la recopie descend tant que "
+                 "cette colonne est remplie. La poignée sert aussi à recopier un texte, un nombre ou à prolonger une "
+                 "série (lundi, mardi, mercredi).</p>",
+        "sheets": "<p>Le geste est le même dans Google Sheets : le petit carré est bleu, et un double-clic recopie la "
+                  "formule jusqu'à la dernière ligne remplie de la colonne voisine. Il arrive aussi que Sheets propose "
+                  "de lui-même de remplir le reste de la colonne : il suffit alors d'accepter la suggestion.</p>",
+        "pieges": [
+            "La recopie s'arrête à la première cellule vide de la colonne voisine. Si votre tableau a des trous, vérifiez que la formule est bien allée jusqu'en bas.",
+            "Le double-clic recopie seulement vers le bas. Pour recopier vers la droite, tirez la poignée avec la souris.",
+            "Si la formule utilise une cellule qui ne doit pas bouger (un taux saisi une seule fois, par exemple), bloquez-la avec le signe $ avant de recopier.",
+            "Le petit carré n'apparaît pas dans Excel ? Ouvrez Fichier, Options, puis la rubrique des options avancées, et vérifiez que la case concernant la poignée de recopie et le glisser-déplacer des cellules est cochée.",
+        ],
+    },
+    {
+        "slug": "retour-a-la-ligne-dans-une-cellule",
+        "titre": "Aller à la ligne dans une cellule",
+        "court": "Aller à la ligne dans une cellule",
+        "description": "Comment faire un retour à la ligne dans une cellule Excel ou Google Sheets : le raccourci "
+                       "Alt + Entrée, le bouton Renvoyer à la ligne automatiquement et les pièges à éviter.",
+        "bref": "Pendant que vous écrivez dans la cellule, appuyez sur Alt + Entrée à l'endroit où le texte doit passer "
+                "à la ligne. Dans Google Sheets, le raccourci est Ctrl + Entrée.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-13",
+        "etapes_excel": True,
+        "etapes": [
+            "Double-cliquez dans la cellule (ou sélectionnez-la et appuyez sur <kbd>F2</kbd>) pour modifier son contenu.",
+            "Placez le curseur à l'endroit exact où le texte doit être coupé.",
+            "Appuyez sur <kbd>Alt</kbd> + <kbd>Entrée</kbd> : la suite du texte passe à la ligne, dans la même cellule.",
+            "Validez avec <kbd>Entrée</kbd>. La hauteur de la ligne s'adapte pour afficher tout le texte.",
+        ],
+        "formules": [],
+        "texte": "<p>Si vous voulez seulement qu'un texte trop long reste dans sa colonne, sans choisir vous-même où il "
+                 "est coupé, sélectionnez les cellules et cliquez sur le bouton Renvoyer à la ligne automatiquement, "
+                 "dans l'onglet Accueil, groupe Alignement. Le texte se replie alors selon la largeur de la colonne, "
+                 "et s'ajuste si vous l'élargissez.</p>"
+                 "<p>Les deux méthodes se complètent : Alt + Entrée impose une coupure à un endroit précis (une "
+                 "adresse sur deux lignes, par exemple), le renvoi automatique s'occupe du reste.</p>",
+        "sheets": "<p>Dans Google Sheets, appuyez sur Ctrl + Entrée pendant la saisie (⌘ + Entrée sur Mac). Sous "
+                  "Windows, Alt + Entrée fonctionne aussi. Pour le renvoi automatique, sélectionnez les cellules puis "
+                  "ouvrez le menu Format et choisissez l'option de retour à la ligne automatique qui renvoie le texte "
+                  "à la ligne.</p>",
+        "pieges": [
+            "Appuyer sur Entrée seule ne crée pas de nouvelle ligne : cela valide la cellule et passe à la suivante.",
+            "Si une partie du texte reste cachée, la hauteur de la ligne a sans doute été fixée à la main. Dans Excel, onglet Accueil, bouton Format, choisissez Ajuster la hauteur de ligne.",
+            "Alt + Entrée est le raccourci d'Excel pour Windows. Sur Mac, la combinaison dépend de la version : essayez Option + Retour, ou Contrôle + Option + Retour.",
+        ],
+    },
+    {
         "slug": "somme-automatique-alt-egal",
         "titre": "Additionner une colonne en deux touches avec Alt + =",
         "court": "Additionner une colonne avec Alt + =",
