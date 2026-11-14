@@ -39,6 +39,80 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "date-du-jour-ctrl-point-virgule",
+        "titre": "Insérer la date du jour en deux touches avec Ctrl + ;",
+        "court": "Insérer la date du jour avec Ctrl + ;",
+        "description": "Le raccourci Ctrl + ; inscrit la date du jour dans une cellule Excel ou Google Sheets, sans "
+                       "formule. Une date fixe, qui ne change plus, contrairement à =AUJOURDHUI().",
+        "bref": "Cliquez dans la cellule, puis appuyez sur Ctrl + ; (la touche Ctrl et le point-virgule) : la date du "
+                "jour s'inscrit. Validez avec Entrée. Cette date reste fixe : elle ne changera pas demain.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-14",
+        "video": "date-du-jour-ctrl-point-virgule",
+        "etapes": [
+            "Cliquez dans la cellule où la date doit apparaître.",
+            "Maintenez la touche <kbd>Ctrl</kbd> enfoncée et appuyez sur la touche <kbd>;</kbd> (point-virgule). La date du jour s'inscrit dans la cellule.",
+            "Validez avec <kbd>Entrée</kbd>.",
+        ],
+        "formules": [("=AUJOURDHUI()", "L'autre méthode : cette formule affiche aussi la date du jour, mais elle se met à jour toute seule. Demain, elle affichera la date de demain.")],
+        "texte": "<p>Le raccourci inscrit une date fixe, exactement comme si vous l'aviez tapée à la main. C'est ce "
+                 "qu'il faut pour noter le jour d'une réception, d'un paiement, d'un appel ou d'une relance : la "
+                 "date ne doit plus bouger ensuite.</p>"
+                 "<p>La formule =AUJOURDHUI() fait l'inverse : elle est recalculée à chaque ouverture du fichier et "
+                 "affiche toujours la date du moment. Elle est utile pour calculer un nombre de jours restants ou un "
+                 "retard, mais pas pour garder la trace d'un événement.</p>"
+                 "<p>Pour l'heure, le raccourci indiqué par Microsoft est Ctrl + Maj + ; (point-virgule). Sur un "
+                 "clavier français, essayez aussi Ctrl + : (deux-points). Pour obtenir la date et l'heure dans la "
+                 "même cellule, insérez la date, tapez une espace, puis insérez l'heure.</p>",
+        "sheets": "<p>Le raccourci est le même dans Google Sheets : Ctrl + ; pour la date du jour (⌘ + ; sur Mac) et "
+                  "Ctrl + Maj + ; pour l'heure. La formule =AUJOURDHUI() existe aussi, avec le même comportement : "
+                  "elle change chaque jour.</p>",
+        "pieges": [
+            "Ne confondez pas avec =AUJOURDHUI() : une date saisie avec cette formule aura changé demain. Pour dater un événement, utilisez le raccourci.",
+            "Si la cellule affiche un nombre comme 46340 au lieu d'une date, elle est au format Nombre. Dans Excel, faites un clic droit, choisissez Format de cellule, puis la catégorie Date.",
+            "Le raccourci agit sur la cellule sélectionnée ou en cours de saisie. Si rien ne se passe, vérifiez que vous n'êtes pas dans une autre fenêtre ou dans une zone de recherche.",
+            "Sur Mac, le raccourci d'Excel peut différer selon la version : essayez Contrôle + ; (point-virgule).",
+        ],
+    },
+    {
+        "slug": "calculer-un-pourcentage",
+        "titre": "Calculer un pourcentage dans Excel",
+        "court": "Calculer un pourcentage",
+        "description": "Comment calculer un pourcentage dans Excel ou Google Sheets : la part d'un total, une "
+                       "augmentation ou une baisse en pourcentage, et le bouton Style de pourcentage pour l'affichage.",
+        "bref": "Divisez la partie par le total, par exemple =B2/C2, puis cliquez sur le bouton % (Style de "
+                "pourcentage) de l'onglet Accueil. Ne multipliez pas par 100 : c'est le format qui s'en charge.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-14",
+        "etapes_excel": True,
+        "etapes": [
+            "Dans une cellule vide, tapez la division de la partie par le total. Exemple : 42 bonnes réponses en B2 sur 50 questions en C2, tapez =B2/C2.",
+            "Validez avec <kbd>Entrée</kbd>. Excel affiche 0,84.",
+            "Cliquez de nouveau sur la cellule du résultat.",
+            "Dans l'onglet Accueil, groupe Nombre, cliquez sur le bouton <kbd>%</kbd> (Style de pourcentage). La cellule affiche 84 %.",
+        ],
+        "formules": [
+            ("=B2/C2", "La part d'un total : la partie divisée par le total, à afficher ensuite au format pourcentage."),
+            ("=(C2-B2)/B2", "Une évolution en pourcentage : la nouvelle valeur moins l'ancienne, le tout divisé par l'ancienne. De 2 342 à 2 500, le résultat est 6,75 %."),
+            ("=B2*20%", "Le montant d'un pourcentage : 20 % de la valeur en B2."),
+            ("=B2*(1+20%)", "Augmenter une valeur de 20 %. Pour la diminuer de 20 %, écrivez =B2*(1-20%)."),
+        ],
+        "texte": "<p>Pour Excel, un pourcentage est un nombre ordinaire : 84 % et 0,84 sont la même valeur, seul "
+                 "l'affichage change. C'est pour cela qu'il ne faut pas multiplier par 100 dans la formule. Le "
+                 "bouton Style de pourcentage s'occupe de l'affichage.</p>"
+                 "<p>Pour afficher des décimales (84,5 % au lieu de 85 %), utilisez les deux boutons de décimales "
+                 "(ajouter ou réduire), juste à côté du bouton %. Le raccourci clavier du format pourcentage "
+                 "est Ctrl + Maj + %.</p>"
+                 "<p>Une évolution négative correspond à une baisse : de 2 500 à 2 425, la formule donne -3 %.</p>",
+        "sheets": "<p>Les formules sont exactement les mêmes dans Google Sheets. Pour l'affichage, sélectionnez la "
+                  "cellule puis cliquez sur le bouton % de la barre d'outils, ou ouvrez le menu Format, puis Nombre, "
+                  "puis Pourcentage.</p>",
+        "pieges": [
+            "N'ajoutez pas *100 à la formule si vous appliquez ensuite le format pourcentage : vous obtiendriez 8400 % au lieu de 84 %.",
+            "Appliquer le format % à un nombre déjà saisi le multiplie par 100 à l'affichage : 10 devient 1000 %. Saisissez 0,1 ou tapez directement 10 %.",
+            "Pour une évolution, divisez toujours par la valeur de départ (l'ancienne), pas par la nouvelle.",
+            "Si le total est vide ou égal à zéro, Excel affiche l'erreur #DIV/0!. Renseignez le total, ou attendez d'avoir la valeur.",
+        ],
+    },
+    {
         "slug": "recopier-formule-double-clic",
         "titre": "Recopier une formule jusqu'en bas d'un double-clic",
         "court": "Recopier une formule d'un double-clic",
