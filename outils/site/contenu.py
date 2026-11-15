@@ -39,6 +39,87 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "ajuster-largeur-colonne-double-clic",
+        "titre": "Des ##### dans une cellule ? Élargir la colonne d'un double-clic",
+        "court": "Faire disparaître les ##### d'un double-clic",
+        "description": "Une cellule Excel remplie de ##### n'a rien perdu : la colonne est trop étroite. Un "
+                       "double-clic sur le bord droit de l'en-tête de colonne l'ajuste au contenu, dans Excel "
+                       "comme dans Google Sheets.",
+        "bref": "Les ##### signifient que la colonne est trop étroite pour afficher le nombre ou la date. Placez "
+                "la souris sur le trait à droite de la lettre de la colonne, tout en haut, puis double-cliquez : "
+                "la colonne prend exactement la largeur de son contenu.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-15",
+        "video": "ajuster-largeur-colonne-double-clic",
+        "etapes": [
+            "Repérez la lettre de la colonne concernée, tout en haut de la feuille (par exemple B).",
+            "Placez la souris sur le trait qui sépare cette lettre de la suivante (entre B et C). Le pointeur se transforme en double flèche.",
+            "Double-cliquez. La colonne s'élargit juste assez pour afficher la cellule la plus longue.",
+        ],
+        "formules": [],
+        "texte": "<p>Rien n'est perdu quand une cellule affiche des dièses : cliquez dessus et regardez la barre de "
+                 "formule, la valeur est toujours là. Excel préfère afficher ##### plutôt qu'un nombre coupé, qui "
+                 "pourrait être lu de travers.</p>"
+                 "<p>Pour ajuster plusieurs colonnes d'un coup, sélectionnez-les en faisant glisser la souris sur "
+                 "leurs lettres, puis double-cliquez sur l'un des traits entre deux lettres sélectionnées. Pour "
+                 "toute la feuille, cliquez d'abord sur le bouton Sélectionner tout, dans le coin en haut à gauche "
+                 "de la grille.</p>"
+                 "<p>La même commande existe dans le ruban d'Excel : onglet Accueil, bouton Format, puis Ajuster "
+                 "la largeur de colonne. Vous pouvez aussi faire glisser le trait à la main pour choisir une autre "
+                 "largeur. Et le double-clic fonctionne de la même façon sur les lignes, pour ajuster leur "
+                 "hauteur.</p>",
+        "sheets": "<p>Le geste est le même dans Google Sheets : un double-clic sur le bord droit de l'en-tête de "
+                  "colonne ajuste la largeur au contenu, et il agit sur toutes les colonnes sélectionnées. Un clic "
+                  "droit sur l'en-tête donne aussi accès à une commande de redimensionnement, avec une option "
+                  "d'ajustement automatique.</p>",
+        "pieges": [
+            "Visez bien l'en-tête, c'est-à-dire le trait entre les lettres tout en haut, et non une bordure de cellule dans le tableau : un double-clic dans une cellule ouvre simplement sa modification.",
+            "La largeur se cale sur la cellule la plus longue de toute la colonne. Un long titre ou une longue phrase plus bas peut donc donner une colonne très large : raccourcissez ce texte ou réglez la largeur à la main.",
+            "Si les ##### restent quelle que soit la largeur, la cellule contient sans doute une date ou une heure négative, par exemple le résultat d'une soustraction entre deux dates faite dans le mauvais sens.",
+            "L'ajustement n'est pas permanent : si vous saisissez ensuite une valeur plus longue, refaites un double-clic.",
+        ],
+    },
+    {
+        "slug": "arrondir-un-nombre",
+        "titre": "Arrondir un nombre dans Excel",
+        "court": "Arrondir un nombre",
+        "description": "Comment arrondir un nombre dans Excel ou Google Sheets avec ARRONDI, ARRONDI.SUP et "
+                       "ARRONDI.INF, et la différence entre arrondir une valeur et masquer ses décimales.",
+        "bref": "Tapez =ARRONDI(A2;2) pour arrondir le nombre de la cellule A2 à deux décimales : 1234,567 devient "
+                "1234,57. Remplacez le 2 par 0 pour obtenir un nombre entier.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-15",
+        "etapes": [
+            "Cliquez dans une cellule vide, à côté du nombre à arrondir.",
+            "Tapez =ARRONDI(A2;2) : A2 est la cellule qui contient le nombre, et 2 le nombre de décimales à garder.",
+            "Validez avec <kbd>Entrée</kbd>. Si A2 contient 1234,567, la cellule affiche 1234,57.",
+        ],
+        "formules": [
+            ("=ARRONDI(A2;2)", "Arrondit à deux décimales, au plus proche : 1234,567 devient 1234,57."),
+            ("=ARRONDI(A2;0)", "Arrondit à l'entier le plus proche : 1234,567 devient 1235."),
+            ("=ARRONDI.SUP(A2;0)", "Arrondit toujours vers le haut : 12,1 devient 13. Pratique pour compter des cartons ou des trajets."),
+            ("=ARRONDI.INF(A2;0)", "Arrondit toujours vers le bas : 12,9 devient 12."),
+            ("=ARRONDI(A2;-2)", "Un nombre de décimales négatif arrondit à gauche de la virgule, ici à la centaine : 1234,567 devient 1200."),
+        ],
+        "texte": "<p>Il y a deux façons très différentes de faire disparaître des décimales. Les boutons de "
+                 "décimales de l'onglet Accueil (ajouter ou réduire) changent seulement l'affichage : la cellule "
+                 "montre 1234,57, mais Excel continue de calculer avec 1234,567. La fonction ARRONDI, elle, "
+                 "change réellement la valeur.</p>"
+                 "<p>C'est ce qui explique les totaux qui semblent faux de quelques centimes : les lignes "
+                 "affichées sont arrondies à l'écran, mais l'addition porte sur les valeurs complètes. Pour qu'un "
+                 "total corresponde à ce qui est affiché, par exemple sur une facture, arrondissez chaque ligne "
+                 "avec ARRONDI avant d'additionner.</p>"
+                 "<p>Vous pouvez arrondir directement le résultat d'un calcul en le plaçant dans la fonction : "
+                 "=ARRONDI(B2*C2;2) arrondit le produit de B2 par C2 à deux décimales.</p>",
+        "sheets": "<p>Les fonctions portent les mêmes noms dans Google Sheets en français : ARRONDI, ARRONDI.SUP et "
+                  "ARRONDI.INF, avec le point-virgule entre les deux éléments. La distinction est la même : les "
+                  "boutons de décimales de la barre d'outils ne changent que l'affichage.</p>",
+        "pieges": [
+            "Réduire les décimales affichées n'arrondit pas la valeur : les calculs suivants utilisent toujours le nombre complet.",
+            "Séparez les deux éléments par un point-virgule, et écrivez les décimales avec une virgule : =ARRONDI(12,345;2).",
+            "ARRONDI.SUP éloigne de zéro et ARRONDI.INF rapproche de zéro : avec un nombre négatif, =ARRONDI.SUP(-3,2;0) donne -4.",
+            "N'arrondissez pas trop tôt dans une suite de calculs : gardez les valeurs complètes dans les étapes intermédiaires et arrondissez le résultat final, sauf quand chaque ligne doit correspondre à un montant réellement facturé.",
+        ],
+    },
+    {
         "slug": "date-du-jour-ctrl-point-virgule",
         "titre": "Insérer la date du jour en deux touches avec Ctrl + ;",
         "court": "Insérer la date du jour avec Ctrl + ;",

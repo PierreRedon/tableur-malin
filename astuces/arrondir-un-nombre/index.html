@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrondir un nombre dans Excel | Tableur Malin</title>
+<meta name="description" content="Comment arrondir un nombre dans Excel ou Google Sheets avec ARRONDI, ARRONDI.SUP et ARRONDI.INF, et la différence entre arrondir une valeur et masquer ses décimales.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/arrondir-un-nombre/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Arrondir un nombre dans Excel | Tableur Malin">
+<meta property="og:description" content="Comment arrondir un nombre dans Excel ou Google Sheets avec ARRONDI, ARRONDI.SUP et ARRONDI.INF, et la différence entre arrondir une valeur et masquer ses décimales.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/arrondir-un-nombre/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Arrondir un nombre dans Excel", "description": "Comment arrondir un nombre dans Excel ou Google Sheets avec ARRONDI, ARRONDI.SUP et ARRONDI.INF, et la différence entre arrondir une valeur et masquer ses décimales.", "inLanguage": "fr", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "mainEntityOfPage": "https://tableurmalin.fr/astuces/arrondir-un-nombre/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Arrondir un nombre dans Excel", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Cliquez dans une cellule vide, à côté du nombre à arrondir."}, {"@type": "HowToStep", "position": 2, "text": "Tapez =ARRONDI(A2;2) : A2 est la cellule qui contient le nombre, et 2 le nombre de décimales à garder."}, {"@type": "HowToStep", "position": 3, "text": "Validez avec Entrée. Si A2 contient 1234,567, la cellule affiche 1234,57."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Arrondir un nombre", "item": "https://tableurmalin.fr/astuces/arrondir-un-nombre/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Arrondir un nombre dans Excel</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Tapez =ARRONDI(A2;2) pour arrondir le nombre de la cellule A2 à deux décimales : 1234,567 devient 1234,57. Remplacez le 2 par 0 pour obtenir un nombre entier.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Cliquez dans une cellule vide, à côté du nombre à arrondir.</li><li>Tapez =ARRONDI(A2;2) : A2 est la cellule qui contient le nombre, et 2 le nombre de décimales à garder.</li><li>Validez avec <kbd>Entrée</kbd>. Si A2 contient 1234,567, la cellule affiche 1234,57.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=ARRONDI(A2;2)</code><button type="button" class="copier" data-copie="=ARRONDI(A2;2)">Copier</button></div><figcaption>Arrondit à deux décimales, au plus proche : 1234,567 devient 1234,57.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=ARRONDI(A2;0)</code><button type="button" class="copier" data-copie="=ARRONDI(A2;0)">Copier</button></div><figcaption>Arrondit à l&#x27;entier le plus proche : 1234,567 devient 1235.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=ARRONDI.SUP(A2;0)</code><button type="button" class="copier" data-copie="=ARRONDI.SUP(A2;0)">Copier</button></div><figcaption>Arrondit toujours vers le haut : 12,1 devient 13. Pratique pour compter des cartons ou des trajets.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=ARRONDI.INF(A2;0)</code><button type="button" class="copier" data-copie="=ARRONDI.INF(A2;0)">Copier</button></div><figcaption>Arrondit toujours vers le bas : 12,9 devient 12.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=ARRONDI(A2;-2)</code><button type="button" class="copier" data-copie="=ARRONDI(A2;-2)">Copier</button></div><figcaption>Un nombre de décimales négatif arrondit à gauche de la virgule, ici à la centaine : 1234,567 devient 1200.</figcaption></figure>
+<h2>À savoir</h2><p>Il y a deux façons très différentes de faire disparaître des décimales. Les boutons de décimales de l'onglet Accueil (ajouter ou réduire) changent seulement l'affichage : la cellule montre 1234,57, mais Excel continue de calculer avec 1234,567. La fonction ARRONDI, elle, change réellement la valeur.</p><p>C'est ce qui explique les totaux qui semblent faux de quelques centimes : les lignes affichées sont arrondies à l'écran, mais l'addition porte sur les valeurs complètes. Pour qu'un total corresponde à ce qui est affiché, par exemple sur une facture, arrondissez chaque ligne avec ARRONDI avant d'additionner.</p><p>Vous pouvez arrondir directement le résultat d'un calcul en le plaçant dans la fonction : =ARRONDI(B2*C2;2) arrondit le produit de B2 par C2 à deux décimales.</p>
+<h2>Dans Google Sheets</h2><p>Les fonctions portent les mêmes noms dans Google Sheets en français : ARRONDI, ARRONDI.SUP et ARRONDI.INF, avec le point-virgule entre les deux éléments. La distinction est la même : les boutons de décimales de la barre d'outils ne changent que l'affichage.</p>
+<h2>Les pièges à éviter</h2><ul><li>Réduire les décimales affichées n&#x27;arrondit pas la valeur : les calculs suivants utilisent toujours le nombre complet.</li><li>Séparez les deux éléments par un point-virgule, et écrivez les décimales avec une virgule : =ARRONDI(12,345;2).</li><li>ARRONDI.SUP éloigne de zéro et ARRONDI.INF rapproche de zéro : avec un nombre négatif, =ARRONDI.SUP(-3,2;0) donne -4.</li><li>N&#x27;arrondissez pas trop tôt dans une suite de calculs : gardez les valeurs complètes dans les étapes intermédiaires et arrondissez le résultat final, sauf quand chaque ligne doit correspondre à un montant réellement facturé.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/ajuster-largeur-colonne-double-clic/index.html">Des ##### dans une cellule ? Élargir la colonne d&#x27;un double-clic</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/date-du-jour-ctrl-point-virgule/index.html">Insérer la date du jour en deux touches avec Ctrl + ;</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/calculer-un-pourcentage/index.html">Calculer un pourcentage dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
