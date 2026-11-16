@@ -39,6 +39,89 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "somme-sans-formule-barre-etat",
+        "titre": "Obtenir une somme sans formule : sélectionnez, regardez en bas",
+        "court": "Obtenir une somme sans taper de formule",
+        "description": "Pour connaître le total de quelques cellules dans Excel ou Google Sheets, inutile d'écrire une "
+                       "formule : sélectionnez-les, la somme et la moyenne s'affichent en bas de la fenêtre.",
+        "bref": "Sélectionnez les nombres à la souris, puis regardez tout en bas de la fenêtre : le tableur y affiche "
+                "leur somme, sans rien écrire dans la feuille. Excel y ajoute la moyenne et le nombre de cellules "
+                "remplies.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-16",
+        "video": "somme-sans-formule-barre-etat",
+        "etapes": [
+            "Cliquez sur le premier nombre et, sans relâcher le bouton de la souris, descendez jusqu'au dernier.",
+            "Relâchez, puis regardez la barre d'état, la bande située tout en bas de la fenêtre d'Excel, à droite.",
+            "Lisez la somme. Juste à côté, Excel affiche aussi la moyenne et le nombre de cellules remplies.",
+        ],
+        "formules": [],
+        "texte": "<p>C'est le moyen le plus rapide de vérifier un total, de contrôler une addition faite ailleurs ou "
+                 "de répondre à une question au téléphone : rien n'est écrit dans la feuille, et le résultat "
+                 "disparaît dès que vous cliquez ailleurs.</p>"
+                 "<p>Les cellules n'ont pas besoin de se toucher. Cliquez sur la première, maintenez la touche "
+                 "<kbd>Ctrl</kbd> enfoncée, puis cliquez sur les autres : la somme tient compte de toutes les "
+                 "cellules sélectionnées. Vous pouvez aussi cliquer sur la lettre d'une colonne pour obtenir le "
+                 "total de la colonne entière.</p>"
+                 "<p>Dans Excel, un clic droit sur la barre d'état ouvre la liste des calculs disponibles : vous "
+                 "pouvez y cocher le minimum et le maximum, ou décocher ceux qui ne vous servent pas. Dans les "
+                 "versions récentes d'Excel pour Microsoft 365, un clic sur une valeur de la barre d'état la copie, "
+                 "pour la coller ensuite où vous voulez.</p>"
+                 "<p>Si le total doit rester dans le tableau, il faut cette fois une vraie formule : voyez "
+                 "<a href=\"/astuces/somme-automatique-alt-egal/\">la somme automatique avec Alt + =</a>.</p>",
+        "sheets": "<p>Google Sheets fait la même chose : sélectionnez plusieurs nombres, leur somme apparaît en bas à "
+                  "droite de la fenêtre. Cliquez sur ce résultat pour choisir un autre calcul, comme la moyenne, le "
+                  "minimum, le maximum ou le nombre de valeurs.</p>",
+        "pieges": [
+            "Il faut sélectionner au moins deux cellules contenant des nombres : avec une seule cellule, la barre d'état n'affiche aucun calcul.",
+            "Si seul le nombre de cellules apparaît, sans somme, vos nombres sont sans doute enregistrés comme du texte (ils sont alors souvent alignés à gauche).",
+            "Dans une liste filtrée, le calcul ne porte que sur les lignes visibles, pas sur les lignes masquées par le filtre.",
+            "Ce résultat n'est écrit nulle part : il disparaît quand vous cliquez ailleurs. Pour le conserver, utilisez une formule SOMME.",
+        ],
+    },
+    {
+        "slug": "compter-cellules-nb-si",
+        "titre": "Compter les cellules qui contiennent un mot avec NB.SI",
+        "court": "Compter les cellules qui contiennent un mot",
+        "description": "Comment compter dans Excel ou Google Sheets le nombre de cellules qui contiennent un mot, une "
+                       "valeur ou un nombre supérieur à un seuil avec la fonction NB.SI. Syntaxe, exemples et pièges.",
+        "bref": "Tapez =NB.SI(A2:A100;\"Payé\") pour compter combien de cellules de la plage A2:A100 contiennent "
+                "exactement le mot Payé. Le premier élément est la plage à examiner, le second le critère, entre "
+                "guillemets.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-16",
+        "etapes": [
+            "Cliquez dans une cellule vide, là où le résultat doit s'afficher.",
+            "Tapez =NB.SI( puis sélectionnez à la souris la plage à examiner, par exemple A2:A100.",
+            "Tapez un point-virgule, puis le mot recherché entre guillemets, et fermez la parenthèse : =NB.SI(A2:A100;\"Payé\").",
+            "Validez avec <kbd>Entrée</kbd> : la cellule affiche le nombre de cellules correspondantes.",
+        ],
+        "formules": [
+            ('=NB.SI(A2:A100;"Payé")', "Compte les cellules qui contiennent exactement Payé."),
+            ('=NB.SI(A2:A100;D1)', "Le critère peut venir d'une cellule, ici D1 : pas de guillemets dans ce cas."),
+            ('=NB.SI(B2:B100;">50")', "Compte les nombres supérieurs à 50. La comparaison s'écrit entre guillemets."),
+            ('=NB.SI(A2:A100;"*facture*")', "L'astérisque remplace n'importe quelle suite de caractères : compte les cellules dont le texte contient le mot facture."),
+            ('=NB.SI(B2:B100;">"&D1)', "Pour comparer à une cellule, collez l'opérateur et la cellule avec le signe &."),
+        ],
+        "texte": "<p>NB.SI répond à toutes les questions du type « combien de fois » : combien de factures payées, "
+                 "combien de clients à Lyon, combien de notes au-dessus de 10. La fonction ne tient pas compte des "
+                 "majuscules et des minuscules : « payé » et « PAYÉ » sont comptés ensemble.</p>"
+                 "<p>Deux caractères spéciaux rendent le critère plus souple : l'astérisque (*) remplace une suite "
+                 "de caractères quelconque, et le point d'interrogation (?) un seul caractère. Ainsi, \"Dup*\" "
+                 "compte Dupont, Dupond et Dupuis.</p>"
+                 "<p>NB.SI n'accepte qu'un seul critère. Pour en combiner plusieurs, par exemple les factures "
+                 "payées du mois de janvier, utilisez NB.SI.ENS, qui suit la même logique que "
+                 "<a href=\"/astuces/somme-si-ens/\">SOMME.SI.ENS</a> : "
+                 "=NB.SI.ENS(A2:A100;\"Payé\";B2:B100;\"Janvier\").</p>",
+        "sheets": "<p>La fonction porte le même nom dans Google Sheets en français : NB.SI, avec le point-virgule "
+                  "entre la plage et le critère. Les caractères * et ? y fonctionnent de la même façon, et NB.SI.ENS "
+                  "existe aussi.</p>",
+        "pieges": [
+            "Le critère texte et les comparaisons s'écrivent entre guillemets droits : \">50\" et non >50. Sans guillemets, la formule est refusée ou renvoie 0.",
+            "Un espace en trop à la fin d'une cellule (« Payé » suivi d'un espace) suffit à ne pas la compter. En cas de résultat trop faible, vérifiez les espaces ou utilisez \"Payé*\".",
+            "Sans astérisque, NB.SI cherche le contenu exact de la cellule : \"facture\" ne compte pas une cellule qui contient « facture mars ».",
+            "Pour chercher un vrai astérisque ou un vrai point d'interrogation, faites-le précéder d'un tilde : \"~?\".",
+        ],
+    },
+    {
         "slug": "ajuster-largeur-colonne-double-clic",
         "titre": "Des ##### dans une cellule ? Élargir la colonne d'un double-clic",
         "court": "Faire disparaître les ##### d'un double-clic",

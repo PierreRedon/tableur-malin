@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compter les cellules qui contiennent un mot avec NB.SI | Tableur Malin</title>
+<meta name="description" content="Comment compter dans Excel ou Google Sheets le nombre de cellules qui contiennent un mot, une valeur ou un nombre supérieur à un seuil avec la fonction NB.SI. Syntaxe, exemples et pièges.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/compter-cellules-nb-si/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Compter les cellules qui contiennent un mot avec NB.SI | Tableur Malin">
+<meta property="og:description" content="Comment compter dans Excel ou Google Sheets le nombre de cellules qui contiennent un mot, une valeur ou un nombre supérieur à un seuil avec la fonction NB.SI. Syntaxe, exemples et pièges.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/compter-cellules-nb-si/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Compter les cellules qui contiennent un mot avec NB.SI", "description": "Comment compter dans Excel ou Google Sheets le nombre de cellules qui contiennent un mot, une valeur ou un nombre supérieur à un seuil avec la fonction NB.SI. Syntaxe, exemples et pièges.", "inLanguage": "fr", "datePublished": "2026-11-16", "dateModified": "2026-11-16", "mainEntityOfPage": "https://tableurmalin.fr/astuces/compter-cellules-nb-si/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Compter les cellules qui contiennent un mot avec NB.SI", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Cliquez dans une cellule vide, là où le résultat doit s'afficher."}, {"@type": "HowToStep", "position": 2, "text": "Tapez =NB.SI( puis sélectionnez à la souris la plage à examiner, par exemple A2:A100."}, {"@type": "HowToStep", "position": 3, "text": "Tapez un point-virgule, puis le mot recherché entre guillemets, et fermez la parenthèse : =NB.SI(A2:A100;\"Payé\")."}, {"@type": "HowToStep", "position": 4, "text": "Validez avec Entrée : la cellule affiche le nombre de cellules correspondantes."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Compter les cellules qui contiennent un mot", "item": "https://tableurmalin.fr/astuces/compter-cellules-nb-si/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Compter les cellules qui contiennent un mot avec NB.SI</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Tapez =NB.SI(A2:A100;&quot;Payé&quot;) pour compter combien de cellules de la plage A2:A100 contiennent exactement le mot Payé. Le premier élément est la plage à examiner, le second le critère, entre guillemets.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Cliquez dans une cellule vide, là où le résultat doit s'afficher.</li><li>Tapez =NB.SI( puis sélectionnez à la souris la plage à examiner, par exemple A2:A100.</li><li>Tapez un point-virgule, puis le mot recherché entre guillemets, et fermez la parenthèse : =NB.SI(A2:A100;"Payé").</li><li>Validez avec <kbd>Entrée</kbd> : la cellule affiche le nombre de cellules correspondantes.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.SI(A2:A100;&quot;Payé&quot;)</code><button type="button" class="copier" data-copie="=NB.SI(A2:A100;&quot;Payé&quot;)">Copier</button></div><figcaption>Compte les cellules qui contiennent exactement Payé.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.SI(A2:A100;D1)</code><button type="button" class="copier" data-copie="=NB.SI(A2:A100;D1)">Copier</button></div><figcaption>Le critère peut venir d&#x27;une cellule, ici D1 : pas de guillemets dans ce cas.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.SI(B2:B100;&quot;&gt;50&quot;)</code><button type="button" class="copier" data-copie="=NB.SI(B2:B100;&quot;&gt;50&quot;)">Copier</button></div><figcaption>Compte les nombres supérieurs à 50. La comparaison s&#x27;écrit entre guillemets.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.SI(A2:A100;&quot;*facture*&quot;)</code><button type="button" class="copier" data-copie="=NB.SI(A2:A100;&quot;*facture*&quot;)">Copier</button></div><figcaption>L&#x27;astérisque remplace n&#x27;importe quelle suite de caractères : compte les cellules dont le texte contient le mot facture.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.SI(B2:B100;&quot;&gt;&quot;&amp;D1)</code><button type="button" class="copier" data-copie="=NB.SI(B2:B100;&quot;&gt;&quot;&amp;D1)">Copier</button></div><figcaption>Pour comparer à une cellule, collez l&#x27;opérateur et la cellule avec le signe &amp;.</figcaption></figure>
+<h2>À savoir</h2><p>NB.SI répond à toutes les questions du type « combien de fois » : combien de factures payées, combien de clients à Lyon, combien de notes au-dessus de 10. La fonction ne tient pas compte des majuscules et des minuscules : « payé » et « PAYÉ » sont comptés ensemble.</p><p>Deux caractères spéciaux rendent le critère plus souple : l'astérisque (*) remplace une suite de caractères quelconque, et le point d'interrogation (?) un seul caractère. Ainsi, "Dup*" compte Dupont, Dupond et Dupuis.</p><p>NB.SI n'accepte qu'un seul critère. Pour en combiner plusieurs, par exemple les factures payées du mois de janvier, utilisez NB.SI.ENS, qui suit la même logique que <a href="/astuces/somme-si-ens/">SOMME.SI.ENS</a> : =NB.SI.ENS(A2:A100;"Payé";B2:B100;"Janvier").</p>
+<h2>Dans Google Sheets</h2><p>La fonction porte le même nom dans Google Sheets en français : NB.SI, avec le point-virgule entre la plage et le critère. Les caractères * et ? y fonctionnent de la même façon, et NB.SI.ENS existe aussi.</p>
+<h2>Les pièges à éviter</h2><ul><li>Le critère texte et les comparaisons s&#x27;écrivent entre guillemets droits : &quot;&gt;50&quot; et non &gt;50. Sans guillemets, la formule est refusée ou renvoie 0.</li><li>Un espace en trop à la fin d&#x27;une cellule (« Payé » suivi d&#x27;un espace) suffit à ne pas la compter. En cas de résultat trop faible, vérifiez les espaces ou utilisez &quot;Payé*&quot;.</li><li>Sans astérisque, NB.SI cherche le contenu exact de la cellule : &quot;facture&quot; ne compte pas une cellule qui contient « facture mars ».</li><li>Pour chercher un vrai astérisque ou un vrai point d&#x27;interrogation, faites-le précéder d&#x27;un tilde : &quot;~?&quot;.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/somme-sans-formule-barre-etat/index.html">Obtenir une somme sans formule : sélectionnez, regardez en bas</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/ajuster-largeur-colonne-double-clic/index.html">Des ##### dans une cellule ? Élargir la colonne d&#x27;un double-clic</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/arrondir-un-nombre/index.html">Arrondir un nombre dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
