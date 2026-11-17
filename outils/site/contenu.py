@@ -39,6 +39,100 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "filtrer-liste-ctrl-maj-l",
+        "titre": "Filtrer une liste en trois touches avec Ctrl + Maj + L",
+        "court": "Filtrer une liste avec Ctrl + Maj + L",
+        "description": "Le raccourci Ctrl + Maj + L ajoute des flèches de filtre aux titres d'un tableau Excel ou Google "
+                       "Sheets : vous n'affichez que les lignes voulues, sans rien supprimer. Étapes et pièges.",
+        "bref": "Cliquez dans votre liste, puis appuyez sur Ctrl + Maj + L : une petite flèche apparaît à côté de "
+                "chaque titre de colonne. Cliquez sur une flèche, cochez ce que vous voulez voir, validez. Les autres "
+                "lignes sont masquées, pas supprimées.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-17",
+        "video": "filtrer-liste-ctrl-maj-l",
+        "etapes": [
+            "Cliquez sur n'importe quelle cellule de votre liste. La première ligne doit contenir les titres des colonnes.",
+            "Maintenez <kbd>Ctrl</kbd> et <kbd>Maj</kbd> enfoncées, puis appuyez sur <kbd>L</kbd> : une flèche apparaît dans chaque cellule de titre.",
+            "Cliquez sur la flèche de la colonne à filtrer, par exemple Ville.",
+            "Décochez (Sélectionner tout), cochez la ou les valeurs à garder, par exemple Lyon, puis cliquez sur OK.",
+            "Pour tout réafficher, appuyez de nouveau sur <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>L</kbd> : les flèches disparaissent et toutes les lignes reviennent.",
+        ],
+        "formules": [("=SOUS.TOTAL(9;C2:C100)", "Additionne uniquement les lignes encore visibles après un filtre. Une formule SOMME, elle, continue de compter les lignes masquées.")],
+        "texte": "<p>Un filtre ne supprime rien : il masque provisoirement les lignes qui ne vous intéressent pas. "
+                 "C'est le moyen le plus simple de retrouver les clients d'une ville, les factures d'un mois ou les "
+                 "lignes encore vides dans une longue liste.</p>"
+                 "<p>Le raccourci fait la même chose que le bouton Filtrer de l'onglet Données. Dans Excel, vous "
+                 "reconnaissez une liste filtrée à deux détails : les numéros des lignes passent en bleu, et la "
+                 "flèche de la colonne concernée est remplacée par un petit entonnoir.</p>"
+                 "<p>Vous pouvez filtrer plusieurs colonnes à la suite, par exemple la ville puis le mois : seules "
+                 "les lignes qui respectent toutes les conditions restent affichées. Sur une colonne de nombres, le "
+                 "menu de la flèche propose aussi des filtres numériques, pour ne garder que les montants supérieurs "
+                 "à une valeur. Pour retirer le filtre d'une seule colonne sans toucher aux autres, cliquez sur son "
+                 "entonnoir, puis sur la commande Effacer le filtre.</p>"
+                 "<p>Le petit total affiché en bas de la fenêtre suit le filtre : voyez "
+                 "<a href=\"/astuces/somme-sans-formule-barre-etat/\">la somme sans formule</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, cliquez dans la liste, ouvrez le menu Données, puis choisissez Créer un "
+                  "filtre. Sur PC, le raccourci Ctrl + Maj + L fait la même chose. Une icône de filtre apparaît dans "
+                  "chaque titre : cliquez dessus, décochez les valeurs à masquer, puis validez avec OK. La fonction "
+                  "SOUS.TOTAL existe aussi, avec la même écriture.</p>",
+        "pieges": [
+            "Une ligne entièrement vide au milieu de la liste arrête le filtre : les lignes situées en dessous ne sont pas prises en compte. Supprimez la ligne vide, ou sélectionnez toute la liste avant d'utiliser le raccourci.",
+            "Sans ligne de titres, c'est votre première ligne de données qui reçoit les flèches et qui n'est plus filtrée. Ajoutez toujours une ligne de titres.",
+            "Les lignes masquées existent toujours : une formule SOMME continue de les additionner. Pour un total qui suit le filtre, utilisez SOUS.TOTAL.",
+            "Le raccourci fonctionne comme un interrupteur : si les flèches sont déjà là, il les retire et annule vos filtres en cours.",
+            "Sur Mac, le raccourci d'Excel peut différer selon la version : essayez ⌘ + Maj + F, ou passez par l'onglet Données, bouton Filtrer.",
+        ],
+    },
+    {
+        "slug": "reunir-deux-cellules-concatener",
+        "titre": "Réunir le contenu de deux cellules en une seule",
+        "court": "Réunir deux cellules en une seule",
+        "description": "Comment assembler le prénom et le nom, ou tout autre texte, de deux cellules dans une seule "
+                       "avec le signe & dans Excel et Google Sheets. Avec CONCAT et JOINDRE.TEXTE, et les pièges.",
+        "bref": "Tapez =A2&\" \"&B2 : le signe & colle le contenu de A2 et celui de B2, et les guillemets contenant "
+                "une espace ajoutent une espace entre les deux. Avec Camille en A2 et Martin en B2, vous obtenez "
+                "Camille Martin.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-17",
+        "etapes": [
+            "Cliquez dans une cellule vide, à droite de vos données, par exemple C2.",
+            "Tapez = puis cliquez sur la première cellule à assembler, par exemple A2.",
+            "Tapez &\" \"& (le signe &, une espace entre guillemets, puis de nouveau &), et cliquez sur la seconde cellule, B2.",
+            "Validez avec <kbd>Entrée</kbd> : la cellule affiche les deux contenus réunis, séparés par une espace.",
+            "Recopiez la formule vers le bas pour traiter toute la liste.",
+        ],
+        "formules": [
+            ('=A2&" "&B2', "Réunit A2 et B2 avec une espace entre les deux : Camille Martin."),
+            ('=A2&B2', "Colle les deux contenus sans rien entre eux : CamilleMartin."),
+            ('=B2&", "&A2', "Tout texte placé entre guillemets est ajouté tel quel : Martin, Camille."),
+            ('=CONCAT(A2;" ";B2)', "La même chose avec une fonction, dans Excel 2019 et les versions suivantes. Dans les versions plus anciennes, la fonction s'appelle CONCATENER."),
+            ('=JOINDRE.TEXTE(" ";VRAI;A2:D2)', "Dans Excel 2019 et les versions suivantes : réunit toute une plage en plaçant une espace entre chaque valeur. VRAI demande d'ignorer les cellules vides."),
+        ],
+        "texte": "<p>Le signe & (l'esperluette, sur la touche 1 d'un clavier français) est le moyen le plus court "
+                 "d'assembler des textes : il fonctionne dans toutes les versions d'Excel et dans Google Sheets, "
+                 "sans fonction à retenir. Tout ce que vous écrivez entre guillemets est ajouté tel quel : une "
+                 "espace, une virgule, un tiret ou un mot entier.</p>"
+                 "<p>Les fonctions CONCAT et CONCATENER font exactement la même chose, en séparant les éléments par "
+                 "des points-virgules. Microsoft indique que CONCAT remplace CONCATENER, qui reste disponible pour "
+                 "les anciens fichiers.</p>"
+                 "<p>JOINDRE.TEXTE devient intéressante dès qu'il y a plus de trois ou quatre cellules à réunir : "
+                 "vous indiquez le séparateur une seule fois, puis la plage entière. C'est pratique pour assembler "
+                 "une adresse répartie sur plusieurs colonnes.</p>"
+                 "<p>Le résultat est une formule : il change si vous modifiez A2 ou B2. Pour le figer, copiez les "
+                 "cellules, puis collez-les au même endroit avec l'option de collage Valeurs. Et pour faire le "
+                 "chemin inverse, c'est-à-dire séparer un prénom et un nom, voyez "
+                 "<a href=\"/astuces/remplissage-instantane-ctrl-e/\">le remplissage instantané avec Ctrl + E</a>.</p>",
+        "sheets": "<p>Le signe & fonctionne à l'identique dans Google Sheets : =A2&\" \"&B2. La fonction CONCATENER "
+                  "y existe aussi et accepte autant d'éléments que nécessaire. Attention à CONCAT, qui n'y réunit "
+                  "que deux valeurs à la fois. Pour réunir une plage avec un séparateur, l'aide de Google présente "
+                  "la fonction sous son nom anglais : =TEXTJOIN(\" \";VRAI;A2:D2).</p>",
+        "pieges": [
+            "Sans l'espace entre guillemets, les deux mots sont collés : CamilleMartin. Vérifiez qu'il y a bien une espace entre les deux guillemets.",
+            "Une date ou un montant réunis à un texte perdent leur mise en forme : la date devient un nombre comme 46343. Dans Excel, utilisez la fonction TEXTE, par exemple =A2&\" le \"&TEXTE(B2;\"jj/mm/aaaa\").",
+            "Le résultat est toujours du texte, même s'il ne contient que des chiffres : il ne pourra pas être additionné tel quel.",
+            "Ne supprimez pas les colonnes d'origine tant que la formule en dépend : collez d'abord le résultat en valeurs.",
+            "Réunir le contenu de deux cellules n'est pas fusionner les cellules : le bouton de fusion d'Excel ne conserve que le contenu de la cellule en haut à gauche.",
+        ],
+    },
+    {
         "slug": "somme-sans-formule-barre-etat",
         "titre": "Obtenir une somme sans formule : sélectionnez, regardez en bas",
         "court": "Obtenir une somme sans taper de formule",
