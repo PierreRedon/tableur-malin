@@ -39,6 +39,100 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "aller-en-bas-liste-ctrl-fleche",
+        "titre": "Aller tout en bas d'une longue liste avec Ctrl + ↓",
+        "court": "Aller en bas d'une liste avec Ctrl + ↓",
+        "description": "Le raccourci Ctrl + flèche bas envoie directement à la dernière ligne remplie d'une colonne "
+                       "dans Excel et Google Sheets, sans faire défiler. Avec Maj pour sélectionner, et les pièges.",
+        "bref": "Cliquez sur une cellule de la colonne, maintenez Ctrl et appuyez sur la flèche vers le bas : vous "
+                "arrivez d'un coup sur la dernière cellule remplie, même 500 lignes plus bas. Ctrl + flèche vers le "
+                "haut vous ramène au début.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-18",
+        "video": "aller-en-bas-liste-ctrl-fleche",
+        "etapes": [
+            "Cliquez sur une cellule remplie de votre liste, par exemple le titre de la première colonne.",
+            "Maintenez <kbd>Ctrl</kbd> enfoncée, puis appuyez sur la flèche <kbd>↓</kbd> : la cellule active saute à la dernière cellule remplie de la colonne.",
+            "Pour revenir en haut, appuyez sur <kbd>Ctrl</kbd> + <kbd>↑</kbd>.",
+            "Les flèches <kbd>→</kbd> et <kbd>←</kbd> fonctionnent de la même façon, pour atteindre la dernière ou la première colonne remplie de la ligne.",
+            "Pour sélectionner les cellules au lieu de simplement vous déplacer, ajoutez <kbd>Maj</kbd> : <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>↓</kbd> sélectionne tout, de la cellule active jusqu'à la dernière cellule remplie.",
+        ],
+        "formules": [],
+        "texte": "<p>Faire tourner la molette de la souris pendant de longues secondes pour atteindre la fin d'une "
+                 "liste n'est plus nécessaire : avec <kbd>Ctrl</kbd> et une flèche, le tableur saute directement au "
+                 "bord des données, dans la direction de la flèche. C'est pratique pour ajouter une ligne à la suite "
+                 "d'une liste, vérifier le dernier enregistrement ou savoir combien de lignes contient un fichier.</p>"
+                 "<p>En ajoutant <kbd>Maj</kbd>, le même saut devient une sélection. <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + "
+                 "<kbd>↓</kbd> sélectionne toute une colonne de données sans la faire défiler ; enchaînez avec "
+                 "<kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>→</kbd> pour étendre la sélection à tout le tableau. Une "
+                 "fois les nombres sélectionnés, leur total s'affiche en bas de la fenêtre : voyez "
+                 "<a href=\"/astuces/somme-sans-formule-barre-etat/\">la somme sans formule</a>.</p>"
+                 "<p>Deux autres raccourcis complètent celui-ci : <kbd>Ctrl</kbd> + <kbd>Origine</kbd> (la touche "
+                 "marquée d'une flèche en diagonale ↖ sur beaucoup de claviers français) ramène à la cellule A1, et "
+                 "<kbd>Ctrl</kbd> + <kbd>Fin</kbd> conduit à la dernière cellule utilisée de la feuille.</p>"
+                 "<p>Si vos titres disparaissent de l'écran une fois en bas de la liste, pensez à "
+                 "<a href=\"/astuces/figer-premiere-ligne/\">figer la première ligne</a>.</p>",
+        "sheets": "<p>Le raccourci est le même dans Google Sheets : Ctrl + ↓ pour atteindre la dernière cellule "
+                  "remplie, Ctrl + ↑ pour remonter, et Ctrl + Maj + flèche pour sélectionner. Sur Mac, remplacez "
+                  "Ctrl par la touche ⌘, dans Google Sheets comme dans Excel.</p>",
+        "pieges": [
+            "Le saut s'arrête à la première cellule vide rencontrée : si une case est vide au milieu de la colonne, vous vous arrêtez juste au-dessus. Appuyez de nouveau sur le raccourci pour passer au bloc suivant, ou partez d'une colonne entièrement remplie.",
+            "Si vous utilisez le raccourci depuis la dernière cellule remplie, ou dans une colonne vide, vous vous retrouvez tout en bas de la feuille (ligne 1 048 576 dans Excel). Pas de panique : Ctrl + ↑ vous ramène aux données.",
+            "Si une cellule est en cours de modification (le curseur clignote dedans), le raccourci déplace le curseur dans le texte au lieu de changer de cellule. Validez d'abord avec Entrée, ou annulez avec Échap.",
+            "Dans une liste filtrée, le saut ne tient compte que des lignes visibles.",
+            "Si, dans Excel, les flèches font défiler la feuille sans changer de cellule, la touche Arrêt défil est sans doute activée : appuyez dessus pour la désactiver.",
+        ],
+    },
+    {
+        "slug": "calculer-une-moyenne",
+        "titre": "Calculer une moyenne dans Excel",
+        "court": "Calculer une moyenne",
+        "description": "Comment calculer une moyenne dans Excel ou Google Sheets avec la fonction MOYENNE : étapes, "
+                       "cellules vides et zéros, moyenne avec condition grâce à MOYENNE.SI, et pièges à éviter.",
+        "bref": "Tapez =MOYENNE(B2:B10) pour obtenir la moyenne des nombres de B2 à B10. La fonction additionne les "
+                "nombres et divise par leur quantité. Les cellules vides et le texte sont laissés de côté, mais "
+                "un 0 compte.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-18",
+        "etapes": [
+            "Cliquez dans une cellule vide, là où la moyenne doit s'afficher.",
+            "Tapez =MOYENNE( puis sélectionnez à la souris les nombres concernés, par exemple B2:B10.",
+            "Fermez la parenthèse et validez avec <kbd>Entrée</kbd> : la cellule affiche la moyenne.",
+            "Si le résultat a trop de décimales, réduisez-en le nombre avec le bouton Réduire les décimales de l'onglet Accueil.",
+        ],
+        "formules": [
+            ("=MOYENNE(B2:B10)", "Moyenne des nombres de B2 à B10."),
+            ("=MOYENNE(B2:B10;D2:D10)", "Moyenne de deux plages à la fois, séparées par un point-virgule."),
+            ('=MOYENNE.SI(A2:A100;"Lyon";C2:C100)', "Moyenne des montants de la colonne C, uniquement pour les lignes où la colonne A contient Lyon."),
+            ('=MOYENNE.SI(B2:B10;">0")', "Moyenne des nombres supérieurs à 0 : les zéros ne sont plus comptés."),
+            ("=ARRONDI(MOYENNE(B2:B10);1)", "La moyenne, arrondie à une décimale."),
+        ],
+        "texte": "<p>La fonction MOYENNE fait le calcul appris à l'école : elle additionne les nombres, puis divise "
+                 "le total par le nombre de valeurs. Avec les notes 12, 15 et 9, elle renvoie 12.</p>"
+                 "<p>Une règle à connaître : une cellule vide est laissée de côté, alors qu'une cellule qui contient "
+                 "0 est prise en compte et fait baisser la moyenne. Pour un élève absent à un contrôle, laissez "
+                 "donc la case vide plutôt que d'y écrire 0, sauf si le zéro est voulu. Le texte présent dans la "
+                 "plage (« absent », « n.c. ») est ignoré lui aussi.</p>"
+                 "<p>Pour une moyenne limitée à certaines lignes, MOYENNE.SI fonctionne comme "
+                 "<a href=\"/astuces/compter-cellules-nb-si/\">NB.SI</a> : la plage à examiner, le critère entre "
+                 "guillemets, puis la plage des nombres. Avec plusieurs conditions, utilisez MOYENNE.SI.ENS.</p>"
+                 "<p>Besoin de la moyenne juste pour information, sans l'écrire dans la feuille ? Sélectionnez les "
+                 "nombres : Excel l'affiche en bas de la fenêtre, comme expliqué dans "
+                 "<a href=\"/astuces/somme-sans-formule-barre-etat/\">la somme sans formule</a>. Et pour maîtriser "
+                 "les décimales du résultat, voyez <a href=\"/astuces/arrondir-un-nombre/\">comment arrondir un "
+                 "nombre</a>.</p>",
+        "sheets": "<p>La fonction porte le même nom dans Google Sheets en français : =MOYENNE(B2:B10), avec le "
+                  "point-virgule pour séparer plusieurs plages. Le texte y est ignoré de la même façon, et "
+                  "MOYENNE.SI existe aussi. Pour la valeur du milieu plutôt que la moyenne, la fonction s'appelle "
+                  "MEDIANE.</p>",
+        "pieges": [
+            "Un 0 n'est pas une cellule vide : il compte dans la moyenne. Videz la cellule, ou utilisez =MOYENNE.SI(B2:B10;\">0\").",
+            "Si la plage ne contient aucun nombre, la formule affiche l'erreur #DIV/0!.",
+            "Une seule cellule en erreur (#N/A, #VALEUR!) dans la plage suffit à mettre toute la moyenne en erreur.",
+            "Des nombres enregistrés comme du texte (souvent alignés à gauche) sont ignorés sans aucun avertissement : la moyenne est alors calculée sur les autres valeurs seulement.",
+            "La moyenne de plusieurs moyennes n'est juste que si les groupes ont la même taille. En cas de doute, calculez la moyenne directement sur toutes les valeurs.",
+            "MOYENNE donne le même poids à chaque valeur. Pour des notes avec coefficients, il faut une moyenne pondérée : =SOMMEPROD(B2:B10;C2:C10)/SOMME(C2:C10), avec les notes en B et les coefficients en C.",
+        ],
+    },
+    {
         "slug": "filtrer-liste-ctrl-maj-l",
         "titre": "Filtrer une liste en trois touches avec Ctrl + Maj + L",
         "court": "Filtrer une liste avec Ctrl + Maj + L",
