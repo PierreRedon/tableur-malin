@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculer le nombre de jours entre deux dates dans Excel | Tableur Malin</title>
+<meta name="description" content="Comment calculer le nombre de jours entre deux dates dans Excel ou Google Sheets : simple soustraction, fonctions JOURS et DATEDIF, jours ouvrés, et pièges à éviter.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/nombre-de-jours-entre-deux-dates/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Calculer le nombre de jours entre deux dates dans Excel | Tableur Malin">
+<meta property="og:description" content="Comment calculer le nombre de jours entre deux dates dans Excel ou Google Sheets : simple soustraction, fonctions JOURS et DATEDIF, jours ouvrés, et pièges à éviter.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/nombre-de-jours-entre-deux-dates/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Calculer le nombre de jours entre deux dates dans Excel", "description": "Comment calculer le nombre de jours entre deux dates dans Excel ou Google Sheets : simple soustraction, fonctions JOURS et DATEDIF, jours ouvrés, et pièges à éviter.", "inLanguage": "fr", "datePublished": "2026-11-19", "dateModified": "2026-11-19", "mainEntityOfPage": "https://tableurmalin.fr/astuces/nombre-de-jours-entre-deux-dates/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Calculer le nombre de jours entre deux dates dans Excel", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Saisissez la date de début dans une cellule, par exemple A2, et la date de fin dans une autre, par exemple B2."}, {"@type": "HowToStep", "position": 2, "text": "Cliquez dans une cellule vide, tapez =B2-A2 (la date de fin d'abord), puis validez avec Entrée."}, {"@type": "HowToStep", "position": 3, "text": "La cellule affiche le nombre de jours qui séparent les deux dates."}, {"@type": "HowToStep", "position": 4, "text": "Si elle affiche une date au lieu d'un nombre, sélectionnez-la puis, dans l'onglet Accueil, choisissez Standard dans la liste des formats de nombre."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Compter les jours entre deux dates", "item": "https://tableurmalin.fr/astuces/nombre-de-jours-entre-deux-dates/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Calculer le nombre de jours entre deux dates dans Excel</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Soustrayez simplement la date de début de la date de fin : =B2-A2. Avec le 01/11/2026 en A2 et le 25/12/2026 en B2, vous obtenez 54. Si le résultat ressemble à une date, passez la cellule au format Standard.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Saisissez la date de début dans une cellule, par exemple A2, et la date de fin dans une autre, par exemple B2.</li><li>Cliquez dans une cellule vide, tapez =B2-A2 (la date de fin d'abord), puis validez avec <kbd>Entrée</kbd>.</li><li>La cellule affiche le nombre de jours qui séparent les deux dates.</li><li>Si elle affiche une date au lieu d'un nombre, sélectionnez-la puis, dans l'onglet Accueil, choisissez Standard dans la liste des formats de nombre.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=B2-A2</code><button type="button" class="copier" data-copie="=B2-A2">Copier</button></div><figcaption>Nombre de jours entre la date de début (A2) et la date de fin (B2).</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=JOURS(B2;A2)</code><button type="button" class="copier" data-copie="=JOURS(B2;A2)">Copier</button></div><figcaption>Le même résultat avec une fonction, à partir d&#x27;Excel 2013. Attention à l&#x27;ordre : la date de fin d&#x27;abord.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=AUJOURDHUI()-A2</code><button type="button" class="copier" data-copie="=AUJOURDHUI()-A2">Copier</button></div><figcaption>Nombre de jours écoulés depuis la date en A2. Le résultat change chaque jour.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;B2;&quot;m&quot;)</code><button type="button" class="copier" data-copie="=DATEDIF(A2;B2;&quot;m&quot;)">Copier</button></div><figcaption>Nombre de mois entiers entre les deux dates. Remplacez &quot;m&quot; par &quot;y&quot; pour les années entières, ou par &quot;d&quot; pour les jours.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NB.JOURS.OUVRES(A2;B2)</code><button type="button" class="copier" data-copie="=NB.JOURS.OUVRES(A2;B2)">Copier</button></div><figcaption>Nombre de jours du lundi au vendredi, les deux dates comprises.</figcaption></figure>
+<h2>À savoir</h2><p>Pour un tableur, une date est un nombre : chaque jour vaut 1 de plus que la veille. C'est pourquoi une simple soustraction suffit pour connaître l'écart entre deux dates, sans aucune fonction. La fonction JOURS donne exactement le même résultat ; elle est seulement plus lisible dans une longue formule.</p><p>La soustraction compte les jours qui séparent les deux dates : du lundi au vendredi de la même semaine, elle renvoie 4. Pour compter aussi le premier jour, par exemple pour la durée d'une location ou d'un congé, ajoutez 1 : =B2-A2+1.</p><p>Pour un écart en mois ou en années entières (un âge, une ancienneté), utilisez DATEDIF. Cette fonction est un peu à part : Excel ne la propose pas dans la liste qui s'affiche pendant la frappe, il faut donc l'écrire en entier. Elle attend la date de début d'abord, puis la date de fin, puis une lettre entre guillemets : "d" pour les jours, "m" pour les mois, "y" pour les années. Ces lettres restent en anglais, même dans Excel en français.</p><p>Pour un délai en jours travaillés, NB.JOURS.OUVRES laisse de côté les samedis et les dimanches. Vous pouvez lui indiquer en troisième position une plage contenant les jours fériés à retirer : =NB.JOURS.OUVRES(A2;B2;F2:F12).</p><p>Pour inscrire rapidement la date du jour dans une cellule, voyez <a href="/astuces/date-du-jour-ctrl-point-virgule/">le raccourci Ctrl + ;</a>.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets, la soustraction =B2-A2 fonctionne de la même façon, et les fonctions JOURS et DATEDIF s'écrivent à l'identique, avec le point-virgule. Si le résultat s'affiche comme une date, ouvrez le menu Format, puis Nombre, et choisissez Nombre. Pour les jours ouvrés, la fonction existe aussi ; l'aide de Google la présente sous son nom anglais, NETWORKDAYS.</p>
+<h2>Les pièges à éviter</h2><ul><li>Si le résultat s&#x27;affiche sous la forme d&#x27;une date (par exemple 23/02/1900), le calcul est juste : c&#x27;est le format de la cellule qu&#x27;il faut remettre sur Standard.</li><li>L&#x27;erreur #VALEUR! signale qu&#x27;une des deux dates est en réalité du texte (souvent alignée à gauche dans la cellule). Ressaisissez-la sous la forme 25/12/2026.</li><li>Avec JOURS, la date de fin s&#x27;écrit en premier ; avec DATEDIF, c&#x27;est la date de début. Dans le mauvais ordre, JOURS renvoie un nombre négatif et DATEDIF une erreur (#NOMBRE! dans Excel).</li><li>La soustraction ne compte pas le premier jour, alors que NB.JOURS.OUVRES compte les deux dates. Ajoutez 1 à la soustraction si vous voulez les deux jours.</li><li>Si vos cellules contiennent aussi une heure, le résultat comporte des décimales. Gardez la partie entière avec =ENT(B2-A2).</li><li>Microsoft déconseille l&#x27;unité &quot;md&quot; de DATEDIF, qui peut donner des résultats inexacts.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/repeter-derniere-action-f4/index.html">Répéter la dernière action d&#x27;une seule touche avec F4</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/aller-en-bas-liste-ctrl-fleche/index.html">Aller tout en bas d&#x27;une longue liste avec Ctrl + ↓</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/calculer-une-moyenne/index.html">Calculer une moyenne dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

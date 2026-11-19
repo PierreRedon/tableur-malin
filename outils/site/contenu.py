@@ -39,6 +39,107 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "repeter-derniere-action-f4",
+        "titre": "Répéter la dernière action d'une seule touche avec F4",
+        "court": "Répéter la dernière action avec F4",
+        "description": "La touche F4 refait votre dernière action dans Excel : couleur, gras, bordure, ligne insérée ou "
+                       "supprimée. Étapes, équivalent Ctrl + Y, Google Sheets et pièges à connaître.",
+        "bref": "Faites l'action une première fois, par exemple colorier une ligne en jaune. Sélectionnez ensuite "
+                "une autre ligne et appuyez sur F4 : Excel refait la même chose, sans repasser par les menus. "
+                "Ctrl + Y a le même effet.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-19",
+        "video": "repeter-derniere-action-f4",
+        "etapes": [
+            "Faites l'action une première fois, normalement : par exemple, sélectionnez une ligne de votre tableau et coloriez-la avec le bouton Couleur de remplissage (le pot de peinture) de l'onglet Accueil.",
+            "Sélectionnez la cellule ou la ligne suivante à traiter.",
+            "Appuyez sur <kbd>F4</kbd> : la même couleur est appliquée à la nouvelle sélection.",
+            "Recommencez autant de fois que nécessaire : une sélection, puis <kbd>F4</kbd>.",
+            "Sur un ordinateur portable, si rien ne se passe, maintenez la touche <kbd>Fn</kbd> et appuyez sur <kbd>F4</kbd>, ou utilisez <kbd>Ctrl</kbd> + <kbd>Y</kbd>.",
+        ],
+        "formules": [],
+        "texte": "<p>Colorier dix lignes éparpillées, insérer une ligne vide à cinq endroits, mettre en gras "
+                 "plusieurs titres : à chaque fois, il faut retourner chercher le même bouton. La touche "
+                 "<kbd>F4</kbd> évite ces allers-retours, car elle rejoue la dernière commande sur la sélection en "
+                 "cours.</p>"
+                 "<p>Elle fonctionne avec la plupart des actions de mise en forme (couleur de remplissage, couleur "
+                 "du texte, gras, bordures, format de nombre), mais aussi avec l'insertion ou la suppression d'une "
+                 "ligne ou d'une colonne. Vous pouvez sélectionner plusieurs cellules avant d'appuyer : l'action "
+                 "s'applique à toute la sélection.</p>"
+                 "<p>Seule la toute dernière action est mémorisée. Si vous mettez une cellule en jaune puis en gras, "
+                 "<kbd>F4</kbd> ne répète que le gras. Pour appliquer plusieurs réglages d'un coup, passez par la "
+                 "fenêtre Format de cellule (<kbd>Ctrl</kbd> + <kbd>1</kbd>) : tout ce que vous y validez compte "
+                 "pour une seule action. Autre solution pour copier toute une mise en forme : le pinceau "
+                 "Reproduire la mise en forme, dans l'onglet Accueil.</p>"
+                 "<p>La touche <kbd>F4</kbd> a un second rôle, sans rapport : pendant que vous écrivez une formule, "
+                 "elle ajoute les signes $ qui servent à "
+                 "<a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer une cellule</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, l'aide de Google indique F4, Ctrl + Y et Ctrl + Maj + Z comme raccourcis "
+                  "de la commande Rétablir. En pratique, juste après une mise en forme simple (une couleur, du "
+                  "gras), ces touches l'appliquent aussi à la nouvelle sélection. Si F4 ne réagit pas, essayez "
+                  "Ctrl + Y. Sur Mac, utilisez ⌘ + Y, dans Google Sheets comme dans Excel.</p>",
+        "pieges": [
+            "F4 ne répète que la dernière action. Si vous avez fait autre chose entre-temps (une saisie, un collage), c'est cette autre action qui compte, ou rien du tout.",
+            "Tout ne se répète pas : la saisie d'un texte ou d'une formule, par exemple, n'est en général pas rejouée. Si F4 reste sans effet, l'action n'est pas répétable.",
+            "Juste après une annulation (Ctrl + Z), F4 et Ctrl + Y rétablissent ce que vous venez d'annuler au lieu de répéter.",
+            "Sur beaucoup d'ordinateurs portables, la touche F4 règle d'abord le son ou la luminosité : il faut alors appuyer sur Fn + F4.",
+            "Pendant la saisie d'une formule, F4 ne répète rien : elle ajoute des $ à la référence. Validez d'abord avec Entrée.",
+            "Alt + F4 n'a rien à voir : ce raccourci ferme Excel.",
+        ],
+    },
+    {
+        "slug": "nombre-de-jours-entre-deux-dates",
+        "titre": "Calculer le nombre de jours entre deux dates dans Excel",
+        "court": "Compter les jours entre deux dates",
+        "description": "Comment calculer le nombre de jours entre deux dates dans Excel ou Google Sheets : simple "
+                       "soustraction, fonctions JOURS et DATEDIF, jours ouvrés, et pièges à éviter.",
+        "bref": "Soustrayez simplement la date de début de la date de fin : =B2-A2. Avec le 01/11/2026 en A2 et le "
+                "25/12/2026 en B2, vous obtenez 54. Si le résultat ressemble à une date, passez la cellule au "
+                "format Standard.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-19",
+        "etapes": [
+            "Saisissez la date de début dans une cellule, par exemple A2, et la date de fin dans une autre, par exemple B2.",
+            "Cliquez dans une cellule vide, tapez =B2-A2 (la date de fin d'abord), puis validez avec <kbd>Entrée</kbd>.",
+            "La cellule affiche le nombre de jours qui séparent les deux dates.",
+            "Si elle affiche une date au lieu d'un nombre, sélectionnez-la puis, dans l'onglet Accueil, choisissez Standard dans la liste des formats de nombre.",
+        ],
+        "formules": [
+            ("=B2-A2", "Nombre de jours entre la date de début (A2) et la date de fin (B2)."),
+            ("=JOURS(B2;A2)", "Le même résultat avec une fonction, à partir d'Excel 2013. Attention à l'ordre : la date de fin d'abord."),
+            ("=AUJOURDHUI()-A2", "Nombre de jours écoulés depuis la date en A2. Le résultat change chaque jour."),
+            ('=DATEDIF(A2;B2;"m")', "Nombre de mois entiers entre les deux dates. Remplacez \"m\" par \"y\" pour les années entières, ou par \"d\" pour les jours."),
+            ("=NB.JOURS.OUVRES(A2;B2)", "Nombre de jours du lundi au vendredi, les deux dates comprises."),
+        ],
+        "texte": "<p>Pour un tableur, une date est un nombre : chaque jour vaut 1 de plus que la veille. C'est "
+                 "pourquoi une simple soustraction suffit pour connaître l'écart entre deux dates, sans aucune "
+                 "fonction. La fonction JOURS donne exactement le même résultat ; elle est seulement plus lisible "
+                 "dans une longue formule.</p>"
+                 "<p>La soustraction compte les jours qui séparent les deux dates : du lundi au vendredi de la même "
+                 "semaine, elle renvoie 4. Pour compter aussi le premier jour, par exemple pour la durée d'une "
+                 "location ou d'un congé, ajoutez 1 : =B2-A2+1.</p>"
+                 "<p>Pour un écart en mois ou en années entières (un âge, une ancienneté), utilisez DATEDIF. "
+                 "Cette fonction est un peu à part : Excel ne la propose pas dans la liste qui s'affiche pendant la "
+                 "frappe, il faut donc l'écrire en entier. Elle attend la date de début d'abord, puis la date de "
+                 "fin, puis une lettre entre guillemets : \"d\" pour les jours, \"m\" pour les mois, \"y\" pour les "
+                 "années. Ces lettres restent en anglais, même dans Excel en français.</p>"
+                 "<p>Pour un délai en jours travaillés, NB.JOURS.OUVRES laisse de côté les samedis et les "
+                 "dimanches. Vous pouvez lui indiquer en troisième position une plage contenant les jours fériés à "
+                 "retirer : =NB.JOURS.OUVRES(A2;B2;F2:F12).</p>"
+                 "<p>Pour inscrire rapidement la date du jour dans une cellule, voyez "
+                 "<a href=\"/astuces/date-du-jour-ctrl-point-virgule/\">le raccourci Ctrl + ;</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, la soustraction =B2-A2 fonctionne de la même façon, et les fonctions JOURS "
+                  "et DATEDIF s'écrivent à l'identique, avec le point-virgule. Si le résultat s'affiche comme une "
+                  "date, ouvrez le menu Format, puis Nombre, et choisissez Nombre. Pour les jours ouvrés, la "
+                  "fonction existe aussi ; l'aide de Google la présente sous son nom anglais, NETWORKDAYS.</p>",
+        "pieges": [
+            "Si le résultat s'affiche sous la forme d'une date (par exemple 23/02/1900), le calcul est juste : c'est le format de la cellule qu'il faut remettre sur Standard.",
+            "L'erreur #VALEUR! signale qu'une des deux dates est en réalité du texte (souvent alignée à gauche dans la cellule). Ressaisissez-la sous la forme 25/12/2026.",
+            "Avec JOURS, la date de fin s'écrit en premier ; avec DATEDIF, c'est la date de début. Dans le mauvais ordre, JOURS renvoie un nombre négatif et DATEDIF une erreur (#NOMBRE! dans Excel).",
+            "La soustraction ne compte pas le premier jour, alors que NB.JOURS.OUVRES compte les deux dates. Ajoutez 1 à la soustraction si vous voulez les deux jours.",
+            "Si vos cellules contiennent aussi une heure, le résultat comporte des décimales. Gardez la partie entière avec =ENT(B2-A2).",
+            "Microsoft déconseille l'unité \"md\" de DATEDIF, qui peut donner des résultats inexacts.",
+        ],
+    },
+    {
         "slug": "aller-en-bas-liste-ctrl-fleche",
         "titre": "Aller tout en bas d'une longue liste avec Ctrl + ↓",
         "court": "Aller en bas d'une liste avec Ctrl + ↓",
