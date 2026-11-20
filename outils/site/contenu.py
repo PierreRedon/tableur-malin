@@ -39,6 +39,106 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "remplir-plusieurs-cellules-ctrl-entree",
+        "titre": "Remplir plusieurs cellules d'un coup avec Ctrl + Entrée",
+        "court": "Remplir plusieurs cellules avec Ctrl + Entrée",
+        "description": "Sélectionnez plusieurs cellules, tapez une seule fois, validez avec Ctrl + Entrée : le même "
+                       "texte, le même nombre ou la même formule remplit toute la sélection. Excel et Google Sheets.",
+        "bref": "Sélectionnez toutes les cellules à remplir, tapez le texte ou le nombre une seule fois, puis validez "
+                "avec Ctrl + Entrée au lieu d'Entrée : toute la sélection reçoit la même saisie.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-20",
+        "video": "remplir-plusieurs-cellules-ctrl-entree",
+        "etapes": [
+            "Sélectionnez toutes les cellules à remplir, par exemple C2 à C7, en faisant glisser la souris.",
+            "Sans cliquer ailleurs, tapez le texte ou le nombre voulu, par exemple « À relancer ». Il s'écrit dans une seule cellule, celle qui est restée blanche dans la sélection : c'est normal.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur <kbd>Entrée</kbd> : la saisie est inscrite dans toutes les cellules sélectionnées.",
+            "Pour des cellules qui ne se touchent pas, cliquez sur la première, puis maintenez <kbd>Ctrl</kbd> pendant que vous cliquez sur les autres. Tapez ensuite votre texte et validez de la même façon avec <kbd>Ctrl</kbd> + <kbd>Entrée</kbd>.",
+        ],
+        "formules": [],
+        "texte": "<p>Quand la même mention revient sur plusieurs lignes (« À relancer », « Payé », « 20 % », un nom de "
+                 "service), on a le réflexe de la taper une fois, puis de la copier et de la coller. "
+                 "<kbd>Ctrl</kbd> + <kbd>Entrée</kbd> fait la même chose en un seul geste, et fonctionne aussi "
+                 "quand les cellules sont éparpillées dans la feuille : l'aide de Microsoft précise que les "
+                 "cellules sélectionnées n'ont pas besoin d'être voisines.</p>"
+                 "<p>Le raccourci fonctionne aussi avec une formule. Sélectionnez par exemple D2 à D7, tapez "
+                 "=B2*1,2 puis validez avec <kbd>Ctrl</kbd> + <kbd>Entrée</kbd> : Excel adapte la formule à "
+                 "chaque ligne (B3, B4, etc.), exactement comme lors d'une recopie vers le bas. Si une référence "
+                 "doit rester fixe, pensez à la "
+                 "<a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer avec le signe $</a>.</p>"
+                 "<p>Autre usage pratique : sur une seule cellule, <kbd>Ctrl</kbd> + <kbd>Entrée</kbd> valide la "
+                 "saisie sans descendre à la ligne suivante. La cellule reste sélectionnée, prête à être mise en "
+                 "forme ou recopiée.</p>"
+                 "<p>Pour prolonger une formule tout le long d'une colonne déjà remplie à côté, le "
+                 "<a href=\"/astuces/recopier-formule-double-clic/\">double-clic sur la poignée de recopie</a> "
+                 "reste le plus rapide.</p>",
+        "sheets": "<p>Le raccourci est le même dans Google Sheets : l'aide de Google l'indique sous le nom "
+                  "« Remplir une plage », avec Ctrl + Entrée sur PC et ⌘ + Entrée sur Mac. Sélectionnez les "
+                  "cellules, tapez, puis validez avec ce raccourci. Google Sheets propose aussi Ctrl + D pour "
+                  "remplir vers le bas et Ctrl + R pour remplir vers la droite à partir de la première cellule de "
+                  "la sélection.</p>",
+        "pieges": [
+            "Si vous validez avec Entrée seule, par habitude, une seule cellule est remplie. Si la sélection est toujours visible, retapez simplement le texte et validez cette fois avec Ctrl + Entrée.",
+            "Tout ce qui se trouvait dans les cellules sélectionnées est remplacé, sans message d'avertissement. En cas d'erreur, annulez tout de suite avec Ctrl + Z.",
+            "Ne cliquez pas dans la feuille entre la sélection et la saisie : un clic annule la sélection, et il faut la refaire.",
+            "Ne confondez pas avec Alt + Entrée, qui sert à aller à la ligne à l'intérieur d'une cellule.",
+        ],
+    },
+    {
+        "slug": "fonction-si",
+        "titre": "Utiliser la fonction SI dans Excel",
+        "court": "Utiliser la fonction SI",
+        "description": "Comment utiliser la fonction SI dans Excel ou Google Sheets pour afficher un résultat selon "
+                       "une condition : syntaxe, exemples avec texte, calcul, ET, OU, et erreurs courantes.",
+        "bref": "Tapez =SI(B2>=10;\"Admis\";\"Refusé\") : la cellule affiche Admis si B2 vaut 10 ou plus, et Refusé "
+                "dans le cas contraire. La fonction attend trois éléments séparés par des points-virgules : la "
+                "condition, le résultat si elle est vraie, le résultat si elle est fausse.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-20",
+        "etapes": [
+            "Cliquez dans la cellule où le résultat doit s'afficher, par exemple C2.",
+            "Tapez =SI( puis la condition à vérifier, par exemple B2>=10.",
+            "Tapez un point-virgule, puis ce qu'il faut afficher quand la condition est vraie. Un texte se met entre guillemets : \"Admis\".",
+            "Tapez un nouveau point-virgule, puis ce qu'il faut afficher quand la condition est fausse : \"Refusé\". Fermez la parenthèse.",
+            "Validez avec <kbd>Entrée</kbd>, puis recopiez la formule vers le bas pour traiter les autres lignes.",
+        ],
+        "formules": [
+            ('=SI(B2>=10;"Admis";"Refusé")', "Affiche Admis si la note en B2 est supérieure ou égale à 10, Refusé sinon."),
+            ('=SI(C2="Oui";"Payé";"À relancer")', "La condition peut porter sur un texte, écrit entre guillemets."),
+            ("=SI(B2>1000;B2*0,05;0)", "Le résultat peut être un calcul : ici une remise de 5 % au-delà de 1 000, et 0 sinon."),
+            ('=SI(A2="";"";B2*C2)', "Laisse la cellule vide tant que A2 n'est pas remplie, au lieu d'afficher un 0."),
+            ('=SI(ET(B2>=10;C2="Oui");"Validé";"À revoir")', "Avec ET, toutes les conditions doivent être vraies. Remplacez ET par OU pour qu'une seule suffise."),
+        ],
+        "texte": "<p>La fonction SI permet à une cellule de choisir entre deux résultats. Elle se lit comme une "
+                 "phrase : « si la condition est vraie, affiche ceci ; sinon, affiche cela ». Microsoft la décrit "
+                 "ainsi : SI(test_logique; valeur_si_vrai; valeur_si_faux).</p>"
+                 "<p>La condition compare en général deux éléments à l'aide d'un de ces signes : = (égal), "
+                 "&gt; (supérieur), &lt; (inférieur), &gt;= (supérieur ou égal), &lt;= (inférieur ou égal) et "
+                 "&lt;&gt; (différent). Les deux résultats peuvent être un texte entre guillemets, un nombre, "
+                 "une cellule ou un calcul.</p>"
+                 "<p>Pour trois cas ou plus, on peut placer une seconde fonction SI à la place du dernier "
+                 "élément : =SI(B2>=16;\"Très bien\";SI(B2>=10;\"Admis\";\"Refusé\")). Excel examine les "
+                 "conditions dans l'ordre et s'arrête à la première qui est vraie : commencez donc par le seuil "
+                 "le plus élevé. Excel accepte jusqu'à 64 fonctions SI imbriquées, mais Microsoft le déconseille "
+                 "vivement : au-delà de deux ou trois, la formule devient difficile à relire et à corriger. Les "
+                 "versions récentes d'Excel proposent la fonction SI.CONDITIONS pour enchaîner plusieurs "
+                 "conditions, et un petit tableau de correspondance lu par "
+                 "<a href=\"/astuces/recherchex-remplacer-recherchev/\">RECHERCHEX</a> est souvent plus "
+                 "simple encore.</p>"
+                 "<p>Pour compter ou additionner selon une condition, inutile de passer par SI : voyez "
+                 "<a href=\"/astuces/compter-cellules-nb-si/\">NB.SI</a> et "
+                 "<a href=\"/astuces/somme-si-ens/\">SOMME.SI.ENS</a>.</p>",
+        "sheets": "<p>Dans Google Sheets en français, la fonction s'appelle également SI et s'écrit de la même "
+                  "façon, avec le point-virgule entre les trois éléments. Les fonctions ET et OU s'y combinent de "
+                  "la même manière.</p>",
+        "pieges": [
+            "Un texte s'écrit toujours entre guillemets droits : \"Admis\". Sans guillemets, Excel croit lire un nom qu'il ne connaît pas et affiche #NOM?.",
+            "Un nombre, à l'inverse, s'écrit sans guillemets : B2>=10 et non B2>=\"10\", qui comparerait la cellule à un texte.",
+            "L'erreur #NOM? apparaît aussi quand le nom de la fonction est mal orthographié.",
+            "Si vous omettez le troisième élément, la cellule affiche FAUX quand la condition n'est pas remplie. Indiquez toujours quoi afficher dans ce cas, ne serait-ce que \"\" pour une cellule vide.",
+            "Dans Excel et Google Sheets en français, les éléments se séparent par un point-virgule. Une formule copiée d'un site en anglais, avec des virgules, est refusée.",
+            "Avec plusieurs SI imbriqués, l'ordre compte : si vous testez d'abord B2>=10, une note de 17 s'arrête à « Admis » et n'atteint jamais « Très bien ».",
+        ],
+    },
+    {
         "slug": "repeter-derniere-action-f4",
         "titre": "Répéter la dernière action d'une seule touche avec F4",
         "court": "Répéter la dernière action avec F4",

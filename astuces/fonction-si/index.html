@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utiliser la fonction SI dans Excel | Tableur Malin</title>
+<meta name="description" content="Comment utiliser la fonction SI dans Excel ou Google Sheets pour afficher un résultat selon une condition : syntaxe, exemples avec texte, calcul, ET, OU, et erreurs courantes.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/fonction-si/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Utiliser la fonction SI dans Excel | Tableur Malin">
+<meta property="og:description" content="Comment utiliser la fonction SI dans Excel ou Google Sheets pour afficher un résultat selon une condition : syntaxe, exemples avec texte, calcul, ET, OU, et erreurs courantes.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/fonction-si/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Utiliser la fonction SI dans Excel", "description": "Comment utiliser la fonction SI dans Excel ou Google Sheets pour afficher un résultat selon une condition : syntaxe, exemples avec texte, calcul, ET, OU, et erreurs courantes.", "inLanguage": "fr", "datePublished": "2026-11-20", "dateModified": "2026-11-20", "mainEntityOfPage": "https://tableurmalin.fr/astuces/fonction-si/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Utiliser la fonction SI dans Excel", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Cliquez dans la cellule où le résultat doit s'afficher, par exemple C2."}, {"@type": "HowToStep", "position": 2, "text": "Tapez =SI( puis la condition à vérifier, par exemple B2>=10."}, {"@type": "HowToStep", "position": 3, "text": "Tapez un point-virgule, puis ce qu'il faut afficher quand la condition est vraie. Un texte se met entre guillemets : \"Admis\"."}, {"@type": "HowToStep", "position": 4, "text": "Tapez un nouveau point-virgule, puis ce qu'il faut afficher quand la condition est fausse : \"Refusé\". Fermez la parenthèse."}, {"@type": "HowToStep", "position": 5, "text": "Validez avec Entrée, puis recopiez la formule vers le bas pour traiter les autres lignes."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Utiliser la fonction SI", "item": "https://tableurmalin.fr/astuces/fonction-si/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Utiliser la fonction SI dans Excel</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Tapez =SI(B2&gt;=10;&quot;Admis&quot;;&quot;Refusé&quot;) : la cellule affiche Admis si B2 vaut 10 ou plus, et Refusé dans le cas contraire. La fonction attend trois éléments séparés par des points-virgules : la condition, le résultat si elle est vraie, le résultat si elle est fausse.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Cliquez dans la cellule où le résultat doit s'afficher, par exemple C2.</li><li>Tapez =SI( puis la condition à vérifier, par exemple B2>=10.</li><li>Tapez un point-virgule, puis ce qu'il faut afficher quand la condition est vraie. Un texte se met entre guillemets : "Admis".</li><li>Tapez un nouveau point-virgule, puis ce qu'il faut afficher quand la condition est fausse : "Refusé". Fermez la parenthèse.</li><li>Validez avec <kbd>Entrée</kbd>, puis recopiez la formule vers le bas pour traiter les autres lignes.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SI(B2&gt;=10;&quot;Admis&quot;;&quot;Refusé&quot;)</code><button type="button" class="copier" data-copie="=SI(B2&gt;=10;&quot;Admis&quot;;&quot;Refusé&quot;)">Copier</button></div><figcaption>Affiche Admis si la note en B2 est supérieure ou égale à 10, Refusé sinon.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SI(C2=&quot;Oui&quot;;&quot;Payé&quot;;&quot;À relancer&quot;)</code><button type="button" class="copier" data-copie="=SI(C2=&quot;Oui&quot;;&quot;Payé&quot;;&quot;À relancer&quot;)">Copier</button></div><figcaption>La condition peut porter sur un texte, écrit entre guillemets.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SI(B2&gt;1000;B2*0,05;0)</code><button type="button" class="copier" data-copie="=SI(B2&gt;1000;B2*0,05;0)">Copier</button></div><figcaption>Le résultat peut être un calcul : ici une remise de 5 % au-delà de 1 000, et 0 sinon.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SI(A2=&quot;&quot;;&quot;&quot;;B2*C2)</code><button type="button" class="copier" data-copie="=SI(A2=&quot;&quot;;&quot;&quot;;B2*C2)">Copier</button></div><figcaption>Laisse la cellule vide tant que A2 n&#x27;est pas remplie, au lieu d&#x27;afficher un 0.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SI(ET(B2&gt;=10;C2=&quot;Oui&quot;);&quot;Validé&quot;;&quot;À revoir&quot;)</code><button type="button" class="copier" data-copie="=SI(ET(B2&gt;=10;C2=&quot;Oui&quot;);&quot;Validé&quot;;&quot;À revoir&quot;)">Copier</button></div><figcaption>Avec ET, toutes les conditions doivent être vraies. Remplacez ET par OU pour qu&#x27;une seule suffise.</figcaption></figure>
+<h2>À savoir</h2><p>La fonction SI permet à une cellule de choisir entre deux résultats. Elle se lit comme une phrase : « si la condition est vraie, affiche ceci ; sinon, affiche cela ». Microsoft la décrit ainsi : SI(test_logique; valeur_si_vrai; valeur_si_faux).</p><p>La condition compare en général deux éléments à l'aide d'un de ces signes : = (égal), &gt; (supérieur), &lt; (inférieur), &gt;= (supérieur ou égal), &lt;= (inférieur ou égal) et &lt;&gt; (différent). Les deux résultats peuvent être un texte entre guillemets, un nombre, une cellule ou un calcul.</p><p>Pour trois cas ou plus, on peut placer une seconde fonction SI à la place du dernier élément : =SI(B2>=16;"Très bien";SI(B2>=10;"Admis";"Refusé")). Excel examine les conditions dans l'ordre et s'arrête à la première qui est vraie : commencez donc par le seuil le plus élevé. Excel accepte jusqu'à 64 fonctions SI imbriquées, mais Microsoft le déconseille vivement : au-delà de deux ou trois, la formule devient difficile à relire et à corriger. Les versions récentes d'Excel proposent la fonction SI.CONDITIONS pour enchaîner plusieurs conditions, et un petit tableau de correspondance lu par <a href="/astuces/recherchex-remplacer-recherchev/">RECHERCHEX</a> est souvent plus simple encore.</p><p>Pour compter ou additionner selon une condition, inutile de passer par SI : voyez <a href="/astuces/compter-cellules-nb-si/">NB.SI</a> et <a href="/astuces/somme-si-ens/">SOMME.SI.ENS</a>.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets en français, la fonction s'appelle également SI et s'écrit de la même façon, avec le point-virgule entre les trois éléments. Les fonctions ET et OU s'y combinent de la même manière.</p>
+<h2>Les pièges à éviter</h2><ul><li>Un texte s&#x27;écrit toujours entre guillemets droits : &quot;Admis&quot;. Sans guillemets, Excel croit lire un nom qu&#x27;il ne connaît pas et affiche #NOM?.</li><li>Un nombre, à l&#x27;inverse, s&#x27;écrit sans guillemets : B2&gt;=10 et non B2&gt;=&quot;10&quot;, qui comparerait la cellule à un texte.</li><li>L&#x27;erreur #NOM? apparaît aussi quand le nom de la fonction est mal orthographié.</li><li>Si vous omettez le troisième élément, la cellule affiche FAUX quand la condition n&#x27;est pas remplie. Indiquez toujours quoi afficher dans ce cas, ne serait-ce que &quot;&quot; pour une cellule vide.</li><li>Dans Excel et Google Sheets en français, les éléments se séparent par un point-virgule. Une formule copiée d&#x27;un site en anglais, avec des virgules, est refusée.</li><li>Avec plusieurs SI imbriqués, l&#x27;ordre compte : si vous testez d&#x27;abord B2&gt;=10, une note de 17 s&#x27;arrête à « Admis » et n&#x27;atteint jamais « Très bien ».</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/remplir-plusieurs-cellules-ctrl-entree/index.html">Remplir plusieurs cellules d&#x27;un coup avec Ctrl + Entrée</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/repeter-derniere-action-f4/index.html">Répéter la dernière action d&#x27;une seule touche avec F4</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/nombre-de-jours-entre-deux-dates/index.html">Calculer le nombre de jours entre deux dates dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
