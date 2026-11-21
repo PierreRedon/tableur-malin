@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mettre un texte en majuscules ou en minuscules dans Excel | Tableur Malin</title>
+<meta name="description" content="Comment passer un texte en majuscules, en minuscules ou avec une majuscule à chaque mot dans Excel et Google Sheets : fonctions MAJUSCULE, MINUSCULE et NOMPROPRE, puis collage des valeurs.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/majuscules-minuscules/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Mettre un texte en majuscules ou en minuscules dans Excel | Tableur Malin">
+<meta property="og:description" content="Comment passer un texte en majuscules, en minuscules ou avec une majuscule à chaque mot dans Excel et Google Sheets : fonctions MAJUSCULE, MINUSCULE et NOMPROPRE, puis collage des valeurs.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/majuscules-minuscules/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Mettre un texte en majuscules ou en minuscules dans Excel", "description": "Comment passer un texte en majuscules, en minuscules ou avec une majuscule à chaque mot dans Excel et Google Sheets : fonctions MAJUSCULE, MINUSCULE et NOMPROPRE, puis collage des valeurs.", "inLanguage": "fr", "datePublished": "2026-11-21", "dateModified": "2026-11-21", "mainEntityOfPage": "https://tableurmalin.fr/astuces/majuscules-minuscules/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Mettre un texte en majuscules ou en minuscules dans Excel", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Insérez une colonne vide à côté de celle qui contient le texte à corriger, par exemple la colonne B si vos textes sont en colonne A."}, {"@type": "HowToStep", "position": 2, "text": "Dans B2, tapez =MAJUSCULE(A2) pour tout mettre en majuscules. Remplacez MAJUSCULE par MINUSCULE ou par NOMPROPRE selon le résultat voulu."}, {"@type": "HowToStep", "position": 3, "text": "Validez avec Entrée, puis recopiez la formule vers le bas pour traiter toute la colonne."}, {"@type": "HowToStep", "position": 4, "text": "Pour garder seulement le résultat : sélectionnez les cellules de la colonne B, copiez-les avec Ctrl + C, faites un clic droit sur la cellule A2, puis choisissez Coller, option Valeurs."}, {"@type": "HowToStep", "position": 5, "text": "Supprimez la colonne B, devenue inutile."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Mettre un texte en majuscules ou minuscules", "item": "https://tableurmalin.fr/astuces/majuscules-minuscules/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Mettre un texte en majuscules ou en minuscules dans Excel</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Tapez =MAJUSCULE(A2) dans une colonne voisine pour obtenir le texte de A2 en majuscules. =MINUSCULE(A2) le met en minuscules, et =NOMPROPRE(A2) met une majuscule au début de chaque mot.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Insérez une colonne vide à côté de celle qui contient le texte à corriger, par exemple la colonne B si vos textes sont en colonne A.</li><li>Dans B2, tapez =MAJUSCULE(A2) pour tout mettre en majuscules. Remplacez MAJUSCULE par MINUSCULE ou par NOMPROPRE selon le résultat voulu.</li><li>Validez avec <kbd>Entrée</kbd>, puis recopiez la formule vers le bas pour traiter toute la colonne.</li><li>Pour garder seulement le résultat : sélectionnez les cellules de la colonne B, copiez-les avec <kbd>Ctrl</kbd> + <kbd>C</kbd>, faites un clic droit sur la cellule A2, puis choisissez Coller, option Valeurs.</li><li>Supprimez la colonne B, devenue inutile.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=MAJUSCULE(A2)</code><button type="button" class="copier" data-copie="=MAJUSCULE(A2)">Copier</button></div><figcaption>« marie dupont » devient « MARIE DUPONT ».</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=MINUSCULE(A2)</code><button type="button" class="copier" data-copie="=MINUSCULE(A2)">Copier</button></div><figcaption>« MARIE DUPONT » devient « marie dupont ».</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NOMPROPRE(A2)</code><button type="button" class="copier" data-copie="=NOMPROPRE(A2)">Copier</button></div><figcaption>« marie DUPONT » devient « Marie Dupont » : une majuscule au début de chaque mot, le reste en minuscules.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=NOMPROPRE(A2)&amp;&quot; &quot;&amp;MAJUSCULE(B2)</code><button type="button" class="copier" data-copie="=NOMPROPRE(A2)&amp;&quot; &quot;&amp;MAJUSCULE(B2)">Copier</button></div><figcaption>Prénom en A2, nom en B2 : affiche « Marie DUPONT ».</figcaption></figure>
+<h2>À savoir</h2><p>Microsoft le précise dans son aide : contrairement à Word, Excel n'a pas de bouton pour modifier la casse d'un texte, c'est-à-dire pour passer des majuscules aux minuscules. Il faut passer par l'une de ces trois fonctions, dans une colonne provisoire :</p><ul><li>MAJUSCULE convertit le texte en majuscules ;</li><li>MINUSCULE convertit le texte en minuscules ;</li><li>NOMPROPRE met en majuscule la première lettre de chaque mot.</li></ul><p>Ces fonctions ne modifient pas le texte d'origine : elles en affichent une copie corrigée. C'est pourquoi on termine en collant les valeurs à la place de l'ancien texte. Tant que cette étape n'est pas faite, ne supprimez pas la colonne de départ : les formules n'auraient plus rien à lire.</p><p>Les chiffres et la ponctuation ne sont pas modifiés. NOMPROPRE est pratique pour remettre en ordre une liste de noms saisis n'importe comment, mais relisez le résultat : d'après Microsoft, la fonction met aussi en majuscule toute lettre qui suit un caractère autre qu'une lettre, et elle passe tout le reste en minuscules, y compris les sigles (« SNCF » devient « Sncf »).</p><p>Dans Excel, le <a href="/astuces/remplissage-instantane-ctrl-e/">remplissage instantané avec Ctrl + E</a> peut aussi faire ce travail sans formule : tapez le premier texte tel que vous le voulez dans la colonne voisine, puis appuyez sur Ctrl + E. Vérifiez bien les lignes proposées.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets en français, les trois fonctions portent les mêmes noms : MAJUSCULE, MINUSCULE et NOMPROPRE. Pour ne garder que le résultat, copiez les cellules, puis utilisez le menu Édition, Collage spécial, « Valeurs uniquement ».</p>
+<h2>Les pièges à éviter</h2><ul><li>Si vous supprimez la colonne d&#x27;origine avant d&#x27;avoir collé les valeurs, les formules affichent l&#x27;erreur #REF!. Annulez aussitôt avec Ctrl + Z.</li><li>Un simple copier-coller recopie la formule, pas son résultat. Choisissez bien l&#x27;option Valeurs au moment de coller.</li><li>NOMPROPRE passe en minuscules tout ce qui n&#x27;est pas une première lettre : un sigle ou un nom comme « McDonald » en ressort modifié (« Mcdonald »).</li><li>La mise en forme (police, gras) ne change rien à la casse : un texte saisi en minuscules reste en minuscules tant qu&#x27;une de ces fonctions n&#x27;est pas utilisée.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/liste-en-tableau-ctrl-t/index.html">Transformer une liste en tableau avec Ctrl + T</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/remplir-plusieurs-cellules-ctrl-entree/index.html">Remplir plusieurs cellules d&#x27;un coup avec Ctrl + Entrée</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/fonction-si/index.html">Utiliser la fonction SI dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

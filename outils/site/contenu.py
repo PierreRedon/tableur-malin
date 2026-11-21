@@ -39,6 +39,106 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "liste-en-tableau-ctrl-t", "etapes_excel": True,
+        "titre": "Transformer une liste en tableau avec Ctrl + T",
+        "court": "Transformer une liste en tableau avec Ctrl + T",
+        "description": "Cliquez dans votre liste, appuyez sur Ctrl + T puis sur Entrée : Excel la transforme en "
+                       "tableau, avec boutons de filtre, lignes colorées et agrandissement automatique. "
+                       "Équivalent dans Google Sheets.",
+        "bref": "Cliquez dans n'importe quelle cellule de votre liste, appuyez sur Ctrl + T, puis validez avec "
+                "Entrée : la liste devient un tableau, avec des boutons de filtre sur les titres et une ligne "
+                "sur deux colorée.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-21",
+        "video": "liste-en-tableau-ctrl-t",
+        "etapes": [
+            "Cliquez dans n'importe quelle cellule de votre liste. Inutile de tout sélectionner.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur <kbd>T</kbd>. La boîte « Créer un tableau » s'ouvre et propose la plage qu'Excel a repérée, par exemple =$A$1:$C$7.",
+            "Vérifiez que la plage couvre bien toute votre liste. Si la première ligne contient vos titres de colonnes, laissez cochée la case « Mon tableau comporte des en-têtes ».",
+            "Validez avec <kbd>Entrée</kbd> ou cliquez sur OK : les titres reçoivent un bouton de filtre et les lignes alternent deux couleurs.",
+            "Sans le clavier, le même résultat s'obtient par l'onglet Insertion, bouton Tableau, ou par l'onglet Accueil, bouton « Mettre sous forme de tableau », qui laisse choisir les couleurs.",
+        ],
+        "formules": [],
+        "texte": "<p>Une liste et un tableau se ressemblent, mais Excel ne les traite pas de la même façon. Une "
+                 "fois la liste transformée en tableau, plusieurs choses se font toutes seules :</p>"
+                 "<ul><li>chaque titre de colonne porte un bouton pour trier et filtrer ;</li>"
+                 "<li>une ligne sur deux est colorée (les « lignes à bandes »), ce qui facilite la lecture ;</li>"
+                 "<li>le tableau s'agrandit de lui-même quand vous tapez une nouvelle ligne juste en dessous, "
+                 "et celle-ci prend la même mise en forme ;</li>"
+                 "<li>une formule tapée dans une colonne se recopie sur toutes les lignes (les « colonnes "
+                 "calculées ») ;</li>"
+                 "<li>une ligne des totaux peut être affichée en bas du tableau, depuis l'onglet « Création de "
+                 "tableau ».</li></ul>"
+                 "<p>Cet onglet « Création de tableau » apparaît dans le ruban dès que vous cliquez dans le "
+                 "tableau (il peut s'appeler simplement « Tableau » selon la version). C'est là que l'on change "
+                 "les couleurs et que l'on active ou non les lignes à bandes.</p>"
+                 "<p>Pour revenir en arrière, cliquez dans le tableau, puis sur « Convertir en plage » dans ce "
+                 "même onglet : les données restent en place, mais redeviennent une liste ordinaire.</p>"
+                 "<p>Si vous cherchez seulement les boutons de filtre, sans changer l'apparence de la liste, "
+                 "<a href=\"/astuces/filtrer-liste-ctrl-maj-l/\">Ctrl + Maj + L</a> suffit.</p>",
+        "sheets": "<p>Google Sheets propose aussi des tableaux, depuis 2024. Cliquez dans votre liste, ouvrez le "
+                  "menu Format, puis choisissez « Convertir en tableau ». Le raccourci clavier indiqué pour "
+                  "Windows est Ctrl + Alt + T. Comme dans Excel, les titres reçoivent un menu de filtre et les "
+                  "lignes alternent deux couleurs.</p>",
+        "pieges": [
+            "Une ligne entièrement vide au milieu de la liste arrête la détection : Excel ne propose alors que la partie située au-dessus ou au-dessous. Regardez toujours la plage affichée dans la boîte « Créer un tableau » avant de valider.",
+            "Si votre liste n'a pas de ligne de titres, décochez « Mon tableau comporte des en-têtes » : Excel ajoute alors des titres provisoires (Colonne1, Colonne2, etc.) que vous pouvez renommer.",
+            "Dans Excel, Ctrl + T crée un tableau ; dans Google Sheets, le raccourci est différent (Ctrl + Alt + T).",
+            "Les couleurs ne vous plaisent pas ? Inutile de tout refaire : choisissez un autre style dans l'onglet « Création de tableau ».",
+        ],
+    },
+    {
+        "slug": "majuscules-minuscules",
+        "titre": "Mettre un texte en majuscules ou en minuscules dans Excel",
+        "court": "Mettre un texte en majuscules ou minuscules",
+        "description": "Comment passer un texte en majuscules, en minuscules ou avec une majuscule à chaque mot "
+                       "dans Excel et Google Sheets : fonctions MAJUSCULE, MINUSCULE et NOMPROPRE, puis collage "
+                       "des valeurs.",
+        "bref": "Tapez =MAJUSCULE(A2) dans une colonne voisine pour obtenir le texte de A2 en majuscules. "
+                "=MINUSCULE(A2) le met en minuscules, et =NOMPROPRE(A2) met une majuscule au début de chaque mot.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-21",
+        "etapes": [
+            "Insérez une colonne vide à côté de celle qui contient le texte à corriger, par exemple la colonne B si vos textes sont en colonne A.",
+            "Dans B2, tapez =MAJUSCULE(A2) pour tout mettre en majuscules. Remplacez MAJUSCULE par MINUSCULE ou par NOMPROPRE selon le résultat voulu.",
+            "Validez avec <kbd>Entrée</kbd>, puis recopiez la formule vers le bas pour traiter toute la colonne.",
+            "Pour garder seulement le résultat : sélectionnez les cellules de la colonne B, copiez-les avec <kbd>Ctrl</kbd> + <kbd>C</kbd>, faites un clic droit sur la cellule A2, puis choisissez Coller, option Valeurs.",
+            "Supprimez la colonne B, devenue inutile.",
+        ],
+        "formules": [
+            ("=MAJUSCULE(A2)", "« marie dupont » devient « MARIE DUPONT »."),
+            ("=MINUSCULE(A2)", "« MARIE DUPONT » devient « marie dupont »."),
+            ("=NOMPROPRE(A2)", "« marie DUPONT » devient « Marie Dupont » : une majuscule au début de chaque mot, le reste en minuscules."),
+            ('=NOMPROPRE(A2)&" "&MAJUSCULE(B2)', "Prénom en A2, nom en B2 : affiche « Marie DUPONT »."),
+        ],
+        "texte": "<p>Microsoft le précise dans son aide : contrairement à Word, Excel n'a pas de bouton pour "
+                 "modifier la casse d'un texte, c'est-à-dire pour passer des majuscules aux minuscules. Il faut "
+                 "passer par l'une de ces trois fonctions, dans une colonne provisoire :</p>"
+                 "<ul><li>MAJUSCULE convertit le texte en majuscules ;</li>"
+                 "<li>MINUSCULE convertit le texte en minuscules ;</li>"
+                 "<li>NOMPROPRE met en majuscule la première lettre de chaque mot.</li></ul>"
+                 "<p>Ces fonctions ne modifient pas le texte d'origine : elles en affichent une copie corrigée. "
+                 "C'est pourquoi on termine en collant les valeurs à la place de l'ancien texte. Tant que cette "
+                 "étape n'est pas faite, ne supprimez pas la colonne de départ : les formules n'auraient plus "
+                 "rien à lire.</p>"
+                 "<p>Les chiffres et la ponctuation ne sont pas modifiés. NOMPROPRE est pratique pour remettre "
+                 "en ordre une liste de noms saisis n'importe comment, mais relisez le résultat : d'après "
+                 "Microsoft, la fonction met aussi en majuscule toute lettre qui suit un caractère autre qu'une "
+                 "lettre, et elle passe tout le reste en minuscules, y compris les sigles (« SNCF » devient "
+                 "« Sncf »).</p>"
+                 "<p>Dans Excel, le <a href=\"/astuces/remplissage-instantane-ctrl-e/\">remplissage instantané "
+                 "avec Ctrl + E</a> peut aussi faire ce travail sans formule : tapez le premier texte tel que "
+                 "vous le voulez dans la colonne voisine, puis appuyez sur Ctrl + E. Vérifiez bien les lignes "
+                 "proposées.</p>",
+        "sheets": "<p>Dans Google Sheets en français, les trois fonctions portent les mêmes noms : MAJUSCULE, "
+                  "MINUSCULE et NOMPROPRE. Pour ne garder que le résultat, copiez les cellules, puis utilisez "
+                  "le menu Édition, Collage spécial, « Valeurs uniquement ».</p>",
+        "pieges": [
+            "Si vous supprimez la colonne d'origine avant d'avoir collé les valeurs, les formules affichent l'erreur #REF!. Annulez aussitôt avec Ctrl + Z.",
+            "Un simple copier-coller recopie la formule, pas son résultat. Choisissez bien l'option Valeurs au moment de coller.",
+            "NOMPROPRE passe en minuscules tout ce qui n'est pas une première lettre : un sigle ou un nom comme « McDonald » en ressort modifié (« Mcdonald »).",
+            "La mise en forme (police, gras) ne change rien à la casse : un texte saisi en minuscules reste en minuscules tant qu'une de ces fonctions n'est pas utilisée.",
+        ],
+    },
+    {
         "slug": "remplir-plusieurs-cellules-ctrl-entree",
         "titre": "Remplir plusieurs cellules d'un coup avec Ctrl + Entrée",
         "court": "Remplir plusieurs cellules avec Ctrl + Entrée",
