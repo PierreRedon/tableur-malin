@@ -32,7 +32,8 @@ Projet de Pierre Redon : astuces Excel et Google Sheets en français. Site stati
 
 ## Procédure de l'astuce du jour
 
-1. Lire `ASTUCES` dans `contenu.py` pour ne pas répéter un sujet. Choisir une astuce Excel/Sheets utile au quotidien,
+1. Lire `ASTUCES` dans `contenu.py` pour ne pas répéter un sujet. Piocher le sujet dans la réserve `outils/idees.md` (créée le 22/11/2026
+   à la demande de Pierre), en suivant son mode d'emploi : cocher l'idée publiée, et recharger la réserve quand elle baisse. Choisir une astuce Excel/Sheets utile au quotidien,
    très visuelle, démontrable en moins de 20 secondes (raccourci, formule courte, réglage en deux clics).
 2. Vérifier par une recherche web les noms de fonctions et de menus EN FRANÇAIS (Excel et Google Sheets), le séparateur
    « ; », et les versions concernées. Ne rien affirmer qui n'a pas été vérifié ; en cas de doute, formuler prudemment.

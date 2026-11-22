@@ -1,0 +1,158 @@
+# Réserve d'idées Tableur Malin
+
+Réserve créée le 22/11/2026 à la demande de Pierre, pour ne jamais manquer de sujet.
+
+Mode d'emploi pour la routine du jour :
+- Prendre la première idée non cochée de la liste « Vidéos » et la première de la liste « Pages », sauf si un sujet
+  d'actualité ou une question reçue est plus pertinent.
+- Les raccourcis, noms de fonctions et menus notés ici sont des pistes : ils restent À VÉRIFIER par recherche web
+  (libellés français, Excel et Google Sheets) avant toute publication, comme le demande CLAUDE.md.
+- Après publication, cocher la ligne (`[x]`) et ajouter le slug. Si une idée se révèle fausse ou sans intérêt, la barrer
+  avec une courte raison plutôt que la supprimer.
+- Quand il reste moins de 15 idées dans une liste, en ajouter 30 nouvelles dans le même commit que l'astuce du jour.
+- Les idées marquées (pack) se prêtent à la ligne « 20 modèles prêts à remplir » dans la légende.
+
+## Vidéos (raccourci ou geste très visuel, démontrable en moins de 20 secondes)
+
+- [x] Séparer prénom et nom avec Ctrl + E — remplissage-instantane-ctrl-e
+- [x] Somme automatique Alt + = — somme-automatique-alt-egal
+- [x] Recopier une formule d'un double-clic — recopier-formule-double-clic
+- [x] Date du jour Ctrl + ; — date-du-jour-ctrl-point-virgule
+- [x] Élargir une colonne d'un double-clic — ajuster-largeur-colonne-double-clic
+- [x] Somme dans la barre d'état — somme-sans-formule-barre-etat
+- [x] Filtrer avec Ctrl + Maj + L — filtrer-liste-ctrl-maj-l
+- [x] Aller en bas d'une liste Ctrl + ↓ — aller-en-bas-liste-ctrl-fleche
+- [x] Répéter avec F4 — repeter-derniere-action-f4
+- [x] Remplir plusieurs cellules Ctrl + Entrée — remplir-plusieurs-cellules-ctrl-entree
+- [x] Liste en tableau Ctrl + T — liste-en-tableau-ctrl-t
+- [ ] Créer un graphique en une touche (Alt + F1, F11 pour une feuille à part)
+- [ ] Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)
+- [ ] Sélectionner tout le tableau autour de la cellule (Ctrl + A)
+- [ ] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R)
+- [ ] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - »)
+- [ ] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace)
+- [ ] Afficher toutes les formules de la feuille d'un coup (Ctrl + ")
+- [ ] Modifier une cellule sans double-cliquer (F2)
+- [ ] Rechercher et remplacer partout (Ctrl + H)
+- [ ] Insérer l'heure actuelle (Ctrl + :)
+- [ ] Mettre en pourcentage ou en euros au clavier (Ctrl + Maj + %, Ctrl + Maj + $ ou M à vérifier)
+- [ ] Ouvrir Format de cellule (Ctrl + 1 du pavé alphabétique)
+- [ ] Poignée de recopie : créer une suite 1, 2, 3 ou lundi, mardi, mercredi
+- [ ] Poignée de recopie : tous les jours ouvrés, ou tous les mois
+- [ ] Déplacer une colonne en la faisant glisser avec Maj
+- [ ] Inverser lignes et colonnes (Collage spécial, Transposer)
+- [ ] Coller seulement les valeurs (Ctrl + Maj + V)
+- [ ] Reproduire la mise en forme (pinceau, double-clic pour le verrouiller)
+- [ ] Élargir toutes les colonnes d'un coup (sélection totale puis double-clic)
+- [ ] Colorer automatiquement les valeurs en retard ou négatives (mise en forme conditionnelle) (pack)
+- [ ] Barres de données dans les cellules (mise en forme conditionnelle)
+- [ ] Repérer les doublons en couleur (mise en forme conditionnelle)
+- [ ] Cases à cocher dans les cellules (Insertion, Case à cocher) (pack)
+- [ ] Mini-graphique dans une cellule (Sparkline)
+- [ ] Trier une liste du plus grand au plus petit en deux clics
+- [ ] Figer la première ligne (version vidéo de la page figer-premiere-ligne)
+- [ ] Liste déroulante (version vidéo de la page liste-deroulante) (pack)
+- [ ] Supprimer les doublons (version vidéo de la page supprimer-les-doublons)
+- [ ] Bloquer une cellule avec F4 dans une formule (version vidéo de bloquer-cellule-formule-dollar-f4)
+- [ ] Retour à la ligne dans une cellule Alt + Entrée (version vidéo)
+- [ ] Séparer une colonne en deux (Données, Convertir)
+- [ ] Analyse rapide (Ctrl + Q) : totaux et graphiques proposés
+- [ ] Ligne des totaux d'un tableau en un clic
+- [ ] Segments : des boutons pour filtrer un tableau
+- [ ] Nommer une cellule pour écrire =Prix*TVA
+- [ ] Changer d'onglet au clavier (Ctrl + Page suivante)
+- [ ] Masquer une colonne (Ctrl + 0) ou une ligne (Ctrl + 9)
+- [ ] Grouper des lignes pour les replier (Maj + Alt + →)
+- [ ] Zoomer sur la sélection
+- [ ] Aller à une cellule précise (Ctrl + T ou F5 selon version, à vérifier) / zone Nom
+- [ ] Sélectionner seulement les cellules vides (Atteindre, Cellules) puis les remplir
+- [ ] Supprimer toutes les lignes vides d'un coup
+- [ ] Annuler et rétablir (Ctrl + Z, Ctrl + Y)
+- [ ] Insérer un commentaire (Maj + F2)
+- [ ] Imprimer sur une seule page (Ajuster à 1 page)
+- [ ] Répéter la ligne de titres sur chaque page imprimée
+- [ ] Protéger une feuille pour qu'on ne casse pas les formules
+- [ ] Copier une feuille en la faisant glisser avec Ctrl
+- [ ] Colorer une ligne sur deux sans tableau
+- [ ] Barrer automatiquement une tâche cochée (pack)
+- [ ] Somme de plusieurs onglets d'un coup (=SOMME(Janvier:Décembre!B2))
+- [ ] Saisir une fraction ou un numéro commençant par 0 sans qu'Excel le transforme
+- [ ] Convertir des nombres stockés comme texte (triangle vert)
+- [ ] Google Sheets : puces intelligentes et listes déroulantes colorées
+- [ ] Google Sheets : explorer les statistiques d'une colonne
+- [ ] Google Sheets : cases à cocher et compteur NB.SI
+- [ ] Tableau croisé dynamique en 15 secondes
+- [ ] Graphique qui se met à jour tout seul grâce au tableau
+- [ ] Copier la largeur des colonnes (Collage spécial)
+- [ ] Sélection de cellules non voisines avec Ctrl + clic, puis somme dans la barre d'état
+
+## Pages sans vidéo (questions réellement cherchées : « comment ... dans Excel »)
+
+- [x] SOMME.SI.ENS, supprimer les doublons, figer la première ligne, liste déroulante, RECHERCHEX
+- [x] Bloquer une cellule ($), retour à la ligne, pourcentage, arrondir, NB.SI, réunir deux cellules
+- [x] Moyenne, nombre de jours entre deux dates, fonction SI, majuscules et minuscules
+- [ ] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A)
+- [ ] Faire une soustraction, une multiplication, une division
+- [ ] Calculer une augmentation ou une baisse en pourcentage
+- [ ] Calculer la TVA : passer du HT au TTC et inversement (pack)
+- [ ] Calculer un âge à partir d'une date de naissance (DATEDIF)
+- [ ] Additionner des heures et dépasser 24 h (format [h]:mm) (pack)
+- [ ] Calculer une mensualité de prêt (VPM) (pack)
+- [ ] SOMME.SI : additionner selon un critère
+- [ ] NB.SI.ENS : compter selon plusieurs critères
+- [ ] NBVAL, NB et NB.VIDE : compter les cellules remplies ou vides
+- [ ] SIERREUR : remplacer #N/A ou #DIV/0! par un texte propre
+- [ ] Comprendre les erreurs #VALEUR!, #REF!, #NOM?, #DIV/0!, #N/A
+- [ ] INDEX et EQUIV
+- [ ] GAUCHE, DROITE, STXT : extraire une partie d'un texte
+- [ ] SUPPRESPACE : enlever les espaces en trop
+- [ ] SUBSTITUE : remplacer un caractère dans une colonne
+- [ ] NBCAR : compter les caractères
+- [ ] TEXTE : afficher une date ou un nombre comme on veut
+- [ ] AUJOURDHUI et MAINTENANT
+- [ ] JOURSEM, MOIS, ANNEE : extraire le jour, le mois, l'année
+- [ ] FIN.MOIS et MOIS.DECALER : échéances et dates de fin de mois
+- [ ] NB.JOURS.OUVRES : compter les jours travaillés
+- [ ] SERIE.JOUR.OUVRE : date d'échéance en jours ouvrés
+- [ ] MAX, MIN, GRANDE.VALEUR, PETITE.VALEUR
+- [ ] RANG : classer des résultats
+- [ ] MEDIANE et différence avec la moyenne
+- [ ] Moyenne pondérée (SOMMEPROD)
+- [ ] SI.CONDITIONS et SI.MULTIPLE
+- [ ] ET, OU dans une condition
+- [ ] UNIQUE, TRIER, FILTRE : les fonctions dynamiques
+- [ ] JOINDRE.TEXTE : assembler une liste avec un séparateur
+- [ ] FRACTIONNER.TEXTE / SPLIT : couper un texte
+- [ ] Créer un tableau croisé dynamique pas à pas
+- [ ] Créer un graphique et choisir le bon type
+- [ ] Graphique à deux axes
+- [ ] Mise en forme conditionnelle : colorer une ligne entière selon une cellule
+- [ ] Liste déroulante dépendante d'une autre
+- [ ] Empêcher la saisie d'une valeur incorrecte (validation des données)
+- [ ] Protéger une feuille, verrouiller certaines cellules
+- [ ] Mettre un mot de passe sur un classeur
+- [ ] Fusionner des cellules (et pourquoi préférer « Centrer sur plusieurs colonnes »)
+- [ ] Séparer le contenu d'une cellule en plusieurs colonnes
+- [ ] Trier sur plusieurs colonnes
+- [ ] Filtrer avec plusieurs critères, filtre par couleur
+- [ ] Figer à la fois une ligne et une colonne
+- [ ] Imprimer : zone d'impression, sauts de page, titres répétés
+- [ ] Numéroter des lignes automatiquement
+- [ ] Afficher un zéro devant un numéro (codes postaux, téléphones)
+- [ ] Convertir un texte en date, une date en texte
+- [ ] Pourquoi ma formule ne se calcule pas (calcul manuel, format Texte)
+- [ ] Références circulaires : comprendre le message et le corriger
+- [ ] Récupérer un fichier non enregistré
+- [ ] Ouvrir un fichier CSV correctement (séparateur, accents)
+- [ ] Enregistrer en PDF
+- [ ] Comparer deux listes et trouver les différences
+- [ ] Lier deux feuilles ou deux classeurs
+- [ ] Passer d'Excel à Google Sheets et inversement
+- [ ] Partager un classeur et travailler à plusieurs
+- [ ] Faire un budget dans Excel pas à pas (pack)
+- [ ] Faire une facture dans Excel : mentions à prévoir (pack, à vérifier avec soin, sans conseil juridique)
+- [ ] Faire un planning dans Excel (pack)
+- [ ] Faire un diagramme de Gantt simple (pack)
+- [ ] Suivre un stock dans Excel (pack)
+- [ ] Faire un tableau d'amortissement de prêt (pack)
+- [ ] Partager des dépenses entre colocataires (pack)
