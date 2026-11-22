@@ -25,7 +25,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Répéter avec F4 — repeter-derniere-action-f4
 - [x] Remplir plusieurs cellules Ctrl + Entrée — remplir-plusieurs-cellules-ctrl-entree
 - [x] Liste en tableau Ctrl + T — liste-en-tableau-ctrl-t
-- [ ] Créer un graphique en une touche (Alt + F1, F11 pour une feuille à part)
+- [x] Créer un graphique en une touche (Alt + F1, F11 pour une feuille à part) — graphique-en-une-touche-alt-f1
 - [ ] Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)
 - [ ] Sélectionner tout le tableau autour de la cellule (Ctrl + A)
 - [ ] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R)
@@ -91,7 +91,7 @@ Mode d'emploi pour la routine du jour :
 - [x] SOMME.SI.ENS, supprimer les doublons, figer la première ligne, liste déroulante, RECHERCHEX
 - [x] Bloquer une cellule ($), retour à la ligne, pourcentage, arrondir, NB.SI, réunir deux cellules
 - [x] Moyenne, nombre de jours entre deux dates, fonction SI, majuscules et minuscules
-- [ ] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A)
+- [x] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A) — recherchev
 - [ ] Faire une soustraction, une multiplication, une division
 - [ ] Calculer une augmentation ou une baisse en pourcentage
 - [ ] Calculer la TVA : passer du HT au TTC et inversement (pack)

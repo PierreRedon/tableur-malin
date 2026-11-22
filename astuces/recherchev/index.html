@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utiliser RECHERCHEV dans Excel (et comprendre l&#x27;erreur #N/A) | Tableur Malin</title>
+<meta name="description" content="Comment utiliser RECHERCHEV dans Excel et Google Sheets : la formule expliquée argument par argument, l&#x27;importance de FAUX à la fin, et les raisons pour lesquelles elle renvoie #N/A.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/recherchev/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Utiliser RECHERCHEV dans Excel (et comprendre l&#x27;erreur #N/A) | Tableur Malin">
+<meta property="og:description" content="Comment utiliser RECHERCHEV dans Excel et Google Sheets : la formule expliquée argument par argument, l&#x27;importance de FAUX à la fin, et les raisons pour lesquelles elle renvoie #N/A.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/recherchev/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Utiliser RECHERCHEV dans Excel (et comprendre l'erreur #N/A)", "description": "Comment utiliser RECHERCHEV dans Excel et Google Sheets : la formule expliquée argument par argument, l'importance de FAUX à la fin, et les raisons pour lesquelles elle renvoie #N/A.", "inLanguage": "fr", "datePublished": "2026-11-22", "dateModified": "2026-11-22", "mainEntityOfPage": "https://tableurmalin.fr/astuces/recherchev/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Utiliser RECHERCHEV dans Excel (et comprendre l'erreur #N/A)", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Repérez votre liste de référence, par exemple les références en colonne A, les noms de produits en colonne B et les prix en colonne C, de la ligne 2 à la ligne 7. La valeur que vous cherchez doit se trouver dans la première colonne de cette plage."}, {"@type": "HowToStep", "position": 2, "text": "Tapez la valeur à chercher dans une cellule libre, par exemple une référence en E2."}, {"@type": "HowToStep", "position": 3, "text": "Dans la cellule où vous voulez le résultat, tapez =RECHERCHEV(E2;A2:C7;3;FAUX)."}, {"@type": "HowToStep", "position": 4, "text": "Validez avec Entrée : le prix du produit dont la référence est en E2 s'affiche."}, {"@type": "HowToStep", "position": 5, "text": "Si vous comptez recopier la formule vers le bas, bloquez la plage avec des dollars : =RECHERCHEV(E2;$A$2:$C$7;3;FAUX)."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Utiliser RECHERCHEV (et éviter #N/A)", "item": "https://tableurmalin.fr/astuces/recherchev/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Utiliser RECHERCHEV dans Excel (et comprendre l&#x27;erreur #N/A)</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Tapez =RECHERCHEV(E2;A2:C7;3;FAUX) : Excel cherche la valeur de E2 dans la première colonne de la plage A2:C7 et renvoie ce qui se trouve sur la même ligne, dans la 3e colonne. Le FAUX final demande une correspondance exacte.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Repérez votre liste de référence, par exemple les références en colonne A, les noms de produits en colonne B et les prix en colonne C, de la ligne 2 à la ligne 7. La valeur que vous cherchez doit se trouver dans la première colonne de cette plage.</li><li>Tapez la valeur à chercher dans une cellule libre, par exemple une référence en E2.</li><li>Dans la cellule où vous voulez le résultat, tapez =RECHERCHEV(E2;A2:C7;3;FAUX).</li><li>Validez avec <kbd>Entrée</kbd> : le prix du produit dont la référence est en E2 s'affiche.</li><li>Si vous comptez recopier la formule vers le bas, bloquez la plage avec des dollars : =RECHERCHEV(E2;$A$2:$C$7;3;FAUX).</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=RECHERCHEV(E2;A2:C7;3;FAUX)</code><button type="button" class="copier" data-copie="=RECHERCHEV(E2;A2:C7;3;FAUX)">Copier</button></div><figcaption>Cherche E2 dans la colonne A et renvoie la valeur de la 3e colonne de la plage (la colonne C).</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=RECHERCHEV(E2;A2:C7;2;FAUX)</code><button type="button" class="copier" data-copie="=RECHERCHEV(E2;A2:C7;2;FAUX)">Copier</button></div><figcaption>Même recherche, mais renvoie la 2e colonne (la colonne B).</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=RECHERCHEV(E2;$A$2:$C$7;3;FAUX)</code><button type="button" class="copier" data-copie="=RECHERCHEV(E2;$A$2:$C$7;3;FAUX)">Copier</button></div><figcaption>La plage est bloquée : la formule peut être recopiée vers le bas.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=SIERREUR(RECHERCHEV(E2;A2:C7;3;FAUX);&quot;Introuvable&quot;)</code><button type="button" class="copier" data-copie="=SIERREUR(RECHERCHEV(E2;A2:C7;3;FAUX);&quot;Introuvable&quot;)">Copier</button></div><figcaption>Affiche « Introuvable » au lieu de #N/A quand la valeur n&#x27;existe pas dans la liste.</figcaption></figure>
+<h2>À savoir</h2><p>RECHERCHEV (le V signifie « verticale ») attend quatre informations, séparées par des points-virgules. Microsoft les nomme ainsi : =RECHERCHEV(valeur_cherchée;table_matrice;no_index_col;[valeur_proche]).</p><ul><li>La valeur cherchée : ce que vous connaissez déjà (ici la référence en E2).</li><li>La plage : la liste dans laquelle chercher. La valeur cherchée doit toujours se trouver dans sa première colonne.</li><li>Le numéro de colonne : la position, dans cette plage, de la colonne à renvoyer. On compte à partir de la première colonne de la plage, pas à partir de la colonne A de la feuille.</li><li>FAUX ou VRAI : FAUX demande une correspondance exacte, VRAI une correspondance approximative, qui suppose que la première colonne est triée.</li></ul><p>Ce dernier argument est facultatif, mais ne l'oubliez pas : si vous ne mettez rien, Excel applique la correspondance approximative et peut renvoyer le résultat d'une autre ligne sans aucun message d'erreur. Dans la plupart des cas (une référence, un nom, un numéro de client), c'est FAUX qu'il vous faut.</p><p><strong>Pourquoi #N/A ?</strong> Cette erreur signifie que la valeur n'a pas été trouvée dans la première colonne. D'après l'aide de Microsoft, les causes les plus courantes sont :</p><ul><li>la valeur n'existe réellement pas dans la liste (ou elle est écrite différemment) ;</li><li>les types ne correspondent pas : vous cherchez un nombre, mais la liste contient ce nombre enregistré comme du texte, ou l'inverse ;</li><li>des espaces en trop se cachent avant ou après le texte, dans la liste ou dans la valeur cherchée. La fonction SUPPRESPACE permet de les enlever ;</li><li>le dernier argument ne convient pas : pour une correspondance exacte, il doit être FAUX.</li></ul><p>Quand il est normal que certaines valeurs soient absentes, entourez la formule de SIERREUR pour afficher un texte propre à la place de l'erreur (voir la dernière formule ci-dessus).</p><p>Si votre version d'Excel le permet (Microsoft 365, Excel 2021 ou plus récent), <a href="/astuces/recherchex-remplacer-recherchev/">RECHERCHEX</a> fait le même travail avec moins de pièges : elle cherche dans n'importe quelle colonne et demande la correspondance exacte par défaut.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets en français, la fonction s'appelle aussi RECHERCHEV et s'écrit de la même façon : =RECHERCHEV(E2;A2:C7;3;FAUX). Google nomme le dernier argument « est_trié » et recommande de le régler sur FAUX pour une correspondance exacte ; sans lui, c'est la correspondance proche qui s'applique, comme dans Excel. Si aucune valeur n'est trouvée, la fonction renvoie également #N/A.</p>
+<h2>Les pièges à éviter</h2><ul><li>Sans FAUX à la fin, RECHERCHEV peut renvoyer une valeur fausse sans afficher d&#x27;erreur. Écrivez toujours le quatrième argument.</li><li>RECHERCHEV ne regarde que vers la droite : la colonne à renvoyer doit se trouver après la colonne de recherche. Sinon, réorganisez la liste ou utilisez RECHERCHEX.</li><li>Si vous insérez une colonne au milieu de la plage, le numéro de colonne écrit dans la formule ne suit pas : la formule renvoie alors la mauvaise colonne.</li><li>En recopiant la formule sans les dollars, la plage se décale d&#x27;une ligne à chaque fois et des valeurs finissent par ne plus être trouvées. Voir « Bloquer une cellule dans une formule ».</li><li>S&#x27;il y a des doublons dans la première colonne, seule la première ligne trouvée est renvoyée.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/graphique-en-une-touche-alt-f1/index.html">Créer un graphique en une touche avec Alt + F1</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/liste-en-tableau-ctrl-t/index.html">Transformer une liste en tableau avec Ctrl + T</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/majuscules-minuscules/index.html">Mettre un texte en majuscules ou en minuscules dans Excel</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

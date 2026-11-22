@@ -39,6 +39,117 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "graphique-en-une-touche-alt-f1", "etapes_excel": True,
+        "titre": "Créer un graphique en une touche avec Alt + F1",
+        "court": "Créer un graphique avec Alt + F1",
+        "description": "Sélectionnez vos données puis appuyez sur Alt + F1 : Excel crée aussitôt un graphique à côté "
+                       "du tableau. F11 le place sur une feuille à part. Équivalent dans Google Sheets.",
+        "bref": "Sélectionnez vos données, titres compris, puis appuyez sur Alt + F1 : Excel crée aussitôt un "
+                "graphique sur la feuille, sans passer par un menu. Avec F11, le graphique est créé sur une feuille "
+                "à part.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-22",
+        "video": "graphique-en-une-touche-alt-f1",
+        "etapes": [
+            "Sélectionnez les cellules à représenter, en incluant la ligne de titres : par exemple de A1 à B5 pour une colonne de mois et une colonne de ventes.",
+            "Maintenez <kbd>Alt</kbd> et appuyez sur <kbd>F1</kbd>. Le graphique apparaît immédiatement sur la feuille, à côté de vos données.",
+            "Déplacez-le en le faisant glisser par son bord, et changez sa taille en tirant sur l'un de ses coins.",
+            "Pour obtenir le graphique seul sur une feuille à part, sélectionnez les mêmes données et appuyez sur <kbd>F11</kbd> à la place.",
+            "Si le graphique proposé ne convient pas, supprimez-le (cliquez sur son bord, puis touche <kbd>Suppr</kbd>) et passez par l'onglet Insertion, bouton « Graphiques recommandés », pour choisir un autre modèle.",
+        ],
+        "formules": [],
+        "texte": "<p>Ce raccourci crée le graphique par défaut d'Excel : en général un graphique en colonnes "
+                 "(Excel parle d'histogramme), avec une colonne par ligne de votre liste. Microsoft le rappelle "
+                 "dans son aide : Alt + F1 crée un graphique immédiatement, mais ce n'est pas forcément le "
+                 "meilleur graphique pour vos données. C'est donc surtout un moyen très rapide de voir à quoi "
+                 "ressemblent des chiffres.</p>"
+                 "<p>Le graphique reste lié aux cellules : si vous corrigez un montant dans la liste, la colonne "
+                 "correspondante change de hauteur toute seule.</p>"
+                 "<p>Quand le graphique est sélectionné, des onglets qui lui sont consacrés apparaissent dans le "
+                 "ruban (« Création de graphique » et « Format » ; leurs noms varient un peu selon la version). "
+                 "C'est là que l'on change les couleurs, le style ou le titre.</p>"
+                 "<p>Pour choisir vous-même le type de graphique dès le départ, sélectionnez vos données, ouvrez "
+                 "l'onglet Insertion, puis cliquez sur « Graphiques recommandés » : Excel montre un aperçu de "
+                 "plusieurs graphiques adaptés, et l'onglet « Tous les graphiques » donne accès aux autres.</p>"
+                 "<p>Vos données forment une longue liste ? <a href=\"/astuces/liste-en-tableau-ctrl-t/\">"
+                 "Transformez-la d'abord en tableau avec Ctrl + T</a> : elle sera plus simple à trier et à "
+                 "filtrer avant d'en tirer un graphique.</p>",
+        "sheets": "<p>Dans Google Sheets, sélectionnez vos données, ouvrez le menu Insertion, puis choisissez "
+                  "Graphique. Google Sheets propose un graphique et ouvre un panneau à droite pour changer son "
+                  "type et son apparence. La liste officielle des raccourcis de Google Sheets n'indique pas de "
+                  "raccourci équivalent à Alt + F1 : le menu reste le chemin le plus sûr.</p>",
+        "pieges": [
+            "Sur de nombreux ordinateurs portables, les touches F1 à F12 servent d'abord à régler le son ou la luminosité : il faut alors ajouter la touche Fn (Alt + Fn + F1, ou Fn + F11).",
+            "N'incluez pas la ligne de total dans la sélection : elle apparaîtrait comme une colonne géante qui écrase toutes les autres.",
+            "Incluez en revanche la ligne de titres et la colonne des libellés (les mois, les produits) : Excel s'en sert pour nommer les colonnes du graphique.",
+            "F11 ajoute une nouvelle feuille au classeur, qui ne contient que le graphique. Si vous l'avez créée par erreur, annulez avec Ctrl + Z ou supprimez cet onglet.",
+        ],
+    },
+    {
+        "slug": "recherchev",
+        "titre": "Utiliser RECHERCHEV dans Excel (et comprendre l'erreur #N/A)",
+        "court": "Utiliser RECHERCHEV (et éviter #N/A)",
+        "description": "Comment utiliser RECHERCHEV dans Excel et Google Sheets : la formule expliquée argument par "
+                       "argument, l'importance de FAUX à la fin, et les raisons pour lesquelles elle renvoie #N/A.",
+        "bref": "Tapez =RECHERCHEV(E2;A2:C7;3;FAUX) : Excel cherche la valeur de E2 dans la première colonne de la "
+                "plage A2:C7 et renvoie ce qui se trouve sur la même ligne, dans la 3e colonne. Le FAUX final "
+                "demande une correspondance exacte.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-22",
+        "etapes": [
+            "Repérez votre liste de référence, par exemple les références en colonne A, les noms de produits en colonne B et les prix en colonne C, de la ligne 2 à la ligne 7. La valeur que vous cherchez doit se trouver dans la première colonne de cette plage.",
+            "Tapez la valeur à chercher dans une cellule libre, par exemple une référence en E2.",
+            "Dans la cellule où vous voulez le résultat, tapez =RECHERCHEV(E2;A2:C7;3;FAUX).",
+            "Validez avec <kbd>Entrée</kbd> : le prix du produit dont la référence est en E2 s'affiche.",
+            "Si vous comptez recopier la formule vers le bas, bloquez la plage avec des dollars : =RECHERCHEV(E2;$A$2:$C$7;3;FAUX).",
+        ],
+        "formules": [
+            ("=RECHERCHEV(E2;A2:C7;3;FAUX)", "Cherche E2 dans la colonne A et renvoie la valeur de la 3e colonne de la plage (la colonne C)."),
+            ("=RECHERCHEV(E2;A2:C7;2;FAUX)", "Même recherche, mais renvoie la 2e colonne (la colonne B)."),
+            ("=RECHERCHEV(E2;$A$2:$C$7;3;FAUX)", "La plage est bloquée : la formule peut être recopiée vers le bas."),
+            ('=SIERREUR(RECHERCHEV(E2;A2:C7;3;FAUX);"Introuvable")', "Affiche « Introuvable » au lieu de #N/A quand la valeur n'existe pas dans la liste."),
+        ],
+        "texte": "<p>RECHERCHEV (le V signifie « verticale ») attend quatre informations, séparées par des "
+                 "points-virgules. Microsoft les nomme ainsi : "
+                 "=RECHERCHEV(valeur_cherchée;table_matrice;no_index_col;[valeur_proche]).</p>"
+                 "<ul><li>La valeur cherchée : ce que vous connaissez déjà (ici la référence en E2).</li>"
+                 "<li>La plage : la liste dans laquelle chercher. La valeur cherchée doit toujours se trouver "
+                 "dans sa première colonne.</li>"
+                 "<li>Le numéro de colonne : la position, dans cette plage, de la colonne à renvoyer. On compte "
+                 "à partir de la première colonne de la plage, pas à partir de la colonne A de la feuille.</li>"
+                 "<li>FAUX ou VRAI : FAUX demande une correspondance exacte, VRAI une correspondance "
+                 "approximative, qui suppose que la première colonne est triée.</li></ul>"
+                 "<p>Ce dernier argument est facultatif, mais ne l'oubliez pas : si vous ne mettez rien, Excel "
+                 "applique la correspondance approximative et peut renvoyer le résultat d'une autre ligne sans "
+                 "aucun message d'erreur. Dans la plupart des cas (une référence, un nom, un numéro de client), "
+                 "c'est FAUX qu'il vous faut.</p>"
+                 "<p><strong>Pourquoi #N/A ?</strong> Cette erreur signifie que la valeur n'a pas été trouvée "
+                 "dans la première colonne. D'après l'aide de Microsoft, les causes les plus courantes sont :</p>"
+                 "<ul><li>la valeur n'existe réellement pas dans la liste (ou elle est écrite différemment) ;</li>"
+                 "<li>les types ne correspondent pas : vous cherchez un nombre, mais la liste contient ce nombre "
+                 "enregistré comme du texte, ou l'inverse ;</li>"
+                 "<li>des espaces en trop se cachent avant ou après le texte, dans la liste ou dans la valeur "
+                 "cherchée. La fonction SUPPRESPACE permet de les enlever ;</li>"
+                 "<li>le dernier argument ne convient pas : pour une correspondance exacte, il doit être "
+                 "FAUX.</li></ul>"
+                 "<p>Quand il est normal que certaines valeurs soient absentes, entourez la formule de SIERREUR "
+                 "pour afficher un texte propre à la place de l'erreur (voir la dernière formule ci-dessus).</p>"
+                 "<p>Si votre version d'Excel le permet (Microsoft 365, Excel 2021 ou plus récent), "
+                 "<a href=\"/astuces/recherchex-remplacer-recherchev/\">RECHERCHEX</a> fait le même travail avec "
+                 "moins de pièges : elle cherche dans n'importe quelle colonne et demande la correspondance "
+                 "exacte par défaut.</p>",
+        "sheets": "<p>Dans Google Sheets en français, la fonction s'appelle aussi RECHERCHEV et s'écrit de la même "
+                  "façon : =RECHERCHEV(E2;A2:C7;3;FAUX). Google nomme le dernier argument « est_trié » et "
+                  "recommande de le régler sur FAUX pour une correspondance exacte ; sans lui, c'est la "
+                  "correspondance proche qui s'applique, comme dans Excel. Si aucune valeur n'est trouvée, la "
+                  "fonction renvoie également #N/A.</p>",
+        "pieges": [
+            "Sans FAUX à la fin, RECHERCHEV peut renvoyer une valeur fausse sans afficher d'erreur. Écrivez toujours le quatrième argument.",
+            "RECHERCHEV ne regarde que vers la droite : la colonne à renvoyer doit se trouver après la colonne de recherche. Sinon, réorganisez la liste ou utilisez RECHERCHEX.",
+            "Si vous insérez une colonne au milieu de la plage, le numéro de colonne écrit dans la formule ne suit pas : la formule renvoie alors la mauvaise colonne.",
+            "En recopiant la formule sans les dollars, la plage se décale d'une ligne à chaque fois et des valeurs finissent par ne plus être trouvées. Voir « Bloquer une cellule dans une formule ».",
+            "S'il y a des doublons dans la première colonne, seule la première ligne trouvée est renvoyée.",
+        ],
+    },
+    {
         "slug": "liste-en-tableau-ctrl-t", "etapes_excel": True,
         "titre": "Transformer une liste en tableau avec Ctrl + T",
         "court": "Transformer une liste en tableau avec Ctrl + T",
