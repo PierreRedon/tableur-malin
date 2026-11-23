@@ -39,6 +39,119 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "selectionner-tableau-ctrl-a",
+        "titre": "Sélectionner tout un tableau en deux touches avec Ctrl + A",
+        "court": "Sélectionner tout un tableau avec Ctrl + A",
+        "description": "Cliquez dans votre liste puis appuyez sur Ctrl + A : Excel sélectionne tout le tableau d'un "
+                       "coup, sans faire glisser la souris. Une deuxième pression sélectionne toute la feuille.",
+        "bref": "Cliquez sur n'importe quelle cellule de votre liste, puis appuyez sur Ctrl + A : Excel sélectionne "
+                "tout le bloc de données autour de cette cellule. Appuyez une deuxième fois sur Ctrl + A pour "
+                "sélectionner la feuille entière.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-23",
+        "video": "selectionner-tableau-ctrl-a",
+        "etapes": [
+            "Cliquez sur une cellule remplie de votre liste, n'importe laquelle.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur <kbd>A</kbd> : toute la liste est sélectionnée, titres compris.",
+            "Faites ce que vous aviez prévu : copier avec <kbd>Ctrl</kbd> + <kbd>C</kbd>, changer la police, ajouter des bordures, etc.",
+            "Pour sélectionner toute la feuille, appuyez une deuxième fois sur <kbd>Ctrl</kbd> + <kbd>A</kbd>.",
+            "Pour annuler la sélection, cliquez simplement sur une cellule.",
+        ],
+        "formules": [],
+        "texte": "<p>Sélectionner une longue liste à la souris oblige à faire défiler la feuille en maintenant le "
+                 "bouton enfoncé, et l'on dépasse souvent la dernière ligne. Avec <kbd>Ctrl</kbd> + <kbd>A</kbd>, "
+                 "la sélection est immédiate et s'arrête exactement au bord des données, que la liste compte dix "
+                 "lignes ou dix mille.</p>"
+                 "<p>L'aide de Microsoft le résume ainsi : si la feuille contient des données, Ctrl + A sélectionne "
+                 "la zone active, et une deuxième pression sélectionne toute la feuille. La « zone active », c'est "
+                 "le bloc de cellules remplies qui entoure la cellule où vous avez cliqué : il s'arrête à la "
+                 "première ligne vide et à la première colonne vide rencontrées.</p>"
+                 "<p>Pour sélectionner toute la feuille à la souris, vous pouvez aussi cliquer sur le bouton "
+                 "« Sélectionner tout », le petit triangle situé dans le coin supérieur gauche de la grille, entre "
+                 "la lettre A et le chiffre 1.</p>"
+                 "<p>Besoin d'une seule colonne de données plutôt que de tout le tableau ? Cliquez sur sa première "
+                 "cellule, puis utilisez <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>↓</kbd>, présenté dans "
+                 "<a href=\"/astuces/aller-en-bas-liste-ctrl-fleche/\">aller en bas d'une liste avec Ctrl + ↓</a>. "
+                 "Et une fois la liste sélectionnée, <a href=\"/astuces/liste-en-tableau-ctrl-t/\">Ctrl + T la "
+                 "transforme en tableau</a> ou <a href=\"/astuces/graphique-en-une-touche-alt-f1/\">Alt + F1 en "
+                 "fait un graphique</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, Ctrl + A est aussi le raccourci pour tout sélectionner (⌘ + A sur Mac) ; "
+                  "la liste officielle des raccourcis de Google indique également Ctrl + Maj + Espace. Regardez "
+                  "bien la zone colorée après avoir appuyé : si elle dépasse votre liste et couvre toute la "
+                  "feuille, sélectionnez plutôt la liste en cliquant sur sa première cellule, puis en cliquant sur "
+                  "la dernière avec la touche Maj enfoncée.</p>",
+        "pieges": [
+            "Une ligne ou une colonne entièrement vide au milieu de la liste coupe la sélection : seules les données qui touchent la cellule de départ sont prises. Supprimez les lignes vides, ou appuyez une deuxième fois et vérifiez la sélection.",
+            "Si la cellule de départ est vide et isolée, il n'y a pas de bloc de données autour d'elle : c'est toute la feuille qui est sélectionnée.",
+            "Si une cellule est en cours de modification (le curseur clignote dedans), Ctrl + A ne sélectionne pas le tableau. Validez d'abord avec Entrée, ou annulez avec Échap.",
+            "Quand tout est sélectionné, ne tapez rien : le premier caractère saisi remplacerait le contenu de la cellule active. En cas d'erreur, annulez avec Ctrl + Z.",
+            "Un titre écrit juste au-dessus de la liste, sans ligne vide entre les deux, fait partie du bloc et sera sélectionné lui aussi.",
+        ],
+    },
+    {
+        "slug": "soustraction-multiplication-division",
+        "titre": "Faire une soustraction, une multiplication ou une division dans Excel",
+        "court": "Soustraire, multiplier, diviser",
+        "description": "Comment soustraire, multiplier et diviser dans Excel et Google Sheets : les signes -, * et /, "
+                       "des formules prêtes à copier, la fonction PRODUIT et l'erreur #DIV/0! expliquée.",
+        "bref": "Commencez par le signe =, puis utilisez - pour soustraire, * (astérisque) pour multiplier et / "
+                "(barre oblique) pour diviser : =A2-B2, =A2*B2, =A2/B2. Validez avec Entrée.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-23",
+        "etapes": [
+            "Cliquez dans la cellule où le résultat doit apparaître.",
+            "Tapez le signe = : c'est lui qui annonce un calcul.",
+            "Cliquez sur la première cellule (par exemple A2), tapez le signe de l'opération (-, * ou /), puis cliquez sur la deuxième cellule (par exemple B2).",
+            "Validez avec <kbd>Entrée</kbd> : la cellule affiche le résultat, et la formule reste visible dans la barre de formule.",
+            "Pour faire le même calcul sur les lignes suivantes, recopiez la formule vers le bas.",
+        ],
+        "formules": [
+            ("=A2-B2", "Soustraction : le contenu de A2 moins celui de B2."),
+            ("=A2*B2", "Multiplication : A2 multiplié par B2, par exemple une quantité par un prix."),
+            ("=A2/B2", "Division : A2 divisé par B2."),
+            ("=A2*$E$1", "Multiplie A2 par la cellule E1, qui reste fixe quand on recopie la formule vers le bas."),
+            ("=(A2-B2)/B2", "Les parenthèses forcent la soustraction à se faire avant la division."),
+            ("=PRODUIT(A2:A5)", "Multiplie entre eux tous les nombres de A2 à A5."),
+            ("=SOMME(A2:A10)-B2", "Additionne A2 à A10, puis retire B2."),
+            ("=SIERREUR(A2/B2;0)", "Affiche 0 au lieu d'une erreur quand la division est impossible."),
+        ],
+        "texte": "<p>Dans un tableur, les quatre opérations s'écrivent avec quatre signes : + pour l'addition, - "
+                 "pour la soustraction, * (l'astérisque) pour la multiplication et / (la barre oblique) pour la "
+                 "division. Sur un clavier avec pavé numérique, ces quatre touches sont regroupées autour des "
+                 "chiffres. Vous pouvez calculer avec des nombres tapés directement (=10-5, =5*10, =10/5) ou, "
+                 "mieux, avec des cellules : si un nombre change, le résultat se met à jour tout seul.</p>"
+                 "<p>Il n'existe pas de fonction SOUSTRAIRE dans Excel, l'aide de Microsoft le précise : on "
+                 "utilise simplement le signe moins. Il n'y a pas non plus de fonction DIVISER : on utilise la barre "
+                 "oblique (la fonction QUOTIENT, elle, ne garde que la partie entière du résultat). Pour la "
+                 "multiplication, la fonction PRODUIT existe et rend service quand il y a beaucoup de cellules à "
+                 "multiplier entre elles : =PRODUIT(A2:A5) est plus court que =A2*A3*A4*A5.</p>"
+                 "<p><strong>L'ordre des calculs.</strong> Comme en mathématiques, les multiplications et les "
+                 "divisions sont faites avant les additions et les soustractions : =2+3*4 donne 14, et non 20. "
+                 "Pour imposer un autre ordre, ajoutez des parenthèses : =(2+3)*4 donne 20.</p>"
+                 "<p><strong>Multiplier ou diviser toute une colonne par le même nombre.</strong> Écrivez ce "
+                 "nombre dans une cellule à part, par exemple E1, puis utilisez =A2*$E$1. Les signes $ empêchent "
+                 "la référence de se décaler quand vous recopiez la formule : voyez "
+                 "<a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer une cellule avec le signe $</a> "
+                 "et <a href=\"/astuces/recopier-formule-double-clic/\">recopier une formule d'un double-clic</a>.</p>"
+                 "<p><strong>L'erreur #DIV/0!.</strong> Elle apparaît quand un nombre est divisé par zéro, ou par "
+                 "une cellule vide. Ce n'est pas une panne : il manque simplement une valeur. Remplissez la cellule "
+                 "qui sert de diviseur, ou entourez le calcul de SIERREUR pour afficher autre chose en attendant "
+                 "(dernière formule ci-dessus). Attention, SIERREUR masque toutes les erreurs, pas seulement "
+                 "celle-ci.</p>"
+                 "<p>Pour aller plus loin : <a href=\"/astuces/calculer-un-pourcentage/\">calculer un "
+                 "pourcentage</a>, <a href=\"/astuces/somme-automatique-alt-egal/\">additionner une colonne en "
+                 "deux touches</a> et <a href=\"/astuces/arrondir-un-nombre/\">arrondir un résultat</a>.</p>",
+        "sheets": "<p>Tout fonctionne de la même façon dans Google Sheets : mêmes signes -, * et /, mêmes "
+                  "parenthèses, même erreur #DIV/0! en cas de division par zéro. La fonction PRODUIT y porte le "
+                  "même nom en français, tout comme SOMME et SIERREUR.</p>",
+        "pieges": [
+            "Sans le signe = au début, rien n'est calculé : Excel affiche le texte tel quel, ou le transforme en date. Tapez 7/30 sans le signe =, et vous obtenez une date au lieu d'une division.",
+            "Le signe de la multiplication est l'astérisque *, pas la lettre x. Celui de la division est la barre oblique /, pas les deux-points.",
+            "Une cellule qui contient du texte, par exemple « 12 kg » ou un nombre suivi d'une espace, provoque l'erreur #VALEUR! dans le calcul. Gardez les nombres seuls dans leurs cellules.",
+            "Une division par une cellule vide donne #DIV/0!, exactement comme une division par zéro.",
+            "Dans une soustraction, l'ordre compte : =A2-B2 et =B2-A2 donnent des résultats opposés.",
+            "Un résultat avec beaucoup de décimales n'est pas faux : réduisez l'affichage avec le bouton « Réduire les décimales » de l'onglet Accueil, ou utilisez la fonction ARRONDI.",
+        ],
+    },
+    {
         "slug": "graphique-en-une-touche-alt-f1", "etapes_excel": True,
         "titre": "Créer un graphique en une touche avec Alt + F1",
         "court": "Créer un graphique avec Alt + F1",

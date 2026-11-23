@@ -26,8 +26,8 @@ Mode d'emploi pour la routine du jour :
 - [x] Remplir plusieurs cellules Ctrl + Entrée — remplir-plusieurs-cellules-ctrl-entree
 - [x] Liste en tableau Ctrl + T — liste-en-tableau-ctrl-t
 - [x] Créer un graphique en une touche (Alt + F1, F11 pour une feuille à part) — graphique-en-une-touche-alt-f1
-- [ ] Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)
-- [ ] Sélectionner tout le tableau autour de la cellule (Ctrl + A)
+- [ ] ~~Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)~~ — écartée le 23/11 : déjà montrée dans la vidéo et la page aller-en-bas-liste-ctrl-fleche
+- [x] Sélectionner tout le tableau autour de la cellule (Ctrl + A) — selectionner-tableau-ctrl-a
 - [ ] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R)
 - [ ] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - »)
 - [ ] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace)
@@ -92,7 +92,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Bloquer une cellule ($), retour à la ligne, pourcentage, arrondir, NB.SI, réunir deux cellules
 - [x] Moyenne, nombre de jours entre deux dates, fonction SI, majuscules et minuscules
 - [x] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A) — recherchev
-- [ ] Faire une soustraction, une multiplication, une division
+- [x] Faire une soustraction, une multiplication, une division — soustraction-multiplication-division
 - [ ] Calculer une augmentation ou une baisse en pourcentage
 - [ ] Calculer la TVA : passer du HT au TTC et inversement (pack)
 - [ ] Calculer un âge à partir d'une date de naissance (DATEDIF)
