@@ -28,7 +28,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Créer un graphique en une touche (Alt + F1, F11 pour une feuille à part) — graphique-en-une-touche-alt-f1
 - [ ] ~~Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)~~ — écartée le 23/11 : déjà montrée dans la vidéo et la page aller-en-bas-liste-ctrl-fleche
 - [x] Sélectionner tout le tableau autour de la cellule (Ctrl + A) — selectionner-tableau-ctrl-a
-- [ ] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R)
+- [x] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R) — recopier-vers-le-bas-ctrl-d
 - [ ] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - »)
 - [ ] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace)
 - [ ] Afficher toutes les formules de la feuille d'un coup (Ctrl + ")
@@ -93,7 +93,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Moyenne, nombre de jours entre deux dates, fonction SI, majuscules et minuscules
 - [x] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A) — recherchev
 - [x] Faire une soustraction, une multiplication, une division — soustraction-multiplication-division
-- [ ] Calculer une augmentation ou une baisse en pourcentage
+- [x] Calculer une augmentation ou une baisse en pourcentage — pourcentage-augmentation-baisse
 - [ ] Calculer la TVA : passer du HT au TTC et inversement (pack)
 - [ ] Calculer un âge à partir d'une date de naissance (DATEDIF)
 - [ ] Additionner des heures et dépasser 24 h (format [h]:mm) (pack)

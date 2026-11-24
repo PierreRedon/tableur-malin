@@ -39,6 +39,119 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "recopier-vers-le-bas-ctrl-d",
+        "titre": "Recopier une formule vers le bas en deux touches avec Ctrl + D",
+        "court": "Recopier vers le bas avec Ctrl + D",
+        "description": "Sélectionnez la cellule à recopier et celles du dessous, puis appuyez sur Ctrl + D : la "
+                       "formule est recopiée jusqu'en bas. Ctrl + R fait la même chose vers la droite.",
+        "bref": "Sélectionnez la cellule qui contient la formule ainsi que les cellules situées en dessous, puis "
+                "appuyez sur Ctrl + D : la formule est recopiée dans toute la sélection. Pour recopier vers la "
+                "droite, sur une ligne, utilisez Ctrl + R.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-24",
+        "video": "recopier-vers-le-bas-ctrl-d",
+        "etapes": [
+            "Écrivez la formule dans la première cellule, par exemple =B2*1,2 en C2, et validez avec <kbd>Entrée</kbd>.",
+            "Cliquez sur cette cellule, puis faites glisser la souris vers le bas jusqu'à la dernière ligne à remplir (ici de C2 à C7).",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur <kbd>D</kbd> : la formule est recopiée dans toutes les cellules sélectionnées.",
+            "Cliquez sur une des cellules remplies pour vérifier : la formule s'est adaptée à sa ligne (=B3*1,2, =B4*1,2, etc.).",
+            "Pour recopier vers la droite, sélectionnez la cellule de départ et celles situées à sa droite, puis appuyez sur <kbd>Ctrl</kbd> + <kbd>R</kbd>.",
+        ],
+        "formules": [],
+        "texte": "<p>Quand une formule doit servir sur toutes les lignes d'une liste, inutile de la retaper ni de "
+                 "faire un copier-coller. L'aide de Microsoft l'indique : après avoir sélectionné la cellule "
+                 "contenant la formule et les cellules voisines à remplir, Ctrl + D recopie la formule dans la "
+                 "colonne, et Ctrl + R la recopie à droite dans la ligne. Pour s'en souvenir : R comme "
+                 "« right », droite en anglais, et D comme « down », bas.</p>"
+                 "<p>Comme avec un copier-coller, la formule s'adapte à chaque ligne : =B2*1,2 devient =B3*1,2 "
+                 "sur la ligne suivante, puis =B4*1,2. Si une cellule de la formule doit rester la même partout, "
+                 "un taux écrit en E1 par exemple, fixez-la avec des signes $ avant de recopier : voyez "
+                 "<a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer une cellule avec le signe $</a>.</p>"
+                 "<p><strong>Sans sélection.</strong> Dans Excel, si vous cliquez sur une seule cellule et appuyez "
+                 "sur <kbd>Ctrl</kbd> + <kbd>D</kbd>, elle reçoit le contenu de la cellule située juste au-dessus. "
+                 "C'est pratique pendant une saisie, quand une ligne reprend la même ville ou la même date que la "
+                 "précédente. De la même façon, <kbd>Ctrl</kbd> + <kbd>R</kbd> reprend la cellule de gauche.</p>"
+                 "<p>Le raccourci ne sert pas qu'aux formules : un texte, un nombre ou une date se recopient de la "
+                 "même manière, avec leur mise en forme (couleur, bordures, format de nombre).</p>"
+                 "<p>Deux autres façons d'arriver au même résultat : "
+                 "<a href=\"/astuces/recopier-formule-double-clic/\">le double-clic sur la poignée de recopie</a>, "
+                 "idéal quand la colonne voisine est déjà remplie, et "
+                 "<a href=\"/astuces/remplir-plusieurs-cellules-ctrl-entree/\">Ctrl + Entrée</a>, qui écrit la même "
+                 "chose dans plusieurs cellules au moment de la saisie. Pour sélectionner rapidement une longue "
+                 "colonne sans la souris, aidez-vous de "
+                 "<a href=\"/astuces/aller-en-bas-liste-ctrl-fleche/\">Ctrl + Maj + ↓</a>.</p>",
+        "sheets": "<p>Les deux raccourcis existent aussi dans Google Sheets : la liste officielle de Google les "
+                  "nomme « Remplir vers le bas » (Ctrl + D) et « Remplir vers la droite » (Ctrl + R) ; sur Mac, "
+                  "remplacez Ctrl par ⌘. Sélectionnez d'abord la cellule de départ et les cellules à remplir, "
+                  "comme dans Excel.</p>",
+        "pieges": [
+            "La cellule à recopier doit être la première de la sélection, tout en haut pour Ctrl + D, tout à gauche pour Ctrl + R. C'est toujours elle qui est recopiée dans les autres.",
+            "Les cellules de la sélection qui contenaient déjà quelque chose sont remplacées sans avertissement. En cas d'erreur, annulez tout de suite avec Ctrl + Z.",
+            "La mise en forme est recopiée avec le contenu : une couleur de fond ou une bordure de la première cellule se retrouve sur toutes les autres.",
+            "Ctrl + D ne crée pas de suite : 1 reste 1 sur toutes les lignes, lundi reste lundi. Pour obtenir 1, 2, 3 ou lundi, mardi, mercredi, faites glisser la poignée de recopie.",
+            "Si une cellule est en cours de modification (le curseur clignote dedans), le raccourci ne recopie rien. Validez d'abord avec Entrée.",
+        ],
+    },
+    {
+        "slug": "pourcentage-augmentation-baisse",
+        "titre": "Calculer une augmentation ou une baisse en pourcentage dans Excel",
+        "court": "Augmentation ou baisse en pourcentage",
+        "description": "Comment calculer un pourcentage d'augmentation ou de baisse entre deux valeurs dans Excel et "
+                       "Google Sheets, et comment appliquer une hausse ou une remise à un prix. Formules prêtes à copier.",
+        "bref": "Pour connaître l'évolution entre une ancienne valeur (A2) et une nouvelle (B2), tapez =(B2-A2)/A2, "
+                "puis mettez la cellule au format pourcentage. Un résultat positif est une augmentation, un "
+                "résultat négatif une baisse.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-24",
+        "etapes": [
+            "Placez l'ancienne valeur dans une cellule (par exemple A2) et la nouvelle dans la cellule voisine (B2).",
+            "Dans une troisième cellule, tapez =(B2-A2)/A2 et validez avec <kbd>Entrée</kbd>. Les parenthèses sont indispensables.",
+            "Le résultat s'affiche sous forme décimale, par exemple 0,25. Sélectionnez la cellule puis, dans l'onglet Accueil, cliquez sur le bouton « Style de pourcentage » (%) : elle affiche 25 %.",
+            "Pour afficher une ou deux décimales (25,4 %), utilisez le bouton « Augmenter les décimales » situé à côté.",
+            "Recopiez la formule vers le bas pour calculer l'évolution des lignes suivantes.",
+        ],
+        "formules": [
+            ("=(B2-A2)/A2", "Évolution entre l'ancienne valeur (A2) et la nouvelle (B2). À afficher au format pourcentage."),
+            ("=B2/A2-1", "Le même calcul, écrit autrement : le résultat est identique."),
+            ("=A2*(1+B2)", "Augmente A2 du pourcentage écrit en B2 (par exemple 5 %)."),
+            ("=A2*(1-B2)", "Diminue A2 du pourcentage écrit en B2 : une remise, par exemple."),
+            ("=A2*1,05", "Augmente A2 de 5 %, sans cellule à part pour le taux."),
+            ("=A2/(1+B2)", "Retrouve la valeur de départ quand A2 a déjà été augmenté du pourcentage B2."),
+            ("=SIERREUR((B2-A2)/A2;\"\")", "Laisse la cellule vide au lieu d'afficher une erreur quand l'ancienne valeur est absente ou égale à zéro."),
+        ],
+        "texte": "<p>Le calcul tient en une phrase : on prend la différence entre la nouvelle valeur et l'ancienne, "
+                 "et on la divise par l'ancienne. Un loyer qui passe de 600 € à 630 € a augmenté de "
+                 "(630-600)/600, soit 0,05, c'est-à-dire 5 %. Une facture qui passe de 80 € à 68 € a baissé de "
+                 "(68-80)/80, soit -0,15 : le signe moins indique une baisse de 15 %. L'aide de Microsoft donne le "
+                 "même modèle avec des nombres, par exemple =(2500-2342)/2342.</p>"
+                 "<p><strong>Pourquoi les parenthèses ?</strong> Sans elles, =B2-A2/A2 calcule d'abord la division "
+                 "A2/A2, qui vaut 1, et vous obtenez la nouvelle valeur moins 1. Le résultat n'a alors plus aucun "
+                 "sens. Le rappel sur l'ordre des calculs se trouve dans "
+                 "<a href=\"/astuces/soustraction-multiplication-division/\">soustraire, multiplier, diviser</a>.</p>"
+                 "<p><strong>Appliquer une hausse ou une baisse.</strong> C'est la question inverse : vous "
+                 "connaissez le pourcentage et vous cherchez le nouveau montant. Multipliez la valeur par 1 plus le "
+                 "pourcentage pour une hausse, par 1 moins le pourcentage pour une baisse. Avec un prix de 80 € en "
+                 "A2 et 15 % en B2, =A2*(1-B2) donne 68 €. Si le taux est le même pour toute une colonne, "
+                 "écrivez-le dans une seule cellule et fixez-la avec des signes $ : =A2*(1+$E$1). Voyez "
+                 "<a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer une cellule avec le signe $</a>.</p>"
+                 "<p><strong>Retrouver la valeur de départ.</strong> Après une hausse de 20 %, on ne revient pas au "
+                 "montant initial en retirant 20 % : il faut diviser par 1,2. Un prix de 120 € obtenu après une "
+                 "hausse de 20 % valait 120/1,2, soit 100 €, alors que 120 € moins 20 % donne 96 €.</p>"
+                 "<p>Pour les autres calculs de pourcentage, comme la part d'un total, consultez "
+                 "<a href=\"/astuces/calculer-un-pourcentage/\">calculer un pourcentage</a>. Et pour appliquer la "
+                 "formule à toute une colonne, <a href=\"/astuces/recopier-vers-le-bas-ctrl-d/\">recopiez-la vers "
+                 "le bas avec Ctrl + D</a>.</p>",
+        "sheets": "<p>Les formules sont exactement les mêmes dans Google Sheets, SIERREUR comprise. Pour "
+                  "l'affichage, sélectionnez la cellule puis cliquez sur le bouton % de la barre d'outils, ou "
+                  "passez par le menu Format, Nombre, Pourcentage.</p>",
+        "pieges": [
+            "On divise toujours par l'ancienne valeur, celle de départ. En divisant par la nouvelle, le pourcentage obtenu est faux.",
+            "Si l'ancienne valeur est vide ou égale à zéro, la formule affiche #DIV/0! : une évolution à partir de zéro ne se calcule pas. Utilisez la version avec SIERREUR pour laisser la cellule vide.",
+            "Tapez le pourcentage avec son signe (5 %) dans la cellule du taux. Si vous tapez 5 tout court, =A2*(1+B2) multiplie le montant par 6.",
+            "Appliquer le format pourcentage à une cellule qui contient déjà un nombre le multiplie par 100 à l'affichage : 25 devient 2500 %. Faites le calcul d'abord, le format ensuite.",
+            "Une hausse de 10 % suivie d'une baisse de 10 % ne ramène pas au point de départ : 100 € deviennent 110 €, puis 99 €.",
+            "Deux évolutions successives ne s'additionnent pas : +10 % puis +10 % font +21 %, et non +20 %.",
+        ],
+    },
+    {
         "slug": "selectionner-tableau-ctrl-a",
         "titre": "Sélectionner tout un tableau en deux touches avec Ctrl + A",
         "court": "Sélectionner tout un tableau avec Ctrl + A",
