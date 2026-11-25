@@ -29,7 +29,7 @@ Mode d'emploi pour la routine du jour :
 - [ ] ~~Sélectionner toute une liste jusqu'en bas (Ctrl + Maj + ↓)~~ — écartée le 23/11 : déjà montrée dans la vidéo et la page aller-en-bas-liste-ctrl-fleche
 - [x] Sélectionner tout le tableau autour de la cellule (Ctrl + A) — selectionner-tableau-ctrl-a
 - [x] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R) — recopier-vers-le-bas-ctrl-d
-- [ ] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - »)
+- [x] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - ») — inserer-ligne-ctrl-plus
 - [ ] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace)
 - [ ] Afficher toutes les formules de la feuille d'un coup (Ctrl + ")
 - [ ] Modifier une cellule sans double-cliquer (F2)
@@ -94,7 +94,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Utiliser RECHERCHEV (et pourquoi elle renvoie #N/A) — recherchev
 - [x] Faire une soustraction, une multiplication, une division — soustraction-multiplication-division
 - [x] Calculer une augmentation ou une baisse en pourcentage — pourcentage-augmentation-baisse
-- [ ] Calculer la TVA : passer du HT au TTC et inversement (pack)
+- [x] Calculer la TVA : passer du HT au TTC et inversement (pack) — calculer-tva-ht-ttc
 - [ ] Calculer un âge à partir d'une date de naissance (DATEDIF)
 - [ ] Additionner des heures et dépasser 24 h (format [h]:mm) (pack)
 - [ ] Calculer une mensualité de prêt (VPM) (pack)

@@ -39,6 +39,133 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "inserer-ligne-ctrl-plus", "etapes_excel": True,
+        "titre": "Insérer une ligne sans la souris avec Ctrl + « + »",
+        "court": "Insérer une ligne avec Ctrl + « + »",
+        "description": "Sélectionnez la ligne avec Maj + Espace, puis appuyez sur Ctrl et la touche + : Excel insère "
+                       "une ligne vide juste au-dessus. Ctrl et la touche - la supprime. Équivalent dans Google Sheets.",
+        "bref": "Cliquez dans la ligne au-dessus de laquelle vous voulez ajouter une ligne, appuyez sur Maj + Espace "
+                "pour la sélectionner en entier, puis sur Ctrl et la touche + : une ligne vide est insérée juste "
+                "au-dessus. Pour supprimer la ligne sélectionnée, appuyez sur Ctrl et la touche - (moins).",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-25",
+        "video": "inserer-ligne-ctrl-plus",
+        "etapes": [
+            "Cliquez sur une cellule de la ligne qui doit descendre : la nouvelle ligne viendra se placer juste au-dessus.",
+            "Appuyez sur <kbd>Maj</kbd> + <kbd>Espace</kbd> : la ligne entière est sélectionnée, son numéro change de couleur à gauche.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur la touche <kbd>+</kbd> : une ligne vide apparaît, et les lignes suivantes descendent d'un cran.",
+            "Tapez vos données dans la nouvelle ligne.",
+            "Pour supprimer une ligne, sélectionnez-la de la même façon avec <kbd>Maj</kbd> + <kbd>Espace</kbd>, puis appuyez sur <kbd>Ctrl</kbd> et la touche <kbd>-</kbd> (moins).",
+        ],
+        "formules": [],
+        "texte": "<p>Quand on a oublié un client, une dépense ou une date au milieu d'une liste, il faut ouvrir une "
+                 "ligne au bon endroit. Le chemin habituel passe par la souris : clic droit sur le numéro de la "
+                 "ligne, puis « Insérer ». Avec deux raccourcis, les mains ne quittent pas le clavier : "
+                 "<kbd>Maj</kbd> + <kbd>Espace</kbd> sélectionne la ligne entière (l'aide de Microsoft l'indique : "
+                 "cliquez sur une cellule de la ligne, puis appuyez sur Maj+Espace), et <kbd>Ctrl</kbd> + "
+                 "<kbd>+</kbd> insère.</p>"
+                 "<p><strong>La nouvelle ligne se place au-dessus.</strong> Excel ajoute toujours les lignes "
+                 "au-dessus de la sélection. Pour ajouter une ligne entre la ligne 3 et la ligne 4, placez-vous donc "
+                 "sur la ligne 4.</p>"
+                 "<p><strong>Plusieurs lignes d'un coup.</strong> Excel insère autant de lignes que vous en avez "
+                 "sélectionné. Après <kbd>Maj</kbd> + <kbd>Espace</kbd>, gardez <kbd>Maj</kbd> enfoncée et appuyez "
+                 "deux fois sur la flèche du bas : trois lignes sont sélectionnées, et <kbd>Ctrl</kbd> + "
+                 "<kbd>+</kbd> en insère trois.</p>"
+                 "<p><strong>Sans sélectionner la ligne.</strong> Si une seule cellule est sélectionnée, "
+                 "<kbd>Ctrl</kbd> + <kbd>+</kbd> ouvre une petite fenêtre qui demande quoi insérer. Choisissez "
+                 "« Ligne entière » puis validez avec <kbd>Entrée</kbd>. Il en va de même pour la suppression "
+                 "avec <kbd>Ctrl</kbd> + <kbd>-</kbd>.</p>"
+                 "<p><strong>Et pour une colonne ?</strong> Le principe est le même : <kbd>Ctrl</kbd> + "
+                 "<kbd>Espace</kbd> sélectionne la colonne entière, puis <kbd>Ctrl</kbd> + <kbd>+</kbd> insère une "
+                 "colonne vide à sa gauche, et <kbd>Ctrl</kbd> + <kbd>-</kbd> supprime la colonne sélectionnée.</p>"
+                 "<p><strong>La mise en forme suit.</strong> D'après l'aide de Microsoft, la mise en forme de la "
+                 "ligne sélectionnée (couleur, bordures) est transférée à la ligne insérée. Si vous n'en voulez pas, "
+                 "cliquez sur le bouton « Options d'insertion » qui apparaît juste après l'insertion.</p>"
+                 "<p>Pour insérer plusieurs lignes à des endroits différents, insérez la première, déplacez-vous, "
+                 "puis <a href=\"/astuces/repeter-derniere-action-f4/\">répétez l'action avec F4</a>. Et si votre "
+                 "liste est un vrai tableau, créé avec "
+                 "<a href=\"/astuces/liste-en-tableau-ctrl-t/\">Ctrl + T</a>, il suffit d'écrire sous la dernière "
+                 "ligne pour qu'il s'agrandisse tout seul.</p>",
+        "sheets": "<p>Dans Google Sheets, la sélection se fait de la même façon : Maj + Espace pour la ligne, "
+                  "Ctrl + Espace pour la colonne. Les raccourcis d'insertion sont différents : d'après la liste "
+                  "officielle de Google, une fois la ligne sélectionnée, Ctrl + Alt + = insère une ligne au-dessus "
+                  "et Ctrl + Alt + - supprime la ligne (sur Mac, ⌘ + Option + = et ⌘ + Option + -). Si le raccourci "
+                  "ne répond pas avec votre clavier, faites un clic droit sur le numéro de la ligne : le menu "
+                  "propose d'insérer une ligne au-dessus ou en dessous, ou de supprimer la ligne.</p>",
+        "pieges": [
+            "Sur un clavier sans pavé numérique, le signe + s'obtient avec la touche Maj : le raccourci devient alors Ctrl + Maj + +, sur la touche qui porte les signes = et +.",
+            "Si rien ne se passe, vérifiez que vous n'êtes pas en train de modifier une cellule (le curseur clignote dedans) : validez d'abord avec Entrée.",
+            "Supprimer une ligne efface tout son contenu, y compris dans les colonnes situées plus à droite, hors de l'écran. En cas d'erreur, annulez tout de suite avec Ctrl + Z.",
+            "Ne confondez pas avec la touche Suppr : elle vide les cellules mais laisse la ligne en place. Ctrl + - retire la ligne, et les suivantes remontent.",
+            "Une formule comme =SOMME(C2:C7) s'adapte quand la ligne est insérée à l'intérieur de la plage. Une ligne ajoutée juste sous la dernière cellule de la plage n'est pas comptée : vérifiez vos totaux.",
+            "Sur une feuille protégée, l'insertion et la suppression de lignes peuvent être bloquées.",
+        ],
+    },
+    {
+        "slug": "calculer-tva-ht-ttc",
+        "titre": "Calculer la TVA dans Excel : passer du HT au TTC et du TTC au HT",
+        "court": "Calculer la TVA : HT, TTC",
+        "description": "Les formules Excel et Google Sheets pour calculer la TVA : passer d'un prix HT au prix TTC, "
+                       "retrouver le HT à partir du TTC et isoler le montant de TVA. Formules prêtes à copier.",
+        "bref": "Avec un prix HT en A2 et le taux de TVA en B2 (par exemple 20 %), le prix TTC s'obtient avec "
+                "=A2*(1+B2). Dans l'autre sens, un prix TTC en A2 donne le prix HT avec =A2/(1+B2).",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-25",
+        "etapes": [
+            "Tapez le prix HT dans une cellule (par exemple A2) et le taux de TVA dans la cellule voisine (B2), avec son signe : 20 %.",
+            "Pour le montant de la TVA, tapez =A2*B2 en C2 et validez avec <kbd>Entrée</kbd>.",
+            "Pour le prix TTC, tapez =A2*(1+B2) en D2. Les parenthèses sont indispensables.",
+            "Dans l'autre sens, si A2 contient un prix TTC, tapez =A2/(1+B2) pour retrouver le prix HT.",
+            "Recopiez les formules vers le bas pour calculer les lignes suivantes.",
+        ],
+        "formules": [
+            ("=A2*(1+B2)", "Prix TTC à partir du prix HT (A2) et du taux de TVA (B2)."),
+            ("=A2*B2", "Montant de la TVA à partir du prix HT."),
+            ("=A2*1,2", "Prix TTC à 20 %, sans cellule à part pour le taux."),
+            ("=A2/(1+B2)", "Prix HT à partir du prix TTC (A2) et du taux (B2)."),
+            ("=A2/1,2", "Prix HT à partir d'un prix TTC à 20 %."),
+            ("=A2-A2/(1+B2)", "Montant de la TVA comprise dans un prix TTC (A2)."),
+            ("=ARRONDI(A2*(1+B2);2)", "Prix TTC arrondi au centime."),
+            ("=A2*(1+$F$1)", "Prix TTC quand le taux est écrit une seule fois, en F1, pour toute la colonne."),
+        ],
+        "texte": "<p>Le prix HT (hors taxes) est le prix avant la TVA ; le prix TTC (toutes taxes comprises) est "
+                 "celui que paie le client. La TVA se calcule sur le prix HT : on multiplie le prix HT par le taux. "
+                 "Pour un article à 100 € HT avec une TVA à 20 %, la TVA vaut 100 × 20 %, soit 20 €, et le prix "
+                 "TTC 120 €. La formule =A2*(1+B2) fait les deux opérations en une fois : elle multiplie le prix "
+                 "par 1,2.</p>"
+                 "<p><strong>Du TTC au HT : on divise.</strong> C'est l'erreur la plus courante : pour retrouver le "
+                 "prix HT, on ne retire pas 20 % du prix TTC. 120 € moins 20 % donnent 96 €, et non 100 €, parce "
+                 "que les 20 % ont été calculés sur le prix HT. Il faut diviser le prix TTC par 1 plus le taux : "
+                 "120/1,2 = 100. Le même raisonnement est détaillé dans "
+                 "<a href=\"/astuces/pourcentage-augmentation-baisse/\">calculer une augmentation ou une baisse en "
+                 "pourcentage</a>.</p>"
+                 "<p><strong>La TVA comprise dans un prix TTC.</strong> Une fois le prix HT retrouvé, la TVA est la "
+                 "différence entre les deux : =A2-A2/(1+B2). Dans un prix de 120 € TTC à 20 %, il y a 20 € de TVA.</p>"
+                 "<p><strong>Un seul taux pour toute la colonne.</strong> Écrivez le taux une fois, par exemple en "
+                 "F1, et fixez cette cellule avec des signes $ dans la formule : =A2*(1+$F$1). En recopiant vers le "
+                 "bas, A2 devient A3, A4, mais $F$1 ne bouge pas. Si le taux change, vous ne modifiez qu'une "
+                 "cellule. Voyez <a href=\"/astuces/bloquer-cellule-formule-dollar-f4/\">bloquer une cellule avec "
+                 "le signe $</a>.</p>"
+                 "<p><strong>Quel taux utiliser ?</strong> En France métropolitaine, les taux les plus courants "
+                 "sont 20 % (taux normal, qui s'applique à la plupart des biens et des services), 10 %, 5,5 % et "
+                 "2,1 %. Le taux dépend du produit ou du service vendu, et les règles peuvent changer : vérifiez "
+                 "celui qui s'applique à votre cas sur le site officiel impots.gouv.fr ou auprès de votre "
+                 "comptable. Cette page explique le calcul, pas la règle fiscale.</p>"
+                 "<p><strong>Arrondir au centime.</strong> Avec un taux de 5,5 %, le résultat a souvent plus de "
+                 "deux décimales. Le format monétaire ne change que l'affichage : pour que le nombre lui-même "
+                 "soit arrondi, entourez le calcul avec ARRONDI, comme dans =ARRONDI(A2*(1+B2);2). Voyez "
+                 "<a href=\"/astuces/arrondir-un-nombre/\">arrondir un nombre</a>.</p>",
+        "sheets": "<p>Toutes ces formules s'écrivent de la même façon dans Google Sheets, ARRONDI comprise, avec le "
+                  "point-virgule entre les arguments. Pour afficher le taux en pourcentage, sélectionnez la cellule "
+                  "puis cliquez sur le bouton % de la barre d'outils.</p>",
+        "pieges": [
+            "Pour passer du TTC au HT, on divise par 1 plus le taux (1,2 pour 20 %). Retirer 20 % du prix TTC donne un résultat faux.",
+            "Tapez le taux avec son signe (20 %) dans la cellule. Si vous tapez 20 tout court, =A2*(1+B2) multiplie le prix par 21.",
+            "N'oubliez pas les parenthèses : =A2*1+B2 calcule d'abord A2*1, puis ajoute le taux, ce qui n'a aucun sens.",
+            "Écrivez les décimales avec une virgule : 1,2 et 5,5 %. Avec un point, Excel en français ne reconnaît pas le nombre.",
+            "Sur une facture, la somme des TTC arrondis ligne par ligne peut différer d'un centime du total HT multiplié par le taux. Choisissez une méthode et gardez-la sur tout le document.",
+            "Si vous ne facturez pas la TVA (franchise en base, par exemple), il n'y a pas de TTC à calculer : le prix HT est le prix à payer.",
+        ],
+    },
+    {
         "slug": "recopier-vers-le-bas-ctrl-d",
         "titre": "Recopier une formule vers le bas en deux touches avec Ctrl + D",
         "court": "Recopier vers le bas avec Ctrl + D",
