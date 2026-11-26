@@ -30,7 +30,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Sélectionner tout le tableau autour de la cellule (Ctrl + A) — selectionner-tableau-ctrl-a
 - [x] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R) — recopier-vers-le-bas-ctrl-d
 - [x] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - ») — inserer-ligne-ctrl-plus
-- [ ] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace)
+- [x] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace) — selectionner-colonne-ctrl-espace
 - [ ] Afficher toutes les formules de la feuille d'un coup (Ctrl + ")
 - [ ] Modifier une cellule sans double-cliquer (F2)
 - [ ] Rechercher et remplacer partout (Ctrl + H)
@@ -95,7 +95,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Faire une soustraction, une multiplication, une division — soustraction-multiplication-division
 - [x] Calculer une augmentation ou une baisse en pourcentage — pourcentage-augmentation-baisse
 - [x] Calculer la TVA : passer du HT au TTC et inversement (pack) — calculer-tva-ht-ttc
-- [ ] Calculer un âge à partir d'une date de naissance (DATEDIF)
+- [x] Calculer un âge à partir d'une date de naissance (DATEDIF) — calculer-un-age
 - [ ] Additionner des heures et dépasser 24 h (format [h]:mm) (pack)
 - [ ] Calculer une mensualité de prêt (VPM) (pack)
 - [ ] SOMME.SI : additionner selon un critère

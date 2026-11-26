@@ -39,6 +39,121 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "selectionner-colonne-ctrl-espace",
+        "titre": "Sélectionner une colonne entière avec Ctrl + Espace",
+        "court": "Sélectionner une colonne avec Ctrl + Espace",
+        "description": "Cliquez dans la colonne puis appuyez sur Ctrl + Espace : toute la colonne est sélectionnée. "
+                       "Maj + Espace fait la même chose pour la ligne. Raccourcis valables dans Excel et Google Sheets.",
+        "bref": "Cliquez sur une cellule de la colonne, puis appuyez sur Ctrl + Espace : la colonne entière est "
+                "sélectionnée, de la première à la dernière ligne de la feuille. Pour sélectionner la ligne entière, "
+                "appuyez sur Maj + Espace.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-26",
+        "video": "selectionner-colonne-ctrl-espace",
+        "etapes": [
+            "Cliquez sur n'importe quelle cellule de la colonne à sélectionner.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur la barre d'<kbd>Espace</kbd> : toute la colonne est sélectionnée, sa lettre change de couleur en haut.",
+            "Pour sélectionner la ligne entière, cliquez sur une de ses cellules et appuyez sur <kbd>Maj</kbd> + <kbd>Espace</kbd> : son numéro change de couleur à gauche.",
+            "Pour étendre la sélection aux colonnes voisines, gardez <kbd>Maj</kbd> enfoncée et appuyez sur la flèche droite ou gauche (flèche haut ou bas pour des lignes).",
+            "Appliquez ensuite ce que vous voulez à toute la colonne ou à toute la ligne : mise en forme, largeur, insertion, suppression.",
+        ],
+        "formules": [],
+        "texte": "<p>Pour mettre une colonne en gras, changer son format, l'élargir ou la supprimer, il faut d'abord "
+                 "la sélectionner en entier. Avec la souris, on clique sur la lettre en haut de la colonne, ou sur "
+                 "le numéro à gauche de la ligne. L'aide de Microsoft donne aussi la version au clavier : cliquez "
+                 "sur une cellule de la colonne puis appuyez sur <kbd>Ctrl</kbd> + <kbd>Espace</kbd>, ou sur une "
+                 "cellule de la ligne puis sur <kbd>Maj</kbd> + <kbd>Espace</kbd>.</p>"
+                 "<p><strong>Un moyen de s'en souvenir.</strong> <kbd>Ctrl</kbd> comme « colonne » : les deux mots "
+                 "commencent par la même lettre. L'autre raccourci, avec <kbd>Maj</kbd>, est donc celui de la "
+                 "ligne.</p>"
+                 "<p><strong>Plusieurs colonnes ou plusieurs lignes.</strong> Si vous avez d'abord sélectionné des "
+                 "cellules dans trois colonnes, <kbd>Ctrl</kbd> + <kbd>Espace</kbd> sélectionne les trois colonnes "
+                 "entières. Vous pouvez aussi sélectionner une colonne, puis garder <kbd>Maj</kbd> enfoncée et "
+                 "appuyer sur la flèche droite pour ajouter les suivantes. Avec la souris, l'aide de Microsoft "
+                 "indique de cliquer sur la première lettre, puis sur les autres en maintenant <kbd>Ctrl</kbd> "
+                 "pour des colonnes qui ne se touchent pas.</p>"
+                 "<p><strong>Toute la colonne, pas seulement vos données.</strong> La sélection va jusqu'à la "
+                 "dernière ligne de la feuille, bien au-delà de votre liste. Pour ne sélectionner que les cellules "
+                 "remplies, utilisez plutôt <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + flèche du bas, expliqué dans "
+                 "<a href=\"/astuces/aller-en-bas-liste-ctrl-fleche/\">aller tout en bas d'une longue liste</a>, "
+                 "ou <a href=\"/astuces/selectionner-tableau-ctrl-a/\">Ctrl + A pour tout le tableau</a>.</p>"
+                 "<p><strong>Et ensuite ?</strong> Une fois la colonne ou la ligne sélectionnée, tout s'enchaîne "
+                 "au clavier : <a href=\"/astuces/inserer-ligne-ctrl-plus/\">Ctrl et la touche + pour insérer, "
+                 "Ctrl et la touche - pour supprimer</a>. Et si la colonne contient des nombres, leur total "
+                 "s'affiche tout de suite en bas de l'écran, comme le montre "
+                 "<a href=\"/astuces/somme-sans-formule-barre-etat/\">la somme sans formule dans la barre "
+                 "d'état</a>.</p>",
+        "sheets": "<p>Les deux raccourcis sont les mêmes dans Google Sheets : d'après la liste officielle de Google, "
+                  "Ctrl + Espace sélectionne la colonne et Maj + Espace sélectionne la ligne. Vous pouvez aussi "
+                  "cliquer sur la lettre de la colonne ou sur le numéro de la ligne.</p>",
+        "pieges": [
+            "Si vous êtes en train de modifier une cellule (le curseur clignote dedans), Maj + Espace tape simplement un espace. Validez d'abord avec Entrée.",
+            "La sélection couvre toute la colonne, y compris les lignes situées plus bas, hors de l'écran. Avant d'appuyer sur Suppr ou de supprimer la colonne, vérifiez qu'il n'y a rien d'autre en dessous de votre liste. En cas d'erreur, annulez avec Ctrl + Z.",
+            "Si la colonne traverse des cellules fusionnées, Excel étend la sélection à toutes les colonnes concernées par la fusion.",
+            "Dans une liste transformée en tableau (Ctrl + T), le premier appui sur Ctrl + Espace peut ne sélectionner que les données de la colonne à l'intérieur du tableau, et non la colonne entière de la feuille.",
+            "Sur Mac, le raccourci de la colonne se fait avec la touche Contrôle (et non ⌘). Si macOS utilise déjà Contrôle + Espace pour autre chose, par exemple pour changer de langue de clavier, il peut ne pas répondre dans Excel : cliquez alors sur la lettre de la colonne.",
+        ],
+    },
+    {
+        "slug": "calculer-un-age",
+        "titre": "Calculer un âge dans Excel à partir d'une date de naissance",
+        "court": "Calculer un âge (DATEDIF)",
+        "description": "La formule Excel et Google Sheets pour calculer un âge à partir d'une date de naissance : "
+                       "=DATEDIF(A2;AUJOURDHUI();\"y\"). Âge en années et en mois, âge à une date donnée, erreurs courantes.",
+        "bref": "Avec la date de naissance en A2, tapez =DATEDIF(A2;AUJOURDHUI();\"y\") : la formule renvoie l'âge "
+                "en années révolues, et il se met à jour tout seul à chaque ouverture du fichier.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-26",
+        "etapes": [
+            "Tapez la date de naissance dans une cellule, par exemple 14/03/1988 en A2.",
+            "Dans la cellule voisine, tapez =DATEDIF(A2;AUJOURDHUI();\"y\") en entier : Excel ne propose pas cette fonction dans sa liste pendant la saisie, c'est normal.",
+            "Validez avec <kbd>Entrée</kbd> : l'âge en années s'affiche.",
+            "Si une date s'affiche à la place d'un nombre, donnez à la cellule le format Standard (onglet Accueil, liste des formats de nombre).",
+            "Recopiez la formule vers le bas pour calculer l'âge de toute la liste.",
+        ],
+        "formules": [
+            ("=DATEDIF(A2;AUJOURDHUI();\"y\")", "Âge aujourd'hui, en années révolues, à partir de la date de naissance en A2."),
+            ("=DATEDIF(A2;B2;\"y\")", "Âge à la date écrite en B2 (par exemple le jour d'une inscription)."),
+            ("=DATEDIF(A2;AUJOURDHUI();\"ym\")", "Nombre de mois écoulés depuis le dernier anniversaire."),
+            ("=DATEDIF(A2;AUJOURDHUI();\"m\")", "Âge en mois, utile pour un bébé."),
+            ("=DATEDIF(A2;AUJOURDHUI();\"y\")&\" ans et \"&DATEDIF(A2;AUJOURDHUI();\"ym\")&\" mois\"", "Âge écrit en toutes lettres : 38 ans et 8 mois."),
+            ("=DATEDIF(A2;AUJOURDHUI();\"y\")>=18", "VRAI si la personne est majeure, FAUX sinon."),
+        ],
+        "texte": "<p>La fonction DATEDIF compte le temps écoulé entre deux dates. Elle prend trois éléments, séparés "
+                 "par des points-virgules : la date de début (la date de naissance), la date de fin, et une lettre "
+                 "entre guillemets qui dit dans quelle unité compter. Avec \"y\" (comme <em>year</em>, année en "
+                 "anglais), elle renvoie le nombre d'années complètes : l'âge ne change donc que le jour de "
+                 "l'anniversaire, comme dans la vie.</p>"
+                 "<p><strong>Les lettres restent en anglais.</strong> Même dans Excel en français, l'unité s'écrit "
+                 "\"y\" pour les années, \"m\" pour les mois et \"d\" pour les jours. \"ym\" donne les mois qui "
+                 "restent une fois les années complètes retirées.</p>"
+                 "<p><strong>AUJOURDHUI() pour un âge toujours à jour.</strong> La fonction AUJOURDHUI() renvoie "
+                 "la date du jour, et se recalcule à chaque ouverture du fichier : l'âge reste donc juste sans "
+                 "rien retoucher. Pour connaître l'âge à une date précise (le jour d'un événement, la date d'une "
+                 "inscription), remplacez AUJOURDHUI() par la cellule qui contient cette date.</p>"
+                 "<p><strong>Une fonction un peu cachée.</strong> DATEDIF fonctionne dans Excel, mais elle "
+                 "n'apparaît pas dans la liste des fonctions proposées quand on commence à taper. Il faut l'écrire "
+                 "en entier, sans faute. L'aide de Microsoft prévient par ailleurs que, dans certains cas, elle "
+                 "peut donner des résultats incorrects, et déconseille l'unité \"md\" (les jours restants une fois "
+                 "les mois retirés). Pour un âge en années et en mois, les unités \"y\" et \"ym\" suffisent.</p>"
+                 "<p><strong>Pourquoi ne pas diviser par 365 ?</strong> On voit souvent "
+                 "=(AUJOURDHUI()-A2)/365. Cette formule donne un nombre à virgule, et elle se décale à cause des "
+                 "années bissextiles : autour de la date d'anniversaire, elle peut annoncer un an de trop ou de "
+                 "moins. DATEDIF compare les dates elles-mêmes et ne se trompe pas de jour.</p>"
+                 "<p>Pour compter des jours plutôt que des années, voyez "
+                 "<a href=\"/astuces/nombre-de-jours-entre-deux-dates/\">calculer le nombre de jours entre deux "
+                 "dates</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, la formule est identique : =DATEDIF(A2;AUJOURDHUI();\"y\"), avec les mêmes "
+                  "unités \"Y\", \"M\", \"D\" et \"YM\" (majuscules ou minuscules). L'aide de Google précise que si "
+                  "le résultat s'affiche comme une date, il faut remettre la cellule au format Nombre.</p>",
+        "pieges": [
+            "La date de naissance doit venir en premier. Si la date de début est postérieure à la date de fin, Excel affiche l'erreur #NOMBRE!.",
+            "N'oubliez pas les guillemets autour de la lettre : \"y\". Sans eux, Excel ne comprend pas la formule.",
+            "Si la date de naissance est alignée à gauche dans la cellule, Excel l'a prise pour du texte et la formule renvoie #VALEUR!. Retapez-la sous la forme 14/03/1988.",
+            "Excel ne reconnaît pas les dates antérieures au 1er janvier 1900 : la formule ne fonctionne pas pour une généalogie ancienne.",
+            "Une année tapée sur deux chiffres (14/03/30) peut être comprise comme 1930 ou comme 2030 selon les cas. Tapez toujours l'année sur quatre chiffres.",
+            "L'âge calculé avec AUJOURDHUI() change avec le temps. Pour garder l'âge à une date donnée, utilisez une date fixe à la place.",
+        ],
+    },
+    {
         "slug": "inserer-ligne-ctrl-plus", "etapes_excel": True,
         "titre": "Insérer une ligne sans la souris avec Ctrl + « + »",
         "court": "Insérer une ligne avec Ctrl + « + »",

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculer un âge dans Excel à partir d&#x27;une date de naissance | Tableur Malin</title>
+<meta name="description" content="La formule Excel et Google Sheets pour calculer un âge à partir d&#x27;une date de naissance : =DATEDIF(A2;AUJOURDHUI();&quot;y&quot;). Âge en années et en mois, âge à une date donnée, erreurs courantes.">
+<link rel="canonical" href="https://tableurmalin.fr/astuces/calculer-un-age/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tableur Malin">
+<meta property="og:title" content="Calculer un âge dans Excel à partir d&#x27;une date de naissance | Tableur Malin">
+<meta property="og:description" content="La formule Excel et Google Sheets pour calculer un âge à partir d&#x27;une date de naissance : =DATEDIF(A2;AUJOURDHUI();&quot;y&quot;). Âge en années et en mois, âge à une date donnée, erreurs courantes.">
+<meta property="og:url" content="https://tableurmalin.fr/astuces/calculer-un-age/">
+<meta property="og:locale" content="fr_FR">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Calculer un âge dans Excel à partir d'une date de naissance", "description": "La formule Excel et Google Sheets pour calculer un âge à partir d'une date de naissance : =DATEDIF(A2;AUJOURDHUI();\"y\"). Âge en années et en mois, âge à une date donnée, erreurs courantes.", "inLanguage": "fr", "datePublished": "2026-11-26", "dateModified": "2026-11-26", "mainEntityOfPage": "https://tableurmalin.fr/astuces/calculer-un-age/", "author": {"@type": "Organization", "name": "Tableur Malin", "url": "https://tableurmalin.fr/"}, "publisher": {"@type": "Organization", "name": "Tableur Malin"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "Calculer un âge dans Excel à partir d'une date de naissance", "inLanguage": "fr", "step": [{"@type": "HowToStep", "position": 1, "text": "Tapez la date de naissance dans une cellule, par exemple 14/03/1988 en A2."}, {"@type": "HowToStep", "position": 2, "text": "Dans la cellule voisine, tapez =DATEDIF(A2;AUJOURDHUI();\"y\") en entier : Excel ne propose pas cette fonction dans sa liste pendant la saisie, c'est normal."}, {"@type": "HowToStep", "position": 3, "text": "Validez avec Entrée : l'âge en années s'affiche."}, {"@type": "HowToStep", "position": 4, "text": "Si une date s'affiche à la place d'un nombre, donnez à la cellule le format Standard (onglet Accueil, liste des formats de nombre)."}, {"@type": "HowToStep", "position": 5, "text": "Recopiez la formule vers le bas pour calculer l'âge de toute la liste."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://tableurmalin.fr/"}, {"@type": "ListItem", "position": 2, "name": "Astuces", "item": "https://tableurmalin.fr/astuces/"}, {"@type": "ListItem", "position": 3, "name": "Calculer un âge (DATEDIF)", "item": "https://tableurmalin.fr/astuces/calculer-un-age/"}]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="../../index.html"><span class="marque-cellule" aria-hidden="true"></span>Tableur Malin</a>
+  <nav aria-label="Navigation principale">
+    <a href="../../astuces/index.html">Astuces</a>
+    <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  </nav>
+</header>
+<main id="contenu">
+<nav class="fil" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> / <a href="../index.html">Astuces</a></nav>
+<article class="fiche">
+<h1>Calculer un âge dans Excel à partir d&#x27;une date de naissance</h1>
+<p class="fiche-meta">Fonctionne dans Excel, Google Sheets. Niveau débutant.</p>
+<p class="bref">Avec la date de naissance en A2, tapez =DATEDIF(A2;AUJOURDHUI();&quot;y&quot;) : la formule renvoie l&#x27;âge en années révolues, et il se met à jour tout seul à chaque ouverture du fichier.</p>
+<h2>Les étapes</h2><ol class="etapes"><li>Tapez la date de naissance dans une cellule, par exemple 14/03/1988 en A2.</li><li>Dans la cellule voisine, tapez =DATEDIF(A2;AUJOURDHUI();"y") en entier : Excel ne propose pas cette fonction dans sa liste pendant la saisie, c'est normal.</li><li>Validez avec <kbd>Entrée</kbd> : l'âge en années s'affiche.</li><li>Si une date s'affiche à la place d'un nombre, donnez à la cellule le format Standard (onglet Accueil, liste des formats de nombre).</li><li>Recopiez la formule vers le bas pour calculer l'âge de toute la liste.</li></ol>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)</code><button type="button" class="copier" data-copie="=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)">Copier</button></div><figcaption>Âge aujourd&#x27;hui, en années révolues, à partir de la date de naissance en A2.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;B2;&quot;y&quot;)</code><button type="button" class="copier" data-copie="=DATEDIF(A2;B2;&quot;y&quot;)">Copier</button></div><figcaption>Âge à la date écrite en B2 (par exemple le jour d&#x27;une inscription).</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;AUJOURDHUI();&quot;ym&quot;)</code><button type="button" class="copier" data-copie="=DATEDIF(A2;AUJOURDHUI();&quot;ym&quot;)">Copier</button></div><figcaption>Nombre de mois écoulés depuis le dernier anniversaire.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;AUJOURDHUI();&quot;m&quot;)</code><button type="button" class="copier" data-copie="=DATEDIF(A2;AUJOURDHUI();&quot;m&quot;)">Copier</button></div><figcaption>Âge en mois, utile pour un bébé.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)&amp;&quot; ans et &quot;&amp;DATEDIF(A2;AUJOURDHUI();&quot;ym&quot;)&amp;&quot; mois&quot;</code><button type="button" class="copier" data-copie="=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)&amp;&quot; ans et &quot;&amp;DATEDIF(A2;AUJOURDHUI();&quot;ym&quot;)&amp;&quot; mois&quot;">Copier</button></div><figcaption>Âge écrit en toutes lettres : 38 ans et 8 mois.</figcaption></figure>
+<figure class="formule"><div class="formule-ligne"><span class="fx" aria-hidden="true">fx</span><code>=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)&gt;=18</code><button type="button" class="copier" data-copie="=DATEDIF(A2;AUJOURDHUI();&quot;y&quot;)&gt;=18">Copier</button></div><figcaption>VRAI si la personne est majeure, FAUX sinon.</figcaption></figure>
+<h2>À savoir</h2><p>La fonction DATEDIF compte le temps écoulé entre deux dates. Elle prend trois éléments, séparés par des points-virgules : la date de début (la date de naissance), la date de fin, et une lettre entre guillemets qui dit dans quelle unité compter. Avec "y" (comme <em>year</em>, année en anglais), elle renvoie le nombre d'années complètes : l'âge ne change donc que le jour de l'anniversaire, comme dans la vie.</p><p><strong>Les lettres restent en anglais.</strong> Même dans Excel en français, l'unité s'écrit "y" pour les années, "m" pour les mois et "d" pour les jours. "ym" donne les mois qui restent une fois les années complètes retirées.</p><p><strong>AUJOURDHUI() pour un âge toujours à jour.</strong> La fonction AUJOURDHUI() renvoie la date du jour, et se recalcule à chaque ouverture du fichier : l'âge reste donc juste sans rien retoucher. Pour connaître l'âge à une date précise (le jour d'un événement, la date d'une inscription), remplacez AUJOURDHUI() par la cellule qui contient cette date.</p><p><strong>Une fonction un peu cachée.</strong> DATEDIF fonctionne dans Excel, mais elle n'apparaît pas dans la liste des fonctions proposées quand on commence à taper. Il faut l'écrire en entier, sans faute. L'aide de Microsoft prévient par ailleurs que, dans certains cas, elle peut donner des résultats incorrects, et déconseille l'unité "md" (les jours restants une fois les mois retirés). Pour un âge en années et en mois, les unités "y" et "ym" suffisent.</p><p><strong>Pourquoi ne pas diviser par 365 ?</strong> On voit souvent =(AUJOURDHUI()-A2)/365. Cette formule donne un nombre à virgule, et elle se décale à cause des années bissextiles : autour de la date d'anniversaire, elle peut annoncer un an de trop ou de moins. DATEDIF compare les dates elles-mêmes et ne se trompe pas de jour.</p><p>Pour compter des jours plutôt que des années, voyez <a href="/astuces/nombre-de-jours-entre-deux-dates/">calculer le nombre de jours entre deux dates</a>.</p>
+<h2>Dans Google Sheets</h2><p>Dans Google Sheets, la formule est identique : =DATEDIF(A2;AUJOURDHUI();"y"), avec les mêmes unités "Y", "M", "D" et "YM" (majuscules ou minuscules). L'aide de Google précise que si le résultat s'affiche comme une date, il faut remettre la cellule au format Nombre.</p>
+<h2>Les pièges à éviter</h2><ul><li>La date de naissance doit venir en premier. Si la date de début est postérieure à la date de fin, Excel affiche l&#x27;erreur #NOMBRE!.</li><li>N&#x27;oubliez pas les guillemets autour de la lettre : &quot;y&quot;. Sans eux, Excel ne comprend pas la formule.</li><li>Si la date de naissance est alignée à gauche dans la cellule, Excel l&#x27;a prise pour du texte et la formule renvoie #VALEUR!. Retapez-la sous la forme 14/03/1988.</li><li>Excel ne reconnaît pas les dates antérieures au 1er janvier 1900 : la formule ne fonctionne pas pour une généalogie ancienne.</li><li>Une année tapée sur deux chiffres (14/03/30) peut être comprise comme 1930 ou comme 2030 selon les cas. Tapez toujours l&#x27;année sur quatre chiffres.</li><li>L&#x27;âge calculé avec AUJOURDHUI() change avec le temps. Pour garder l&#x27;âge à une date donnée, utilisez une date fixe à la place.</li></ul>
+</article>
+<section><h2>D'autres astuces</h2><ol class="feuille" start="1">
+<li><span class="num" aria-hidden="true">1</span><a class="lien-astuce" href="../../astuces/selectionner-colonne-ctrl-espace/index.html">Sélectionner une colonne entière avec Ctrl + Espace</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">2</span><a class="lien-astuce" href="../../astuces/inserer-ligne-ctrl-plus/index.html">Insérer une ligne sans la souris avec Ctrl + « + »</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+<li><span class="num" aria-hidden="true">3</span><a class="lien-astuce" href="../../astuces/calculer-tva-ht-ttc/index.html">Calculer la TVA dans Excel : passer du HT au TTC et du TTC au HT</a><span class="meta">Excel, Google Sheets</span><span class="meta">Débutant</span></li>
+</ol></section>
+<aside class="bande-pack">
+  <h2>Des tableaux déjà prêts, plutôt que de partir d'une feuille vide</h2>
+  <p>Le pack de modèles réunit vingt tableaux prêts à remplir (budget, factures, planning, stock, prêt, épargne), avec les formules
+  déjà en place. Il fonctionne dans Excel et dans Google Sheets.</p>
+  <a class="bouton" href="../../pack-modeles/index.html">Voir le contenu du pack</a>
+</aside>
+</main>
+<footer class="pied">
+  <p>Tableur Malin publie une astuce Excel ou Google Sheets par jour, en français.</p>
+  <p><a href="../../astuces/index.html">Toutes les astuces</a> <a href="../../pack-modeles/index.html">Pack de modèles</a>
+  <a href="../../mentions-legales/index.html">Mentions légales</a></p>
+  <p class="discret">Site indépendant, sans lien avec Microsoft ni Google. Excel et Google Sheets sont des marques
+  de leurs propriétaires respectifs.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
