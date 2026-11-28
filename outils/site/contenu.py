@@ -39,6 +39,126 @@ PACK_MODELES = [
 
 ASTUCES = [
     {
+        "slug": "afficher-les-formules-ctrl-guillemet", "etapes_excel": True,
+        "titre": "Afficher toutes les formules d'une feuille Excel avec Ctrl + \"",
+        "court": "Afficher toutes les formules avec Ctrl + \"",
+        "description": "Appuyez sur Ctrl + \" (la touche du 3) : Excel affiche toutes les formules de la feuille à la "
+                       "place des résultats. Le même raccourci revient à l'affichage normal. Bouton du ruban et "
+                       "équivalent Google Sheets.",
+        "bref": "Sur un clavier français, appuyez sur Ctrl + \" (la touche du 3, en haut du clavier) : chaque cellule "
+                "montre sa formule au lieu de son résultat. Appuyez une seconde fois pour revenir aux résultats. "
+                "Le bouton Afficher les formules de l'onglet Formules fait la même chose.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-28",
+        "video": "afficher-les-formules-ctrl-guillemet",
+        "etapes": [
+            "Ouvrez la feuille dont vous voulez voir les formules.",
+            "Maintenez <kbd>Ctrl</kbd> et appuyez sur la touche <kbd>\"</kbd>, celle du chiffre 3 dans la rangée du haut (sans la touche Maj).",
+            "Toutes les cellules qui contiennent une formule affichent cette formule ; les colonnes s'élargissent pour laisser la place.",
+            "Repérez ce qui cloche : une cellule qui montre un nombre au milieu d'une colonne de formules a été tapée à la main.",
+            "Appuyez de nouveau sur <kbd>Ctrl</kbd> + <kbd>\"</kbd> pour revenir aux résultats.",
+            "Si le raccourci ne répond pas, ouvrez l'onglet Formules et cliquez sur le bouton Afficher les formules ; cliquez dessus une seconde fois pour revenir.",
+        ],
+        "formules": [
+            ("=FORMULETEXTE(B2)", "Écrit dans une autre cellule, en texte, la formule contenue en B2 (Excel 2013 et versions suivantes)."),
+        ],
+        "texte": "<p>D'habitude, une cellule montre le résultat, et la formule n'apparaît que dans la barre de formule, "
+                 "une cellule à la fois. Pour comprendre un fichier reçu d'un collègue, ou vérifier le vôtre, il "
+                 "faudrait cliquer sur chaque cellule. L'affichage des formules les montre toutes en même temps, "
+                 "directement dans la grille.</p>"
+                 "<p><strong>Quelle touche, exactement ?</strong> L'aide de Microsoft indique le raccourci "
+                 "<kbd>Ctrl</kbd> + <kbd>`</kbd> (l'accent grave), qui correspond aux claviers américains. Sur un "
+                 "clavier français, c'est <kbd>Ctrl</kbd> + <kbd>\"</kbd> : la touche qui porte le 3 et les "
+                 "guillemets, dans la rangée du haut. Si rien ne se passe sur votre clavier, passez par le ruban : "
+                 "onglet Formules, bouton Afficher les formules. Il se trouve dans le groupe qui s'appelle, selon "
+                 "les versions, « Audit de formules » ou « Vérification des formules ».</p>"
+                 "<p><strong>À quoi ça sert ?</strong> À repérer d'un coup d'œil la cellule où quelqu'un a tapé un "
+                 "nombre par-dessus une formule, à vérifier qu'une formule a bien été "
+                 "<a href=\"/astuces/recopier-formule-double-clic/\">recopiée jusqu'en bas</a>, ou à voir quelles "
+                 "cellules sont des calculs avant de modifier un tableau que vous ne connaissez pas.</p>"
+                 "<p><strong>Les colonnes s'élargissent, c'est normal.</strong> L'aide de Microsoft le précise : "
+                 "les colonnes s'élargissent automatiquement pour afficher les formules, et elles reprennent leur "
+                 "taille quand vous revenez à l'affichage normal. Pendant ce temps, les nombres et les dates "
+                 "perdent aussi leur mise en forme à l'écran ; rien n'est modifié dans le fichier.</p>"
+                 "<p><strong>Une feuille à la fois.</strong> Le réglage ne concerne que la feuille affichée. Pour "
+                 "un autre onglet, refaites le raccourci dans cet onglet.</p>"
+                 "<p><strong>Garder une formule visible à côté de son résultat.</strong> Pour montrer une seule "
+                 "formule, dans un mode d'emploi par exemple, la fonction FORMULETEXTE écrit dans une cellule la "
+                 "formule d'une autre : =FORMULETEXTE(B2).</p>",
+        "sheets": "<p>Dans Google Sheets, ouvrez le menu Affichage, puis Afficher, puis Formules ; refaites le même "
+                  "chemin pour revenir aux résultats. La liste officielle des raccourcis de Google mentionne bien "
+                  "« Afficher toutes les formules » (Ctrl + ~), mais prévient que certains raccourcis ne "
+                  "fonctionnent pas avec tous les claviers : sur un clavier français, le menu est le plus sûr.</p>",
+        "pieges": [
+            "Si vous imprimez pendant que les formules sont affichées, ce sont les formules qui sortent sur le papier. Revenez aux résultats avant d'imprimer.",
+            "Vous avez appuyé sur Ctrl + \" par mégarde et toute la feuille montre des formules ? Rien n'est cassé : refaites le raccourci, ou cliquez sur Afficher les formules dans l'onglet Formules.",
+            "Si une seule cellule montre sa formule au lieu du résultat, ce n'est pas ce réglage : la cellule est sans doute au format Texte. Donnez-lui le format Standard, puis appuyez sur F2 et sur Entrée.",
+            "Sur un ordinateur portable ou un clavier d'une autre langue, la touche peut être différente. Le bouton du ruban fonctionne dans tous les cas.",
+            "Sur Mac, plusieurs guides indiquent Contrôle + ` (accent grave). Si le raccourci ne répond pas, utilisez le bouton Afficher les formules de l'onglet Formules.",
+        ],
+    },
+    {
+        "slug": "additionner-des-heures",
+        "titre": "Additionner des heures dans Excel et dépasser 24 h",
+        "court": "Additionner des heures (plus de 24 h)",
+        "description": "Pour additionner des heures dans Excel, utilisez =SOMME(B2:B8) puis donnez au total le format "
+                       "personnalisé [h]:mm : il affiche 37:30 au lieu de 13:30. Explications, heures en nombre "
+                       "décimal et équivalent Google Sheets.",
+        "bref": "Tapez vos durées avec deux-points (7:30), additionnez-les avec =SOMME(B2:B8), puis donnez à la "
+                "cellule du total le format personnalisé [h]:mm. Sans ces crochets, Excel repart de zéro toutes "
+                "les 24 heures et affiche 13:30 au lieu de 37:30.",
+        "outils": "Excel, Google Sheets", "niveau": "Débutant", "date": "2026-11-28",
+        "etapes": [
+            "Tapez chaque durée avec deux-points entre les heures et les minutes : 7:30 pour 7 heures 30.",
+            "Sous la liste, tapez =SOMME(B2:B8) et validez avec <kbd>Entrée</kbd>.",
+            "Si le total dépasse 24 heures, il paraît faux. Sélectionnez la cellule du total, puis ouvrez Format de cellule : onglet Accueil, bouton Format, Format de cellule (ou <kbd>Ctrl</kbd> + <kbd>1</kbd>).",
+            "Dans l'onglet Nombre, choisissez la catégorie Personnalisée.",
+            "Dans la zone Type, effacez ce qui s'y trouve, tapez [h]:mm et validez avec OK : le vrai total s'affiche.",
+        ],
+        "formules": [
+            ("=SOMME(B2:B8)", "Total des durées de B2 à B8 (à afficher au format [h]:mm)."),
+            ("=B2+B3", "Addition de deux durées."),
+            ("=C2-B2", "Durée entre une heure d'arrivée (B2) et une heure de départ (C2)."),
+            ("=MOD(C2-B2;1)", "La même durée quand le départ a lieu après minuit (travail de nuit)."),
+            ("=B9*24", "Convertit un total d'heures en nombre décimal : 37:30 devient 37,5 (cellule au format Standard)."),
+            ("=B9*24*C1", "Montant à payer : total d'heures en B9 multiplié par le taux horaire en C1."),
+            ("=TEXTE(B9;\"[h]:mm\")", "Le total écrit en texte, pour l'insérer dans une phrase."),
+        ],
+        "texte": "<p>L'aide de Microsoft donne cet exemple : 12:45 plus 15:30. Excel affiche 4:15, alors que le total "
+                 "est de 28 heures et 15 minutes. Le calcul est juste, c'est l'affichage qui trompe : avec le "
+                 "format d'heure habituel, Excel montre une heure d'horloge, qui revient à zéro après 23:59. Les "
+                 "24 premières heures ont disparu de l'écran, pas du calcul.</p>"
+                 "<p><strong>Les crochets changent tout.</strong> Dans un format personnalisé, [h] demande à "
+                 "Excel d'afficher le nombre total d'heures écoulées, sans s'arrêter à 24. Avec [h]:mm, le total "
+                 "de l'exemple s'affiche 28:15. De la même façon, [mm]:ss affiche un total de minutes qui dépasse "
+                 "60.</p>"
+                 "<p><strong>Pourquoi 7:30 n'est pas 7,5.</strong> Pour Excel, une heure est une fraction de "
+                 "journée : 24 heures valent 1, 12:00 vaut 0,5 et 7:30 vaut 0,3125. C'est ce qui explique les "
+                 "résultats étranges quand on multiplie une durée par un taux horaire. Pour obtenir un nombre "
+                 "d'heures ordinaire, multipliez la durée par 24 et donnez à la cellule le format Standard : "
+                 "7:30 devient 7,5, et 37:30 devient 37,5. C'est ce nombre-là qu'il faut multiplier par un tarif.</p>"
+                 "<p><strong>Calculer une durée de travail.</strong> Avec l'heure d'arrivée en B2 et l'heure de "
+                 "départ en C2, la durée est =C2-B2. Pour retirer une pause notée en D2, écrivez =C2-B2-D2. Si "
+                 "le départ a lieu le lendemain (arrivée 22:00, départ 6:00), la soustraction donne une durée "
+                 "négative, qu'Excel affiche sous la forme d'une suite de #### ; la formule =MOD(C2-B2;1) donne "
+                 "alors les 8 heures attendues.</p>"
+                 "<p>Pour compter des jours plutôt que des heures, voyez "
+                 "<a href=\"/astuces/nombre-de-jours-entre-deux-dates/\">calculer le nombre de jours entre deux "
+                 "dates</a>.</p>",
+        "sheets": "<p>Dans Google Sheets, la formule =SOMME(B2:B8) est la même. Pour le total, sélectionnez la "
+                  "cellule, ouvrez le menu Format, puis Nombre, et choisissez Durée : le total s'affiche alors "
+                  "au-delà de 24 heures (37:30:00). La multiplication par 24 pour obtenir un nombre décimal "
+                  "fonctionne de la même façon.</p>",
+        "pieges": [
+            "Tapez 7:30 et non 7,30 ou 7h30 : sans les deux-points, Excel ne reconnaît pas une durée. Une durée reconnue s'aligne à droite dans la cellule.",
+            "7,5 heures et 7:30 sont la même durée, mais pas le même contenu de cellule. Ne mélangez pas les deux écritures dans une même colonne.",
+            "N'oubliez pas les crochets : le format h:mm, sans crochets, repart de zéro toutes les 24 heures.",
+            "Le format [h]:mm se met sur la cellule du total. Les durées de la liste peuvent rester au format d'heure habituel.",
+            "Pour une durée de plus de 24 heures à saisir directement, tapez-la telle quelle (30:00) dans une cellule au format [h]:mm.",
+            "Une cellule remplie de #### alors que la colonne est assez large signale le plus souvent une durée négative : vérifiez l'ordre de la soustraction.",
+            "Pour calculer une paie, multipliez d'abord le total par 24. Sinon, vous multipliez le tarif par une fraction de journée et le montant est 24 fois trop petit.",
+        ],
+    },
+    {
         "slug": "selectionner-colonne-ctrl-espace",
         "titre": "Sélectionner une colonne entière avec Ctrl + Espace",
         "court": "Sélectionner une colonne avec Ctrl + Espace",

@@ -31,7 +31,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Recopier la cellule du dessus (Ctrl + D) et celle de gauche (Ctrl + R) — recopier-vers-le-bas-ctrl-d
 - [x] Insérer une ligne sans la souris (Ctrl + « + ») et en supprimer une (Ctrl + « - ») — inserer-ligne-ctrl-plus
 - [x] Sélectionner une ligne entière (Maj + Espace) ou une colonne entière (Ctrl + Espace) — selectionner-colonne-ctrl-espace
-- [ ] Afficher toutes les formules de la feuille d'un coup (Ctrl + ")
+- [x] Afficher toutes les formules de la feuille d'un coup (Ctrl + ") — afficher-les-formules-ctrl-guillemet
 - [ ] Modifier une cellule sans double-cliquer (F2)
 - [ ] Rechercher et remplacer partout (Ctrl + H)
 - [ ] Insérer l'heure actuelle (Ctrl + :)
@@ -96,7 +96,7 @@ Mode d'emploi pour la routine du jour :
 - [x] Calculer une augmentation ou une baisse en pourcentage — pourcentage-augmentation-baisse
 - [x] Calculer la TVA : passer du HT au TTC et inversement (pack) — calculer-tva-ht-ttc
 - [x] Calculer un âge à partir d'une date de naissance (DATEDIF) — calculer-un-age
-- [ ] Additionner des heures et dépasser 24 h (format [h]:mm) (pack)
+- [x] Additionner des heures et dépasser 24 h (format [h]:mm) (pack) — additionner-des-heures
 - [ ] Calculer une mensualité de prêt (VPM) (pack)
 - [ ] SOMME.SI : additionner selon un critère
 - [ ] NB.SI.ENS : compter selon plusieurs critères
